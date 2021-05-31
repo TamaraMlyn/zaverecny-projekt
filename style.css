@@ -3,47 +3,85 @@
 }
 
 :root {
-  --primary-color: #ffffff;
+  --primary-color: black;
   --blue: #e7edfd;
   --dark-blue: #151d75;
   --btn-hover: #fe7062;
 }
 /* barvy se pak pouzivaji jako color: var(--primary-color) */
 
+/* ---- navigation ------ */
+
+.nav-btn {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+
+  background-image: url('./img/menu-icon.svg');
+  background-size: contain;
+  background-color: transparent;
+  color: var(--dark-blue);
+
+  cursor: pointer;
+}
+
+nav a {
+  display: block;
+  margin: 1rem;
+  border-bottom: 1px solid var(--btn-hover);
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/* ------------------ */
+
 .container {
   padding: 0px;
   font-family: 'Lora', serif;
-}
-
-.intro__header {
-  font-family: 'Roboto', sans-serif;
-}
-
-.intro__info {
   padding: 0 15px;
+}
+
+.container__header,
+.rules__header {
+  font-family: 'Roboto', sans-serif;
 }
 
 .intro__text {
   font-size: 1.2rem;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.intro__image {
+  display: flex;
+  justify-content: center;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 30vh;
 }
 
 .cta {
+  max-width: 500px;
   background-color: var(--blue);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
   border-radius: 10px;
-  padding: 20px 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .cta__icon {
-  max-width: 80px;
+  display: none;
+}
+
+.cta__content {
+  justify-content: start;
 }
 
 .btn {
@@ -55,7 +93,18 @@ img {
   text-align: center;
   background-color: var(--dark-blue);
   color: var(--blue);
-  padding: 15px;
+  padding: 25px;
   margin-top: 15px;
-  border-radius: 25px;
+  border-radius: 40px;
+}
+
+.rules__header {
+  color: var(--dark-blue);
+}
+
+@media (min-width: 600px) {
+  .cta__icon {
+    display: inline;
+    max-width: 80px;
+  }
 }
