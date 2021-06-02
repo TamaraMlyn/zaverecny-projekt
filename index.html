@@ -13,19 +13,32 @@
     />
   </head>
   <body>
-    <header>
-      <div class="topbar">
-        <div class="logo"></div>
-        <div class="navigation">
-          <button class="nav-btn"></button>
-          <nav class="nav-closed">
-            <a href="">O projektu</a>
-          <a href="">Přihlášení</a>
-          <a href="">Registrace</a>
-          </nav>
-          
-        </div>
-      </div>
+    <header class="header">
+      <a class="logo" href="">Dobrovozík</a>    
+      <nav class="nav-mobile">
+        <button class="hamburger hamburger--opened"></button>
+        <ul class="menu-items">
+          <li class="menu-item"><a href="">O projektu</a></li>
+          <li class="menu-item"><a href="">Přihlášení</a></li>
+          <li class="menu-item ">
+            <a class="sign-up" href="">Registrace</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="nav-desktop">
+        <ul class="menu-items">
+          <li class="menu-item"><a href="">O projektu</a></li>
+          <li class="menu-item"><a href="">Přihlášení</a></li>
+          <li class="menu-item ">
+            <a class="sign-up" href="">Registrace</a>
+          </li>
+        </ul>
+      </nav>
+    
+
+
+    
     </header>
 
     <div class="intro container">
@@ -40,16 +53,19 @@
             jednodušší.
           </p>
         </div>
-        <div class="intro__cta">
+        <div class="intro__buttons">
+          <button class="btn">
+            <a class="btn__" href="">Potřebuji asistenci</a>
+            <p class="btn__description">Jsem na vozíku a hledám pomoc</p>
+          </button>
+          
           <div class="cta cta--wheelchair">
-            <img class="cta__icon" src="img/lupa.svg" alt="" />
             <div class="cta__content">
             <a class="btn" href="">Potřebuji asistenci</a>
             <p>Jsem na vozíku a hledám pomoc</p>
             </div>
           </div>
           <div class="cta cta--volunteer">
-            <img class="cta__icon" src="img/hodiny.svg" alt="" />
             <div class="cta__content">
             <a class="btn" href="">Chci být dobrovolník</a>
             <p>Chci věnovat svůj čas a pomoc</p>

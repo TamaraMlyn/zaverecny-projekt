@@ -4,17 +4,29 @@
 
 :root {
   --primary-color: black;
-  --blue: #e7edfd;
+  --light-blue: #e7edfd;
+  --blue: #8eb2f9;
   --dark-blue: #151d75;
-  --btn-hover: #fe7062;
+  --contrast-color: #fe7062;
 }
 /* barvy se pak pouzivaji jako color: var(--primary-color) */
 
 /* ---- navigation ------ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--blue);
+}
 
-.nav-btn {
-  width: 2rem;
-  height: 2rem;
+.nav-desktop {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  width: 40px;
+  height: 40px;
   padding: 0;
   border: none;
 
@@ -26,12 +38,37 @@
   cursor: pointer;
 }
 
-nav a {
-  display: block;
-  margin: 1rem;
-  border-bottom: 1px solid var(--btn-hover);
+.hamburger--opened {
+  position: absolute;
+  right: 10px;
+  padding-bottom: 10px;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 35px;
+  left: 35px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.menu-item {
+  list-style-type: none;
+  width: 100%;
+  padding: 1rem;
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.menu-item a {
   text-decoration: none;
-  color: var(--primary-color);
+}
+
+.sign-up {
+  color: var(--contrast-color);
 }
 
 /* ------------------ */
@@ -64,7 +101,7 @@ img {
 
 .cta {
   max-width: 500px;
-  background-color: var(--blue);
+  background-color: var(--light-blue);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,14 +111,6 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-.cta__icon {
-  display: none;
-}
-
-.cta__content {
-  justify-content: start;
 }
 
 .btn {
@@ -103,8 +132,44 @@ img {
 }
 
 @media (min-width: 600px) {
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-closed {
+    display: flex;
+  }
+
   .cta__icon {
     display: inline;
     max-width: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    border-color: white;
+  }
+
+  .nav-desktop  {
+    display: flex;
+    z-index: 50;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  .menu-items {
+    flex-direction: row;
+    top: 0;
+  }
+
+  .menu-item a:hover {
+    color: var(--contrast-color);
+  }
+
+  .sign-up:hover {
+    border-bottom: 1px solid var(--contrast-color);
   }
 }
