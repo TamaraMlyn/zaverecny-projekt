@@ -131,6 +131,44 @@ img {
   color: var(--dark-blue);
 }
 
+
+/* ----------  volunteer.html  -------- */
+h1 {
+  color: var(--dark-blue);
+  font-weight: 800;
+}
+
+.volunteer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Lora', serif;
+  padding: 30px;
+}
+
+
+.volunteer__intro {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.volunteer__expect {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.volunteer__process {
+  display: flex;
+  flex-direction: row;
+}
+
+.volunteer__step {
+  width: 150px;
+  margin: 40px;
+}
+
 @media (min-width: 600px) {
   .nav-btn {
     display: none;
