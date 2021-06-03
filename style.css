@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   font-family: 'Roboto', sans-serif;
-  background-color: var(--blue);
+  background-color: var(--light-blue);
 }
 
 .nav-desktop {
@@ -72,16 +72,17 @@
   color: var(--contrast-color);
 }
 
-/* ------------------ */
+/* ------- landing page ----------- */
 
 .container {
+  width: 100%;
   font-family: 'Lora', serif;
-  padding: 0 15px;
-  margin-bottom: 20px;
+  padding: 0 25px;
+  margin-bottom: 50px;
 }
 
 .container__header,
-.rules__header {
+.person__header {
   font-family: 'Roboto', sans-serif;
   color: var(--dark-blue);
 }
@@ -97,23 +98,8 @@
 }
 
 img {
-  max-width: 100%;
   max-height: 30vh;
 }
-
-/* .cta {
-  max-width: 500px;
-  background-color: var(--light-blue);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 0;
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-} */
 
 .btn {
   display: inline-block;
@@ -122,6 +108,7 @@ img {
   text-align: center;
   background-color: var(--dark-blue);
   color: var(--light-blue);
+  border: none;
   padding: 25px;
   margin-top: 15px;
   border-radius: 15px;
@@ -138,7 +125,13 @@ img {
   margin-top: 10px;
 }
 
-.rules__header {
+.rules {
+  background-color: var(--light-blue);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.person__header {
   color: var(--contrast-color);
 }
 
@@ -178,24 +171,12 @@ h1 {
   margin: 40px;
 }
 
-@media (min-width: 600px) {
-  .nav-btn {
-    display: none;
-  }
-
-  .nav-closed {
-    display: flex;
-  }
-
-  .cta__icon {
-    display: inline;
-    max-width: 80px;
-  }
-}
+/* -------- desktop ---------- */
 
 @media (min-width: 768px) {
+  /* ------- header ------ */
   .header {
-    border-color: white;
+    background-color: white;
   }
 
   .nav-desktop  {
@@ -218,5 +199,68 @@ h1 {
 
   .sign-up:hover {
     border-bottom: 1px solid var(--contrast-color);
+  }
+
+  /* ----- landing page -------- */
+  .intro {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 0;
+  }
+
+  .intro__image {
+    max-height: 50vh;
+  }
+
+  .intro__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 50px;
+  }
+
+  .intro__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header--main {
+    font-size: 40px;
+  }
+
+  .btn {
+    flex-basis: 47%;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  .btn__description {
+    margin-top: 20px;
+  }
+
+  .rules__content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .rules__person {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 40%;
+    text-align: justify;
+  }
+
+  .person__icon {
+    max-width: 15%;
+  }
+
+  .person__description {
+    margin-left: 40px;
+    line-height: 1.5rem;
+  }
+
+  .about__text {
+    line-height: 1.5rem;
   }
 }
