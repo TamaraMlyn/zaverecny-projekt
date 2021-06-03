@@ -142,7 +142,8 @@ img {
   color: var(--contrast-color);
 }
 
-/* ----------  volunteer.html  -------- */
+
+
 h1 {
   color: var(--dark-blue);
   font-weight: 800;
@@ -178,6 +179,15 @@ h1 {
   margin: 40px;
 }
 
+/* ----------  registration.html  -------- */
+
+.registration__container {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
 @media (min-width: 600px) {
   .nav-btn {
     display: none;
@@ -192,6 +202,7 @@ h1 {
     max-width: 80px;
   }
 }
+
 
 @media (min-width: 768px) {
   .header {
