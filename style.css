@@ -105,6 +105,7 @@ img {
   display: inline-block;
   width: 100%;
   font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   text-align: center;
   background-color: var(--dark-blue);
   color: var(--light-blue);
@@ -117,10 +118,10 @@ img {
 .btn__text {
   text-decoration: none;
   color: var(--primary-light);
-  font-size: 20px;
 }
 
 .btn__description {
+  font-size: 14px;
   margin: 0;
   margin-top: 10px;
 }
@@ -134,8 +135,6 @@ img {
 .person__header {
   color: var(--contrast-color);
 }
-
-
 
 h1 {
   color: var(--dark-blue);
@@ -172,7 +171,6 @@ h1 {
   margin: 40px;
 }
 
-
 /* ----------  registration.html  -------- */
 
 .registration__container {
@@ -182,6 +180,59 @@ h1 {
   align-items: center;
 }
 
+/* --------- request --------- */
+
+.request {
+  width: 100%;
+  max-width: 576px;
+  margin: 0 auto;
+  background-color: var(--light-blue);
+  padding: 24px;
+}
+
+.request__description {
+  text-align: center;
+  font-size: 16px;
+  margin: 32px 0;
+}
+
+form {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.label {
+  font-size: 20px;
+}
+
+input {
+  width: 100%;
+  display: inline-block;
+  height: 56px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  border: 1px solid var(--dark-blue);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.request__details {
+  margin-top: 50px;
+}
+
+.label--checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.input--checkbox {
+  flex-grow: 0;
+  width: 30px;
+  margin: 0;
+}
 
 /* -------- desktop ---------- */
 @media (min-width: 768px) {

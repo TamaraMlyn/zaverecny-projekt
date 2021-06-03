@@ -5,45 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Potřebuji asistenci</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div>
+    <div class="request">
+      <div class="request__description">
         <h1 class="container__header">Potřebuji asistenci</h1>
-        <p class="intro__text">
+        <p>
           Najděte si vhodného asistenta na základě svých přesných požadavků.
         </p>
       </div>
-      <div>
-        <form>
-          <label>
-            Zadejte místo, odkud potřebujete:
+      <form>
+        <label class="label">
+          Místo, odkud potřebujete:
+          <input type="text" placeholder="Husinecká" />
+        </label>
+        <label class="label">
+          Místo, kam potřebujete:
+          <input type="text" placeholder="Jindřišská" />
+        </label>
+        <label class="label">
+          Datum:
+          <input type="date" />
+        </label>
+        <label class="label">
+          Čas od:
+          <input type="time" />
+        </label>
+        <label class="label">
+          Čas do:
+          <input type="time" />
+        </label>
+
+        <div class="request__details">
+          <h2 class="container__header">Požadavky na asistenta</h2>
+          <label class="label label--checkbox">
+            Dobrovolník musí mít zkušenosti s asistencí
+            <input class="input--checkbox" type="checkbox" />
+          </label>
+          <label class="label label--checkbox">
+            Dobrovolník musí být fyzicky zdatný <input class="input--checkbox" type="checkbox" />
+          </label>
+          <label class="label">
+            Vaše poznámky (dopište, co je ještě pro Vás důležité):
             <input type="text" />
           </label>
-          <label>
-            Zadejte místo, kam potřebujete:
-            <input type="text" />
-          </label>
-          <label> Datum: </label>
-          <label> Čas od: </label>
-          <label> Čas do: </label>
-        </form>
-      </div>
-      <div>
-        <h2>Požadavky na asistenta</h2>
-        <label>
-          Dobrovolník musí mít zkušenosti s asistencí
-          <input type="checkbox" />
-        </label>
-        <label>
-          Dobrovolník musí být fyzicky zdatný <input type="checkbox" />
-        </label>
-        <label>
-          Vaše poznámky (dopište, co je ještě pro Vás důležité):
-          <input type="text" />
-        </label>
-      </div>
-      <button>Zadat požadavek</button>
+        </div>
+
+        <button class="btn">Zadat požadavek</button>
+      </form>
     </div>
   </body>
 </html>
