@@ -135,7 +135,8 @@ img {
   color: var(--contrast-color);
 }
 
-/* ----------  volunteer.html  -------- */
+
+
 h1 {
   color: var(--dark-blue);
   font-weight: 800;
@@ -171,8 +172,18 @@ h1 {
   margin: 40px;
 }
 
-/* -------- desktop ---------- */
 
+/* ----------  registration.html  -------- */
+
+.registration__container {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+
+/* -------- desktop ---------- */
 @media (min-width: 768px) {
   /* ------- header ------ */
   .header {
