@@ -5,58 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrace</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="style-registration.css" />
 </head>
 <body>
     <div class="registration__container">
+        <h1 class="h1log">Zaregistrujte se</h1>
+        <div class="registration__intro">Od dobrovolnictví Vás už dělí jenom pár kroků!</div>
         <form>
-          <label>
+          <label class="label">
             Jméno:
-            <br>
-            <input type="text" />
+            <input type="text" placeholder="Julie"/>
           </label>
-          <br>
-          <br>
-          <label>
+          <label class="label">
            Příjmení:
-           <br>
-            <input type="text" />
+            <input type="text" placeholder="Malá"/>
           </label>
-          <br>
-          <br>
-          <label>
+          <label class="label">
             Email:
-            <br>
-            <input type="text" />
+            <input type="email" placeholder="julie.mala@gmail.com" />
           </label>
-          <br>
-          <br>
-          <label>
+          <label class="label">
            Telefonní číslo:
-           <br>
-            <input type="text" />
+            <input type="number" placeholder="+420*********"/>
           </label>
-          <br>
-          <br>
-          <label>
+          <label class="label">
            Heslo:
-           <br>
-            <input type="text" />
-          </label>
-          <br>
-          <br>
-          <label>
+            <input type="password" placeholder="Minimálně 8 znaků" />
+          </label class="label">
+          <label class="label">
            Heslo znovu:
-           <br>
-            <input type="text" />
+            <input type="password" placeholder="Minimálně 8 znaků"/>
           </label>
-          <button type="submit" class="btn">Registrovat</button>
+          <label class="label label__checkbox">
+            <input class="checkbox" type="checkbox" checked name="podmínky"> 
+            Souhlasím s obchodními podmínkami
+         </label>
+         <label class="label label__checkbox">
+            <input class="checkbox" type="checkbox" checked name="podmínky"> 
+            Souhlasím se zpracováním údajů
+         </label>
+          <button type="submit" class="btn primary">Registrovat</button>
         </form>
+        <div class="registration__account-created">Už máte účet? 
+            <a href="sign-in.html">
+            Přihlašte se </a></div>
     </div>
+    
 </body>
 </html>
