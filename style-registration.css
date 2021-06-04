@@ -87,18 +87,18 @@
     color: var(--light-blue);
   }
   
-  .btn--registration {
+  /* .btn--registration {
     width: 90%;
     margin: 0 auto;
-  }
+  } */
   
-  .btn.secondary {
+  /* .btn.secondary {
     border-radius: 5px;
     height: 56px;
     color: var(--contrast-color);
     background-color: transparent;
     border: 2px solid var(--contrast-color);
-  }
+  } */
   
   @media (min-width: 768px) {
     input {

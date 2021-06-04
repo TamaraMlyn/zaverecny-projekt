@@ -142,6 +142,8 @@ h1 {
   font-weight: 800;
 }
 
+/* --------- volunteer --------- */
+
 .volunteer__container {
   display: flex;
   flex-direction: column;
@@ -156,31 +158,27 @@ h1 {
 }
 
 .volunteer__expect {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.8rem;
-  font-weight: 700;
+  font-weight: 800;
   padding: 20px;
+  color: var(--contrast-color)
 }
 
 .volunteer__process {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .volunteer__step {
   width: 150px;
   margin: 40px;
+  text-align: center;
 }
 
-/* ----------  registration.html  -------- */
-
-.registration__container {
-  margin: 0 auto;
-  display: flex;
-  width: 100%;
-  align-items: center;
+.btn__volunteer {
+width: 250px;
 }
-
 
 /* --------- request --------- */
 
@@ -340,4 +338,11 @@ input {
   .about__text {
     line-height: 1.5rem;
   }
+
+ /* ----- volunteer -------- */
+
+  .volunteer__process {
+    flex-direction: row;
+  }
 }
+
