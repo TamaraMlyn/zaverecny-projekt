@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-filter.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Filtrování requestů</title>
+</head>
+<body>
+
+<div class="filter__containter">
+
+    
+    <div class="filter__window">
+        <div class="filter__intro">CHCI VYHLEDAT DLE:</div>
+        <form>
+          <label for="date" id class="label">
+            Datum:
+          </label>
+            <input id="date" type="date" name placeholder=""/>
+          <label class="label">
+           Časový interval:
+          </label>
+            <input id="time" type="text" placeholder="13:30 - 15:30"/>
+          <label for="location" class="label">
+            Lokalita:
+        </label>
+            <input id="location" type="email" placeholder="Jindřišská" />
+        </form> 
+    </div>
+
+    <div class="filter__requests">
+        <h1 class="header ">Momentálně pomoc hledají tyto osoby: </h1>
+        <div class="filter__intro">Můžete vybírat z už existujících požadavků od těch, které jsou seřazeny dle největší urgence</div>
+        <div class="filter__request">
+            <img src="img/user.jpg" alt="user">
+            <div class="filter__name">Anna</div>
+            <div class="filter__purpose">
+              <div>Účel:</div>
+              <br>
+            Procházka
+            </div>
+            <div class="filter__time"> 
+               <div>Od-do:</div>
+               <div> 13:30 - 14:30 </div>
+            </div>
+            <div class="filter__specific">
+          <div> Specifické požadavky:</div>
+          <div> pro fyzicky zdatnější </div>
+           </div>
+           <div class="btn btn__primary">Kontaktovat</div>
+        </div>
+        
+    </div>
+
+</div>
+</body>
+</html>
