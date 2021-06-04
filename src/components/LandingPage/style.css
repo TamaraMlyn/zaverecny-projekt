@@ -63,7 +63,6 @@ img {
   margin-top: 10px;
 }
 
-
 .rules {
   background-color: var(--light-blue);
   padding-top: 15px;
@@ -77,4 +76,68 @@ img {
 h1 {
   color: var(--dark-blue);
   font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 0;
+  }
+
+  .intro__image {
+    max-height: 50vh;
+  }
+
+  .intro__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 50px;
+  }
+
+  .intro__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header--main {
+    font-size: 40px;
+  }
+
+  .btn {
+    flex-basis: 47%;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  .btn__description {
+    margin-top: 20px;
+  }
+
+  .rules__content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .rules__person {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 40%;
+    text-align: justify;
+  }
+
+  .person__icon {
+    max-width: 15%;
+  }
+
+  .person__description {
+    margin-left: 40px;
+    line-height: 1.5rem;
+  }
+
+  .about__text {
+    line-height: 1.5rem;
+  }
 }

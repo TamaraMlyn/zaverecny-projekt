@@ -1,0 +1,41 @@
+.volunteer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Lora', serif;
+  padding: 30px;
+}
+
+.volunteer__intro {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.volunteer__expect {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 800;
+  padding: 20px;
+  color: var(--contrast-color);
+}
+
+.volunteer__process {
+  display: flex;
+  flex-direction: column;
+}
+
+.volunteer__step {
+  width: 150px;
+  margin: 40px;
+  text-align: center;
+}
+
+.btn__volunteer {
+  width: 250px;
+}
+
+@media (min-width: 768px) {
+  .volunteer__process {
+    flex-direction: row;
+  }
+}

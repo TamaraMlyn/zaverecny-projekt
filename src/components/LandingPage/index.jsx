@@ -1,11 +1,15 @@
 import React from 'react';
-import './style.css';
 import { Link } from 'react-router-dom';
+import { Header } from '../Header';
 import wheelchair from './img/wheelchair.jpeg';
+import magnifier from './img/magnifier.svg';
+import clock from './img/clock.svg';
+import './style.css';
 
 export const LandingPage = () => {
   return (
     <>
+      <Header />
       <div className="intro container">
         <img
           className="intro__image"
@@ -53,7 +57,7 @@ export const LandingPage = () => {
         <h2 className="container__header">Jak propojování funguje?</h2>
         <div className="rules__content">
           <div className="rules__person">
-            <img className="person__icon" src="/img/lupa.svg" alt="" />
+            <img className="person__icon" src={magnifier} alt="" />
             <div className="person__description">
               <h3 className="person__header">Člověk na vozíku</h3>
               <p>
@@ -66,7 +70,7 @@ export const LandingPage = () => {
           </div>
 
           <div className="rules__person">
-            <img className="person__icon" src="/img/hodiny.svg" alt="" />
+            <img className="person__icon" src={clock} alt="" />
             <div className="person__description">
               <h3 className="person__header">Dobrovolník</h3>
               <p>
