@@ -1,20 +1,37 @@
 import React from 'react';
 import { render } from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+import {LandingPage} from "./components/LandingPage"
+import {Registration} from "./components/Registration"
+import {Request} from "./components/Request"
+import {Volunteer} from "./components/Volunteer"
 import './style.css';
 
+
+
 const App = () => (
-  <div className="container">
-    <header>
-      <div className="logo"></div>
-      <h1>Webová aplikace</h1>
-    </header>
-    <main>
-      <p>Startovací šablona pro webovou aplikaci v Reactu. Vytvořeno pomocí <a href="https://www.npmjs.com/package/create-czechitas-app">create-czechitas-app</a>.</p>
-    </main>
-    <footer>
-      <p>Czechitas, Digitální akademie: Web</p>
-    </footer>
-  </div>
+  <Router>
+
+    <Switch>
+      <Route path="/pozadavek">
+        <Request/>
+      </Route>
+      <Route path="/dobrovolnik">
+        <Volunteer/>
+      </Route>
+      <Route path="/registrace">
+        <Registration/>
+      </Route>
+      <Route path="/">
+        <LandingPage/>
+      </Route>
+    </Switch>
+  </Router>
 );
 
 render(<App />, document.querySelector('#app'));
