@@ -126,6 +126,7 @@ img {
   margin-top: 10px;
 }
 
+
 .rules {
   background-color: var(--light-blue);
   padding-top: 15px;
@@ -180,6 +181,7 @@ h1 {
   align-items: center;
 }
 
+
 /* --------- request --------- */
 
 .request {
@@ -187,7 +189,7 @@ h1 {
   max-width: 576px;
   margin: 0 auto;
   background-color: var(--light-blue);
-  padding: 24px;
+  padding: 24px 0;
 }
 
 .request__description {
@@ -212,7 +214,8 @@ input {
   margin-top: 8px;
   margin-bottom: 16px;
   padding: 0 8px;
-  border: 1px solid var(--dark-blue);
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
   border-radius: 5px;
   font-size: 16px;
 }
@@ -233,6 +236,18 @@ input {
   width: 30px;
   margin: 0;
 }
+
+.btn--form {
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  input {
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+}
+
 
 /* -------- desktop ---------- */
 @media (min-width: 768px) {
