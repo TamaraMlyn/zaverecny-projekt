@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
-import { Header } from '../Header';
 import { Button } from '../Button';
-import { Link } from 'react-router-dom';
 import './style.css';
 
 export const Wheelchair = () => {

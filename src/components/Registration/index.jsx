@@ -1,9 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../Button';
 import './style.css';
 
-export const Registration = ({type, text}) => {
+export const Registration = ({ type, text }) => {
+  const [name, setName] = useState('');
+  const [surname, setSurname] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordCheck, setPasswordCheck] = useState('');
+  const [conditions, setConditions] = useState(false);
+  const [personalData, setPersonalData] = useState(false);
+
   return (
     <>
       <div className="registration__container">
@@ -12,42 +21,74 @@ export const Registration = ({type, text}) => {
         <form>
           <label className="label">
             Jméno:
-            <input type="text" placeholder="Julie" />
+            <input
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              type="text"
+              placeholder="Julie"
+            />
           </label>
           <label className="label">
             Příjmení:
-            <input type="text" placeholder="Malá" />
+            <input
+              onChange={(e) => setSurname(e.target.value)}
+              value={surname}
+              type="text"
+              placeholder="Malá"
+            />
           </label>
           <label className="label">
             Email:
-            <input type="email" placeholder="julie.mala@gmail.com" />
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              type="email"
+              placeholder="julie.mala@gmail.com"
+            />
           </label>
           <label className="label">
             Telefonní číslo:
-            <input type="number" placeholder="+420*********" />
+            <input
+              onChange={(e) => setPhone(e.target.value)}
+              value={phone}
+              type="number"
+              placeholder="+420*********"
+            />
           </label>
           <label className="label">
             Heslo:
-            <input type="password" placeholder="Minimálně 8 znaků" />
+            <input
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              type="password"
+              placeholder="Minimálně 8 znaků"
+            />
           </label>
           <label className="label">
             Heslo znovu:
-            <input type="password" placeholder="Minimálně 8 znaků" />
+            <input
+              onChange={(e) => setPasswordCheck(e.target.value)}
+              value={passwordCheck}
+              type="password"
+              placeholder="Minimálně 8 znaků"
+            />
           </label>
           <label className="label label__checkbox">
             <input
+              onChange={() => setConditions((oldValue) => !oldValue)}
+              checked={conditions}
               className="checkbox"
               type="checkbox"
-              checked
               name="podmínky"
             />
             Souhlasím s obchodními podmínkami
           </label>
           <label className="label label__checkbox">
             <input
+              onChange={() => setPersonalData((oldValue) => !oldValue)}
+              checked={personalData}
               className="checkbox"
               type="checkbox"
-              checked
               name="podmínky"
             />
             Souhlasím se zpracováním údajů
