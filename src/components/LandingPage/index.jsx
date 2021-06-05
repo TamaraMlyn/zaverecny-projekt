@@ -10,7 +10,6 @@ import './style.css';
 export const LandingPage = () => {
   return (
     <>
-      <Header />
       <div className="intro container">
         <img
           className="intro__image"

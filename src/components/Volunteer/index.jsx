@@ -10,7 +10,6 @@ export const Volunteer = () => {
 
   return (
     <>
-      <Header />
       <div className="volunteer__container">
         <h1 className="header header--main">Chcete se stát dobrovolníkem?</h1>
         <div className="volunteer__intro">

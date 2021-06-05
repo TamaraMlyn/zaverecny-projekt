@@ -10,7 +10,6 @@ export const RegistrationVolunteer = () => {
 
   return (
     <>
-      <Header />
       <div className="registration__container">
         <h1 className="h1log">Zaregistrujte se</h1>
         <div className="registration__intro">

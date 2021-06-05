@@ -11,7 +11,6 @@ export const Request = () => {
 
   return (
     <>
-      <Header />
       <div className="request">
         <div className="request__description">
           <h1 className="container__header">Potřebuji asistenci</h1>
