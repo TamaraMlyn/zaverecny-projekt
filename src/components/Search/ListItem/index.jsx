@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from '../../Button';
 
 import './style.css';
 
@@ -24,7 +25,10 @@ export const ListItem = () => {
               <i className="icons dumbell las la-dumbbell"></i>{" "}
             </div>
           </div>
-          <div className="btn primary">Kontaktovat</div>
+          <Button
+              // to="/dobrovolnik"
+              text="Kontaktovat"
+            />
         </div>
     )
 }
