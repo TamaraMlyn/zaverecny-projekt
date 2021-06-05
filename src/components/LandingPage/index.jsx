@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../Header';
+import { Button } from '../Button';
 
 import wheelchair from './img/wheelchair.jpeg';
 import magnifier from './img/magnifier.svg';
@@ -28,27 +29,10 @@ export const LandingPage = () => {
             </p>
           </div>
           <div className="intro__buttons">
-            <Link to="/prihlaseni">
-              <div className="btn">
-                <div className="btn__text" href="">
-                  Potřebuji asistenci
-                </div>
-                <div className="btn__description">
-                  Jsem na vozíku a hledám pomoc
-                </div>
-              </div>
-            </Link>
+            <Button to="/pozadavek" text="Potřebuji asistenci" description="Jsem na vozíku a hledám pomoc"/>
 
-            <Link to="/dobrovolnik">
-              <div className="btn">
-                <div className="btn__text" href="">
-                  Chci být dobrovolník
-                </div>
-                <div className="btn__description">
-                  Chci věnovat svůj čas a pomoc
-                </div>
-              </div>
-            </Link>
+            <Button to="/dobrovolnik" text="Chci být dobrovolník" description="Chci věnovat svůj čas a pomoc"/>
+      
           </div>
         </div>
       </div>
