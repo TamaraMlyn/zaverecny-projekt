@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Header } from '../Header';
+import { Button } from '../Button';
 import { Link } from 'react-router-dom';
 import './style.css';
 
@@ -10,7 +11,6 @@ export const SignUp = () => {
 
   return (
     <>
-      <Header />
       <div className="sign-in container">
         <h1 className="h1log">Přihlášení</h1>
         <form>
@@ -22,15 +22,10 @@ export const SignUp = () => {
             Heslo
             <input type="password" placeholder="Minimálně 8 znaků" />
           </label>
-          <Link to="/" className="btn primary">
-            Přihlásit se
-          </Link>
+
+          <Button text="Přihlásit se" />
+          <Button type="secondary" text="Registrovat se" />
         </form>
-        <div className="btn--registration">
-          <Link to="/registrace" className="btn secondary">
-            Registrovat se
-          </Link>
-        </div>
       </div>
     </>
   );

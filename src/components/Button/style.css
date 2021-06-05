@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 15px;
+  border-radius: 5px;
+  height: 56px;
+}
+
+.btn--primary {
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
+}
+
+.btn--secondary {
+  border-radius: 5px;
+  height: 56px;
+  color: var(--contrast-color);
+  background-color: transparent;
+  border: 2px solid var(--contrast-color);
+}

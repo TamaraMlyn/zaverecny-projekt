@@ -7,10 +7,12 @@ import { SignUp } from './components/SignUp';
 import { Request } from './components/Request';
 import { Volunteer } from './components/Volunteer';
 import { Search } from './components/Search';
+import { Header } from './components/Header';
 import './style.css';
 
 const App = () => (
   <Router>
+    <Header />
     <Switch>
       <Route path="/pozadavek">
         <Request />
