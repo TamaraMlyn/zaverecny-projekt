@@ -29,10 +29,17 @@ export const LandingPage = () => {
             </p>
           </div>
           <div className="intro__buttons">
-            <Button to="/pozadavek" text="Potřebuji asistenci" description="Jsem na vozíku a hledám pomoc"/>
+            <Button
+              to="/potrebuji-asistenci"
+              text="Potřebuji asistenci"
+              description="Jsem na vozíku a hledám pomoc"
+            />
 
-            <Button to="/dobrovolnik" text="Chci být dobrovolník" description="Chci věnovat svůj čas a pomoc"/>
-      
+            <Button
+              to="/dobrovolnik"
+              text="Chci být dobrovolník"
+              description="Chci věnovat svůj čas a pomoc"
+            />
           </div>
         </div>
       </div>

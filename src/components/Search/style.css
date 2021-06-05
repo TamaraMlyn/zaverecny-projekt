@@ -124,7 +124,7 @@
       font-size: 32px;
   }
 
-  .btn {
+  /* .btn {
     display: inline-block;
     width: 100%;
     font-family: 'Roboto', sans-serif;
@@ -152,7 +152,7 @@
     color: var(--contrast-color);
     background-color: transparent;
     border: 2px solid var(--contrast-color);
-  }
+  } */
   
   @media (min-width: 768px) {
     input {

@@ -9,18 +9,22 @@ import { Volunteer } from './components/Volunteer';
 import { Search } from './components/Search';
 import { Header } from './components/Header';
 import './style.css';
+import { Wheelchair } from './components/Wheelchair';
 
 const App = () => (
   <Router>
     <Header />
     <Switch>
+      <Route path="/potrebuji-asistenci">
+        <Wheelchair />
+      </Route>
       <Route path="/pozadavek">
         <Request />
       </Route>
       <Route path="/dobrovolnik">
         <Volunteer />
       </Route>
-      <Route path="/registrace-dobrovolnik">
+      <Route path="/registrace/dobrovolnik">
         <RegistrationVolunteer />
       </Route>
       <Route path="/prihlaseni">

@@ -39,9 +39,8 @@ export const Volunteer = () => {
             </div>
           </div>
         </div>
-        <Link to="/registrace">
-          <div className="btn btn__volunteer">Chci se zaregistrovat</div>
-        </Link>
+
+        <Button to="/registrace/pozadavek" text="Chci se registrovat" />
       </div>
     </>
   );

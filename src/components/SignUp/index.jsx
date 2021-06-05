@@ -24,7 +24,11 @@ export const SignUp = () => {
           </label>
 
           <Button text="Přihlásit se" />
-          <Button type="secondary" text="Registrovat se" />
+          <Button
+            to="/registrace/dobrovolnik"
+            type="secondary"
+            text="Registrovat se"
+          />
         </form>
       </div>
     </>
