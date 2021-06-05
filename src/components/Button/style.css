@@ -27,6 +27,10 @@
   margin-top: 10px;
 }
 
+.btn--hidden {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .btn {
     margin-top: 40px;

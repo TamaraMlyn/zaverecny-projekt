@@ -57,7 +57,7 @@ export const RequestList = () => {
       </div>
 
       {requestList.map((item) => (
-        <ListItem item={item}/>
+        <ListItem item={item} key={item.name}/>
       ))}
     </div>
   );
