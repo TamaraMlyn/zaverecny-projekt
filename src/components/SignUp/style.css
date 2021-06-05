@@ -1,17 +1,4 @@
-:root {
-  --primary-color: black;
-  --primary-light: white;
-  --light-blue: #e7edfd;
-  --blue: #8eb2f9;
-  --dark-blue: #151d75;
-  --contrast-color: #fe7062;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.registration__container {
+.sign-in {
   width: 100%;
   max-width: 576px;
   margin: 0 auto;
@@ -25,20 +12,14 @@
   text-align: center;
 }
 
-.registration__intro {
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  font-size: 20px;
-}
-
 form {
   width: 90%;
   margin: 40px auto;
 }
 
 .label {
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  display: block;
 }
 
 input {
@@ -53,22 +34,7 @@ input {
   font-size: 16px;
 }
 
-.label__checkbox {
-  font-size: 15px;
-}
-
-.checkbox {
-    width: 15px;
-    height: 15px;
-    margin-bottom: 4px;
-}
-
-.registration__account-created {
-    font-size: 20px;
-  text-align: center;
-}
-
-/* .btn {
+.btn {
   display: inline-block;
   width: 100%;
   font-family: 'Roboto', sans-serif;
@@ -78,25 +44,25 @@ input {
   margin-top: 15px;
   border-radius: 5px;
   height: 56px;
-} */
+}
 
 .btn.primary {
   background-color: var(--dark-blue);
   color: var(--light-blue);
 }
 
-/* .btn--registration {
+.btn--registration {
   width: 90%;
   margin: 0 auto;
-} */
+}
 
-/* .btn.secondary {
+.btn.secondary {
   border-radius: 5px;
   height: 56px;
   color: var(--contrast-color);
   background-color: transparent;
   border: 2px solid var(--contrast-color);
-} */
+}
 
 @media (min-width: 768px) {
   input {

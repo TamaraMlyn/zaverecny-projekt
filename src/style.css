@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: black;
+  --primary-light: white;
+  --light-blue: #e7edfd;
+  --blue: #8eb2f9;
+  --dark-blue: #151d75;
+  --contrast-color: #fe7062;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

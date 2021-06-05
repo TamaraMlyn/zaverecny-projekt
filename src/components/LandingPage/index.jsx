@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../Header';
+
 import wheelchair from './img/wheelchair.jpeg';
 import magnifier from './img/magnifier.svg';
 import clock from './img/clock.svg';
@@ -28,7 +29,7 @@ export const LandingPage = () => {
             </p>
           </div>
           <div className="intro__buttons">
-            <Link to="/pozadavek">
+            <Link to="/prihlaseni">
               <div className="btn">
                 <div className="btn__text" href="">
                   Potřebuji asistenci
@@ -83,7 +84,7 @@ export const LandingPage = () => {
         </div>
       </div>
 
-      <div className="about container">
+      <div id="o-projektu" className="about container">
         <div className="about__description">
           <h2 className="container__header">O projektu</h2>
           <p className="about__text">
