@@ -19,23 +19,64 @@
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    justify-content: space-around;
   }
   
 
   .filter__window {
     width: 100%;
-    max-width: 800px;
+    max-width: 400px;
     padding: 24px 0;
     background-color: var(--light-blue);
+    margin-top: 20px;
+    margin: 0 auto;
   }
 
   .filter__request {
-    border: solid var(--dark-blue);
     display: flex;
+    flex-direction: column;
+    border: solid var(--dark-blue);
     width: 100%;
-    padding: 24px 24px;
+    padding: 15px 15px;
     margin: 14px 0;
+    justify-content: space-between;
+    font-size: 18px;
+
+  }
+
+  .filter__row {
+      display: flex;
+      flex-direction: row;
+      padding: 0 30px;
+  }
+
+  .filter__row--second {
+      font-weight: 800;
+  }
+  
+
+  .filter__search {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 20px;
+    font-size: 20px;
+    color: var(--contrast-color);
+    font-weight: 800;
+  }
+
+  .user__icon {
+  width: 60px;
+  height: 60px;
+  }
+
+  .filter__name {
+    padding: 20px 10px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .filter__row--first,
+  .filter__row--second {
+      padding: 10px;
+      min-width: 80px;  
   }
 
 
@@ -55,6 +96,25 @@
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
   }
+
+  .specific.label {
+      display: flex;
+      flex-direction: row;
+      padding:25px 0;
+      justify-content:space-between;
+      align-items: center;
+  }
+
+ 
+  .label__checkbox {
+    font-size: 15px;
+  }
+
+  .checkbox {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 4px;
+  }
   
   input {
     font-family: 'Roboto', sans-serif;
@@ -69,6 +129,10 @@
     font-size: 16px;
   }
   
+  .icons {
+      font-size: 30px;
+  }
+
   .btn {
     display: inline-block;
     width: 100%;
@@ -115,12 +179,26 @@
 }
 
 .filter__requests {
-    width: 600px;
+    width: 100%;
+    margin: 0 60px;
+    /* justify-content: space-between; */
 }
 
 .filter__request {
     flex-direction: row;
+    align-items: center;
 }
+
+.filter__row {
+    flex-direction: column;
+}
+
+
+.filter__row--first,
+  .filter__row--second {
+      min-width: 140px;  
+  }
+
 
 
   }
