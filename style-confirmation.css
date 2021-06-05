@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-color: black;
+    --primary-light: white;
+    --light-blue: #e7edfd;
+    --blue: #8eb2f9;
+    --dark-blue: #151d75;
+    --contrast-color: #fe7062;
+  }
+
+  .confirmation__container {
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-blue);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+
+  .confirmation__next {
+      pad
+      /* margin: 80px; */
+  }
+
+  .confirmation__text {
+    padding: 50px;
+}
+
