@@ -40,7 +40,7 @@ export const Wheelchair = () => {
             </div>
           </div>
         </div>
-        <Button to="/registrace/dobrovolnik" text="Chci se registrovat" />
+        <Button to="/registrace/vozickar" text="Chci se registrovat" />
       </div>
     </>
   );

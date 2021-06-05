@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { LandingPage } from './components/LandingPage';
 import { RegistrationVolunteer } from './components/RegistrationVolunteer';
+import { RegistrationWheelchair } from './components/RegistrationWheelchair';
 import { SignUp } from './components/SignUp';
 import { Request } from './components/Request';
 import { Volunteer } from './components/Volunteer';
@@ -26,6 +27,9 @@ const App = () => (
       </Route>
       <Route path="/registrace/dobrovolnik">
         <RegistrationVolunteer />
+      </Route>
+      <Route path="/registrace/vozickar">
+        <RegistrationWheelchair />
       </Route>
       <Route path="/prihlaseni">
         <SignUp />

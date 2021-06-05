@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { Header } from '../Header';
-import { Link } from 'react-router-dom';
+import { Button } from '../Button';
 import './style.css';
 
 export const Volunteer = () => {
@@ -40,7 +39,7 @@ export const Volunteer = () => {
           </div>
         </div>
 
-        <Button to="/registrace/pozadavek" text="Chci se registrovat" />
+        <Button to="/registrace/dobrovolnik" text="Chci se registrovat" />
       </div>
     </>
   );
