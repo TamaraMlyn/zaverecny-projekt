@@ -55,35 +55,6 @@ input {
   text-align: center;
 }
 
-/* .btn {
-  display: inline-block;
-  width: 100%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  text-align: center;
-  border: none;
-  margin-top: 15px;
-  border-radius: 5px;
-  height: 56px;
-} */
-
-.btn.primary {
-  background-color: var(--dark-blue);
-  color: var(--light-blue);
-}
-
-/* .btn--registration {
-  width: 90%;
-  margin: 0 auto;
-} */
-
-/* .btn.secondary {
-  border-radius: 5px;
-  height: 56px;
-  color: var(--contrast-color);
-  background-color: transparent;
-  border: 2px solid var(--contrast-color);
-} */
 
 @media (min-width: 768px) {
   input {

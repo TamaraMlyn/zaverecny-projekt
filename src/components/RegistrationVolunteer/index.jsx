@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Header } from '../Header';
+import { Button } from '../Button';
 import './style.css';
 
 export const RegistrationVolunteer = () => {
@@ -59,7 +59,7 @@ export const RegistrationVolunteer = () => {
             Souhlasím se zpracováním údajů
           </label>
           <div type="submit" className="btn primary">
-          <Link to="/">Registrovat</Link>
+          <Button text="Registrovat se"/>
           </div>
         </form>
         <div className="registration__account-created">
