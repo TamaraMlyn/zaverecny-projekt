@@ -1,10 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Header } from '../Header';
-
+import { Button } from '../Button';
 import { Link } from 'react-router-dom';
 import './style.css';
 
 export const Request = () => {
+
+  const [from, setFrom] = useState('');
+  const [to, setTo] = useState('');
+  const [date, setDate] = useState('');
+  const [timeFrom, setTimeFrom] = useState('');
+  const [timeTo, setTimeTo] = useState('');
+  const [purpose, setPurpose] = useState('');
+
+  
+
   useEffect(() => {
     document.title = 'Potřebuji asistenci';
   }, []);
@@ -19,44 +29,61 @@ export const Request = () => {
           </p>
         </div>
         <form>
-          <label className="label">
+          <label htmlFor="from" className="label">
             Místo, odkud potřebujete:
-            <input type="text" placeholder="Husinecká" />
           </label>
-          <label className="label">
+            <input id="from" type="text" placeholder="Husinecká" />
+          <label htmlFor="to" className="label"> 
             Místo, kam potřebujete:
-            <input type="text" placeholder="Jindřišská" />
           </label>
-          <label className="label">
+            <input id="to" type="text" placeholder="Jindřišská" />
+          <label htmlFor="date"  className="label">
             Datum:
-            <input type="date" />
           </label>
-          <label className="label">
+            <input id="date" type="date" />
+          <label htmlFor="timeFrom" className="label">
             Čas od:
-            <input type="time" />
           </label>
-          <label className="label">
+            <input id="timeFrom" type="time" />
+          <label htmlFor="timeTo" className="label">
             Čas do:
-            <input type="time" />
           </label>
+            <input id="timeTo" type="time" />
+          <label htmlFor="purpose" className="label">
+            Účel asistence:
+          </label>
+            <input list="choices" id="purpose" type="text" />
+          <datalist id="choices">
+           <option value="k lékaři"/>
+           <option value="na nákup"/>
+           <option value="na úřad"/>
+           <option value="na společenskou událost"/>
+           <option value="procházka"/>
+          </datalist>
+            
+  
+          
 
           <div className="request__details">
             <h2 className="container__header">Požadavky na asistenta</h2>
-            <label className="label label--checkbox">
+            <label htmlFor="experience" className="label label--checkbox">
               Dobrovolník musí mít zkušenosti s asistencí
-              <input className="input--checkbox" type="checkbox" />
+              <input id="experience" className="input--checkbox" type="checkbox" />
             </label>
-            <label className="label label--checkbox">
+            <label htmlFor="strength"  className="label label--checkbox">
               Dobrovolník musí být fyzicky zdatný
-              <input className="input--checkbox" type="checkbox" />
+              <input id="strength" className="input--checkbox" type="checkbox" />
             </label>
-            <label className="label">
+            <label htmlFor="notes"  className="label">
               Vaše poznámky (dopište, co je ještě pro Vás důležité):
-              <input type="text" />
+              <input id="notes" type="text" />
             </label>
           </div>
 
-          <div className="btn btn--form">Zadat požadavek</div>
+          <Button
+              // to=""
+              text="Zadat požadavek"
+            />
         </form>
       </div>
     </>

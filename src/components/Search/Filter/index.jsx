@@ -46,7 +46,7 @@ const [strength, setStrength] = useState(false);
             </div>
   
             <Button
-              // to="/dobrovolnik"
+              // to=""
               text="Hledat"
               type="secondary"
             />
