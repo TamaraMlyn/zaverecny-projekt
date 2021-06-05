@@ -6,6 +6,7 @@ import { RegistrationVolunteer } from './components/RegistrationVolunteer';
 import { SignUp } from './components/SignUp';
 import { Request } from './components/Request';
 import { Volunteer } from './components/Volunteer';
+import { Search } from './components/Search';
 import './style.css';
 
 const App = () => (
@@ -22,6 +23,9 @@ const App = () => (
       </Route>
       <Route path="/prihlaseni">
         <SignUp />
+      </Route>
+      <Route path="/hledani">
+        <Search />
       </Route>
       <Route path="/">
         <LandingPage />
