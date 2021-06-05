@@ -50,8 +50,7 @@ export const Filter = () => {
           onChange={(e) => setTimeFrom(e.target.value)}
           value={timeFrom}
           id="time"
-          type="text"
-          placeholder="13:30"
+          type="time"
         />
         <label htmlFor="time" className="label">
           Do:
@@ -60,8 +59,7 @@ export const Filter = () => {
           onChange={(e) => setTimeTill(e.target.value)}
           value={timeTill}
           id="time"
-          type="text"
-          placeholder="15:30"
+          type="time"
         />
         <label htmlFor="location" className="label">
           Lokalita:
