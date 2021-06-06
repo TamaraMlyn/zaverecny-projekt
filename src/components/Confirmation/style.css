@@ -11,11 +11,14 @@
   line-height: 1.8rem;
 }
 
-
-.confirmation__next {
-    /* margin: 80px; */
+.header.header--main {
+  line-height: 2.4rem;
 }
 
 .confirmation__text {
-  padding: 50px;
+  margin: 20px;
+}
+
+.confirmation__block {
+  margin: 20px;
 }

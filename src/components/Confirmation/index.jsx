@@ -1,10 +1,10 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { useDoc } from 'use-pouchdb';
-import { Button } from '../Button';
-import dayjs from 'dayjs';
-import 'dayjs/locale/cs';
-import './style.css';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { useDoc } from "use-pouchdb";
+import { Button } from "../Button";
+import dayjs from "dayjs";
+import "dayjs/locale/cs";
+import "./style.css";
 
 export const Confirmation = () => {
   const { id } = useParams();
@@ -21,15 +21,17 @@ export const Confirmation = () => {
       </h1>
       <div className="confirmation__text">
         Ještě předtím, než začněte pomáhat, zaregistujte se!
-        <div className="confirmation__date">
-          Datum: {dayjs(doc.dateTimeFrom).format('D.M.')}
-        </div>
-        <div className="confirmation__time">
-          Čas: {dayjs(doc.dateTimeFrom).format('HH:mm')}–
-          {dayjs(doc.dateTimeTo).format('HH:mm')}
-        </div>
-        <div className="confirmation__location">
-          Místo setkání: {doc.streetFrom}
+        <div className="confirmation__block">
+          <div className="confirmation__date">
+            Datum: {dayjs(doc.dateTimeFrom).format("D.M.")}
+          </div>
+          <div className="confirmation__time">
+            Čas: {dayjs(doc.dateTimeFrom).format("HH:mm")}–
+            {dayjs(doc.dateTimeTo).format("HH:mm")}
+          </div>
+          <div className="confirmation__location">
+            Místo setkání: {doc.streetFrom}
+          </div>
         </div>
       </div>
       <div className="confirmation__next">
