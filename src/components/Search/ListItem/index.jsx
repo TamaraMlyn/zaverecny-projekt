@@ -28,8 +28,9 @@ export const ListItem = ({ item }) => {
       <div className="filter__row">
         <div className="specific filter__row--first"> Požadavky:</div>
         <div className="filter__row--second">
-         {item.experience &&  <i className="icons las la-dumbbell"></i>}
-         {item.strength &&  <i className="icons las la-graduation-cap"></i>}
+          {!item.experience && !item.strength && <div>Žádné</div>}
+         {item.experience &&  <i className="icons las la-graduation-cap"></i>}
+         {item.strength &&  <i className="icons las la-dumbbell"></i>}
         </div>
       </div>
       <Button
