@@ -1,52 +1,56 @@
-import React, { useState } from 'react';
-import { Button } from '../../Button';
-import { KeyboardTimePicker, KeyboardDatePicker } from '@material-ui/pickers';
-
+import React, { useState } from "react";
+import { Button } from "../../Button";
+import { KeyboardTimePicker, KeyboardDatePicker } from "@material-ui/pickers";
 import {
   TextField,
   Checkbox,
   FormControlLabel,
   FormGroup,
-} from '@material-ui/core';
-import { Autocomplete } from '@material-ui/lab';
+} from "@material-ui/core";
+import { Autocomplete } from "@material-ui/lab";
+import "./style.css";
+import dayjs from '../../../lib/dayjs';
 
-import './style.css';
-
-export const Filter = () => {
+export const Filter = ({ onChange }) => {
   const [date, setDate] = useState(null);
   const [timeFrom, setTimeFrom] = useState(null);
   const [timeTo, setTimeTo] = useState(null);
-  const [place, setPlace] = useState('');
+  const [place, setPlace] = useState(null);
   const [experience, setExperience] = useState(false);
   const [strength, setStrength] = useState(false);
 
+  const createDateTime = (date, time) => {
+    const timeData = dayjs(time);
+    return dayjs(date).hour(timeData.hour()).minute(timeData.minute());
+  };
+
   const handleSubmit = (e) => {
-    console.log('funguju');
     e.preventDefault();
 
     const search = {
-      date: date,
-      timefrom: timeFrom,
-      timeTo: timeTo,
-      place: place,
+      dateTimeFrom: createDateTime(date, timeFrom).toISOString(),
+      dateTimeTo: createDateTime(date, timeTo).toISOString(),
+      streetFrom: place,
       experience: experience,
       strength: strength,
+      cityFrom: "Praha",
+      cityTo: "Praha",
     };
 
-    console.log(search);
+    onChange(search);
   };
 
   const districts = [
-    { name: 'Praha 1' },
-    { name: 'Praha 2' },
-    { name: 'Praha 3' },
-    { name: 'Praha 4' },
-    { name: 'Praha 5' },
-    { name: 'Praha 6' },
-    { name: 'Praha 7' },
-    { name: 'Praha 8' },
-    { name: 'Praha 9' },
-    { name: 'Praha 10' },
+    { name: "Praha 1" },
+    { name: "Praha 2" },
+    { name: "Praha 3" },
+    { name: "Praha 4" },
+    { name: "Praha 5" },
+    { name: "Praha 6" },
+    { name: "Praha 7" },
+    { name: "Praha 8" },
+    { name: "Praha 9" },
+    { name: "Praha 10" },
   ];
 
   return (
@@ -64,9 +68,9 @@ export const Filter = () => {
               setDate(date);
             }}
             KeyboardButtonProps={{
-              'aria-label': 'změňte datum',
+              "aria-label": "změňte datum",
             }}
-            classes={{ root: 'text-field' }}
+            classes={{ root: "text-field" }}
           />
 
           <FormGroup row={true}>
@@ -80,14 +84,14 @@ export const Filter = () => {
                 setTimeFrom(time);
               }}
               KeyboardButtonProps={{
-                'aria-label': 'výběr času - začátek',
+                "aria-label": "výběr času - začátek",
               }}
-              classes={{ root: 'text-field' }}
+              classes={{ root: "text-field" }}
             />
 
             <KeyboardTimePicker
               id="time-picker"
-              label="Čas od:"
+              label="Čas do:"
               format="HH:mm"
               ampm={false}
               value={timeTo}
@@ -95,21 +99,25 @@ export const Filter = () => {
                 setTimeTo(time);
               }}
               KeyboardButtonProps={{
-                'aria-label': 'výběr času - konec',
+                "aria-label": "výběr času - konec",
               }}
-              classes={{ root: 'text-field' }}
+              classes={{ root: "text-field" }}
             />
           </FormGroup>
 
           <Autocomplete
             id="combo-box-demo"
-            options={districts}
-            getOptionLabel={(option) => option.name}
+            options={districts.map(option => option.name)}
+            getOptionLabel={(option) => districts.find(item => item.name === option).name}
             style={{ width: 300 }}
+            value={place}
+            onChange={(event, value, reason ) => {
+              setPlace(value);
+            }}
             renderInput={(params) => (
               <TextField {...params} label="Lokalita:" variant="outlined" />
             )}
-            classes={{ root: 'text-field' }}
+            classes={{ root: "text-field" }}
           />
 
           <FormControlLabel
@@ -123,7 +131,7 @@ export const Filter = () => {
               />
             }
             label="Dobrovolník musí mít zkušenosti s asistencí"
-            classes={{ root: 'text-field' }}
+            classes={{ root: "text-field" }}
           />
 
           <FormControlLabel
@@ -137,7 +145,7 @@ export const Filter = () => {
               />
             }
             label="Dobrovolník musí být fyzicky zdatný"
-            classes={{ root: 'text-field' }}
+            classes={{ root: "text-field" }}
           />
         </FormGroup>
 

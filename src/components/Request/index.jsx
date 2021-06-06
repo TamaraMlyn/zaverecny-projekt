@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '../Button';
 import dayjs from '../../lib/dayjs';
-
 import {
   KeyboardTimePicker,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
-
 import {
   TextField,
   Checkbox,
@@ -14,10 +12,8 @@ import {
   FormGroup,
 } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
-
 import './style.css';
 import { usePouch } from 'use-pouchdb';
-
 
 export const Request = () => {
   const [from, setFrom] = useState(null);
@@ -31,11 +27,11 @@ export const Request = () => {
   const [notes, setNotes] = useState('');
 
   const db = usePouch()
-
+   
   useEffect(() => {
     document.title = 'Potřebuji asistenci';
   }, []);
-
+  
   const createDateTime = (date, time) => {
   const timeData = dayjs(time)
   return dayjs(date).hour(timeData.hour()).minute(timeData.minute())
@@ -51,9 +47,9 @@ export const Request = () => {
     cityFrom: 'Praha',
     streetFrom: from.name,
     cityTo: 'Praha',
-    streetFrom: to.name,
+    streetTo: to.name,
     dateTimeFrom: createDateTime(date, timeFrom).toISOString(),
-    dateTimeTill: createDateTime(date, timeTo).toISOString(),
+    dateTimeTo: createDateTime(date, timeTo).toISOString(),
     purpose: purpose.name,
     experience: false,
     strength: false,
@@ -63,8 +59,6 @@ export const Request = () => {
     db.post(request)
     .then((response)=> console.log(response))
     .catch((err)=> console.error(err))
-
-  
   }
 
 

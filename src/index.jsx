@@ -12,12 +12,14 @@ import { Header } from './components/Header';
 import './style.css';
 import { Wheelchair } from './components/Wheelchair';
 import PouchDB from 'pouchdb-browser';
+import Find from 'pouchdb-find'
 import { Provider } from 'use-pouchdb';
 import 'dayjs';
 import DayJsUtils from '@date-io/dayjs';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 
+PouchDB.plugin(Find)
 const db = new PouchDB('local')
 
 const App = () => (

@@ -21,7 +21,7 @@ export const ListItem = ({ item }) => {
           {dayjs(item.dateTimeFrom).format('D. M.')}
         </div>
         <div className="filter__row--second">
-          {dayjs(item.dateTimeFrom).format('H:mm')}–{dayjs(item.dateTimeTill).format('H:mm')}
+          {dayjs(item.dateTimeFrom).format('H:mm')}–{dayjs(item.dateTimeTo).format('H:mm')}
         </div>
       </div>
 
