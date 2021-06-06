@@ -16,7 +16,6 @@ export const Filter = () => {
     console.log('funguju');
     e.preventDefault();
 
-
     const search = {
       date: date,
       timefrom: timeFrom,

@@ -11,37 +11,42 @@ import { Search } from './components/Search';
 import { Header } from './components/Header';
 import './style.css';
 import { Wheelchair } from './components/Wheelchair';
+import 'dayjs';
+import DayJsUtils from '@date-io/dayjs';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 const App = () => (
-  <Router>
-    <Header />
-    <Switch>
-      <Route path="/potrebuji-asistenci">
-        <Wheelchair />
-      </Route>
-      <Route path="/pozadavek">
-        <Request />
-      </Route>
-      <Route path="/dobrovolnik">
-        <Volunteer />
-      </Route>
-      <Route path="/registrace/dobrovolnik">
-        <RegistrationVolunteer />
-      </Route>
-      <Route path="/registrace/vozickar">
-        <RegistrationWheelchair />
-      </Route>
-      <Route path="/prihlaseni">
-        <SignUp />
-      </Route>
-      <Route path="/hledani">
-        <Search />
-      </Route>
-      <Route path="/">
-        <LandingPage />
-      </Route>
-    </Switch>
-  </Router>
+  <MuiPickersUtilsProvider utils={DayJsUtils}>
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/potrebuji-asistenci">
+          <Wheelchair />
+        </Route>
+        <Route path="/pozadavek">
+          <Request />
+        </Route>
+        <Route path="/dobrovolnik">
+          <Volunteer />
+        </Route>
+        <Route path="/registrace/dobrovolnik">
+          <RegistrationVolunteer />
+        </Route>
+        <Route path="/registrace/vozickar">
+          <RegistrationWheelchair />
+        </Route>
+        <Route path="/prihlaseni">
+          <SignUp />
+        </Route>
+        <Route path="/hledani">
+          <Search />
+        </Route>
+        <Route path="/">
+          <LandingPage />
+        </Route>
+      </Switch>
+    </Router>
+  </MuiPickersUtilsProvider>
 );
 
 render(<App />, document.querySelector('#app'));
