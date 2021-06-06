@@ -11,8 +11,13 @@ import { Search } from './components/Search';
 import { Header } from './components/Header';
 import './style.css';
 import { Wheelchair } from './components/Wheelchair';
+import PouchDB from 'pouchdb-browser';
+import { Provider } from 'use-pouchdb';
+
+const db = new PouchDB('local')
 
 const App = () => (
+  <Provider pouchdb={db}>
   <Router>
     <Header />
     <Switch>
@@ -42,6 +47,7 @@ const App = () => (
       </Route>
     </Switch>
   </Router>
+  </Provider>
 );
 
 render(<App />, document.querySelector('#app'));

@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../Button';
 import './style.css';
+import { useCallback } from 'react';
+import { usePouch } from 'use-pouchdb';
+
 
 export const Registration = ({ type, text }) => {
   const [name, setName] = useState('');
@@ -12,13 +15,32 @@ export const Registration = ({ type, text }) => {
   const [passwordCheck, setPasswordCheck] = useState('');
   const [conditions, setConditions] = useState(false);
   const [personalData, setPersonalData] = useState(false);
+  const db = usePouch()
+
+
+  const handleSubmit = (e) => {
+    console.log('funguju');
+    e.preventDefault();
+
+    const registration = {
+      // type: 'todo',
+      // text: input,
+      // done: false,
+    }
+
+    db.post(registration) 
+
+  
+  }
+
+  
 
   return (
     <>
       <div className="registration__container">
         <h1 className="h1log">Zaregistrujte se</h1>
         <div className="registration__intro">{text}</div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label className="label">
             Jméno:
             <input
@@ -94,7 +116,8 @@ export const Registration = ({ type, text }) => {
             Souhlasím se zpracováním údajů
           </label>
           <div type="submit" className="btn primary">
-            <Button text="Registrovat se" />
+            <Button text="Registrovat se" 
+            formType="submit"/>
           </div>
         </form>
         <div className="registration__account-created">

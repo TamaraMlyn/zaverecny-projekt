@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ListItem } from '../ListItem';
 import './style.css';
+import { useAllDocs } from 'use-pouchdb'
+
+
 
 const wheelchairUsers = [
   {
@@ -46,7 +49,13 @@ const wheelchairUsers = [
 ];
 
 export const RequestList = () => {
-  const [requestList, setRequestList] = useState(wheelchairUsers);
+  // const [requestList, setRequestList] = useState(wheelchairUsers);
+
+
+  const db = useAllDocs({
+    include_docs: true,
+  })
+
 
   return (
     <div className="filter__requests">
@@ -56,8 +65,8 @@ export const RequestList = () => {
         dle největší urgence
       </div>
 
-      {requestList.map((item) => (
-        <ListItem item={item} key={item.name}/>
+      {db.rows.map((item) => (
+        <ListItem item={item.doc} key={item.id}/>
       ))}
     </div>
   );

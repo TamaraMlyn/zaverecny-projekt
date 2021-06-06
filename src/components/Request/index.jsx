@@ -3,6 +3,8 @@ import { Header } from '../Header';
 import { Button } from '../Button';
 import { Link } from 'react-router-dom';
 import './style.css';
+import { usePouch } from 'use-pouchdb';
+
 
 export const Request = () => {
 
@@ -13,11 +15,39 @@ export const Request = () => {
   const [timeTo, setTimeTo] = useState('');
   const [purpose, setPurpose] = useState('');
 
-  
+  const db = usePouch()
 
   useEffect(() => {
     document.title = 'Potřebuji asistenci';
   }, []);
+
+  const handleSubmit = (e) => {
+    console.log('funguju');
+    e.preventDefault();
+
+    const request = {
+    name: 'Anna',
+    surname: 'S.',
+    cityFrom: 'Praha',
+    streetFrom: from,
+    cityTo: 'Praha',
+    streetFrom: to,
+    dateTimeFrom: `${date}T${timeFrom}:00`,
+    dateTimeTill: `${date}T${timeTo}:00`,
+    purpose: purpose,
+    experience: false,
+    strength: false,
+    notes: '',
+    }
+
+    db.post(request)
+    .then((response)=> console.log(response))
+    .catch((err)=> console.error(err))
+
+  
+  }
+
+
 
   return (
     <>
@@ -28,7 +58,7 @@ export const Request = () => {
             Najděte si vhodného asistenta na základě svých přesných požadavků.
           </p>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="from" className="label">
             Místo, odkud potřebujete:
           </label>
@@ -52,7 +82,8 @@ export const Request = () => {
           <label htmlFor="purpose" className="label">
             Účel asistence:
           </label>
-            <input list="choices" id="purpose" type="text" />
+            <input 
+            list="choices" id="purpose" type="text" />
           <datalist id="choices">
            <option value="k lékaři"/>
            <option value="na nákup"/>
@@ -83,6 +114,7 @@ export const Request = () => {
           <Button
               // to=""
               text="Zadat požadavek"
+              formType="submit"
             />
         </form>
       </div>
