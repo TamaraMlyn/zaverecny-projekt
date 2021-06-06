@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from '../../Button';
+import { KeyboardTimePicker, KeyboardDatePicker } from '@material-ui/pickers';
+
+import {
+  TextField,
+  Checkbox,
+  FormControlLabel,
+  FormGroup,
+} from '@material-ui/core';
+import { Autocomplete } from '@material-ui/lab';
 
 import './style.css';
 
 export const Filter = () => {
-  const [date, setDate] = useState('');
-  const [timeFrom, setTimeFrom] = useState('');
-  const [timeTill, setTimeTill] = useState('');
+  const [date, setDate] = useState(null);
+  const [timeFrom, setTimeFrom] = useState(null);
+  const [timeTo, setTimeTo] = useState(null);
   const [place, setPlace] = useState('');
   const [experience, setExperience] = useState(false);
   const [strength, setStrength] = useState(false);
@@ -19,7 +27,7 @@ export const Filter = () => {
     const search = {
       date: date,
       timefrom: timeFrom,
-      timeTill: timeTill,
+      timeTo: timeTo,
       place: place,
       experience: experience,
       strength: strength,
@@ -28,81 +36,107 @@ export const Filter = () => {
     console.log(search);
   };
 
+  const districts = [
+    { name: 'Praha 1' },
+    { name: 'Praha 2' },
+    { name: 'Praha 3' },
+    { name: 'Praha 4' },
+    { name: 'Praha 5' },
+    { name: 'Praha 6' },
+    { name: 'Praha 7' },
+    { name: 'Praha 8' },
+    { name: 'Praha 9' },
+    { name: 'Praha 10' },
+  ];
+
   return (
     <div className="filter__window">
       <div className="filter__search">Chci vyhledat dle:</div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="date" className="label">
-          Datum:
-        </label>
-        <input
-          onChange={(e) => setDate(e.target.value)}
-          value={date}
-          id="date"
-          type="date"
-          placeholder=""
-        />
-        <label htmlFor="time" className="label">
-          Od:
-        </label>
-        <input
-          onChange={(e) => setTimeFrom(e.target.value)}
-          value={timeFrom}
-          id="time"
-          type="time"
-        />
-        <label htmlFor="time" className="label">
-          Do:
-        </label>
-        <input
-          onChange={(e) => setTimeTill(e.target.value)}
-          value={timeTill}
-          id="time"
-          type="time"
-        />
-        <label htmlFor="location" className="label">
-          Lokalita:
-        </label>
-        <input
-          onChange={(e) => setPlace(e.target.value)}
-          value={place}
-          id="location"
-          type="text"
-          placeholder="Jindřišská"
-        />
-        <div className="specific label">
-          <div className="requirements">
-            <input
-              onChange={(e) => setExperience((oldValue) => !oldValue)}
-              checked={experience}
-              className="checkbox"
-              id="experience"
-              type="checkbox"
-              name="zkušenosti"
-            />
-            <label htmlFor="experience" className="label">
-              Zkušenosti s asistencí
-            </label>
-          </div>
-          <i className="icons las la-hands-helping"></i>
-        </div>
+        <FormGroup>
+          <KeyboardDatePicker
+            id="date"
+            margin="normal"
+            id="date-picker-dialog"
+            label="Datum"
+            format="D.M.YYYY"
+            value={date}
+            onChange={(date) => {
+              setDate(date);
+            }}
+            KeyboardButtonProps={{
+              'aria-label': 'změňte datum',
+            }}
+          />
 
-        <div className="specific label">
-          <div className="requirements">
-            <input
-              onChange={() => setStrength((oldValue) => !oldValue)}
-              checked={strength}
-              className="checkbox"
-              id="strength"
-              type="checkbox"
-              name="zdatnost"
+          <FormGroup row={true}>
+            <KeyboardTimePicker
+              margin="normal"
+              id="time-picker"
+              label="Čas od:"
+              format="HH:mm"
+              ampm={false}
+              value={timeFrom}
+              onChange={(time) => {
+                setTimeFrom(time);
+              }}
+              KeyboardButtonProps={{
+                'aria-label': 'výběr času - začátek',
+              }}
             />
-            <label htmlFor="strength" className="label">
-              Fyzická zdatnost
-            </label>
-          </div>
-          <i className="icons dumbell las la-dumbbell"></i>
-        </div>
+
+            <KeyboardTimePicker
+              margin="normal"
+              id="time-picker"
+              label="Čas od:"
+              format="HH:mm"
+              ampm={false}
+              value={timeTo}
+              onChange={(time) => {
+                setTimeTo(time);
+              }}
+              KeyboardButtonProps={{
+                'aria-label': 'výběr času - konec',
+              }}
+            />
+          </FormGroup>
+
+          <Autocomplete
+            id="combo-box-demo"
+            options={districts}
+            getOptionLabel={(option) => option.name}
+            style={{ width: 300 }}
+            renderInput={(params) => (
+              <TextField {...params} label="Lokalita:" variant="outlined" />
+            )}
+          />
+
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={experience}
+                onChange={(e) => setExperience((oldValue) => !oldValue)}
+                color="primary"
+                icon={<i className="icons las la-hands-helping"></i>}
+                checkedIcon={<i className="icons las la-hands-helping"></i>}
+              />
+            }
+            label="Dobrovolník musí mít zkušenosti s asistencí"
+          />
+
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={strength}
+                onChange={(e) => setStrength((oldValue) => !oldValue)}
+                color="primary"
+                icon={<i className="icons dumbell las la-dumbbell"></i>}
+                checkedIcon={<i className="icons dumbell las la-dumbbell"></i>}
+              />
+            }
+            label="Dobrovolník musí být fyzicky zdatný"
+          />
+        </FormGroup>
 
         <Button text="Hledat" type="secondary" formType="submit" />
       </form>
