@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { LandingPage } from './components/LandingPage';
@@ -23,6 +23,10 @@ const db = new PouchDB('local');
 
 const App = () => {
   const [registrationState, setRegistrationState] = useState(null);
+
+  useEffect(() => {
+    return () => db.close();
+  }, []);
 
   return (
     <MuiPickersUtilsProvider utils={DayJsUtils}>
