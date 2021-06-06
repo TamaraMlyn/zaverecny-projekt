@@ -42,7 +42,7 @@ const App = () => {
               <Route path="/potrebuji-asistenci">
                 <Wheelchair />
               </Route>
-              <Route path="/pozadavek/potvrzeni">
+              <Route path="/pozadavek/potvrzeni/:id">
                 <Confirmation />
               </Route>
               <Route path="/pozadavek">

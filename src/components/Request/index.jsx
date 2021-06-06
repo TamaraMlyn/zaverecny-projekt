@@ -1,10 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Button } from '../Button';
 import dayjs from '../../lib/dayjs';
-import {
-  KeyboardTimePicker,
-  KeyboardDatePicker,
-} from '@material-ui/pickers';
+import { KeyboardTimePicker, KeyboardDatePicker } from '@material-ui/pickers';
 import {
   TextField,
   Checkbox,
@@ -32,7 +30,7 @@ export const Request = () => {
   useEffect(() => {
     document.title = 'Potřebuji asistenci';
   }, []);
-  
+
   const createDateTime = (date, time) => {
     const timeData = dayjs(time);
     return dayjs(date).hour(timeData.hour()).minute(timeData.minute());
@@ -40,6 +38,8 @@ export const Request = () => {
 
   const { registrationState, setRegistrationState } =
     useContext(RegistrationContext);
+
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     console.log('funguju');
@@ -51,7 +51,7 @@ export const Request = () => {
       cityFrom: 'Praha',
       streetFrom: from.name,
       cityTo: 'Praha',
-      streetFrom: to.name,
+      streetTo: to.name,
       dateTimeFrom: createDateTime(date, timeFrom).toISOString(),
       dateTimeTo: createDateTime(date, timeTo).toISOString(),
       purpose: purpose,
@@ -61,7 +61,10 @@ export const Request = () => {
     };
 
     db.post(request)
-      .then((response) => console.log(response))
+      .then((response) => {
+        console.log(response);
+        history.push(`/pozadavek/potvrzeni/${response.id}`);
+      })
       .catch((err) => console.error(err));
   };
 
@@ -229,11 +232,7 @@ export const Request = () => {
               />
             </div>
 
-            <Button
-              text="Zadat požadavek"
-              formType="submit"
-              to="/pozadavek/potvrzeni"
-            />
+            <Button text="Zadat požadavek" formType="submit" />
           </FormGroup>
         </form>
       </div>
