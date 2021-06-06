@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../Button';
-import './style.css';
-import { useCallback } from 'react';
-import { usePouch } from 'use-pouchdb';
 import {
   TextField,
   Checkbox,
   FormControlLabel,
   FormGroup,
 } from '@material-ui/core';
+import { RegistrationContext } from '../../lib/RegistrationContext';
+import './style.css';
 
-export const Registration = ({ type, text }) => {
+export const Registration = ({ role, text }) => {
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
   const [email, setEmail] = useState('');
@@ -20,19 +19,24 @@ export const Registration = ({ type, text }) => {
   const [passwordCheck, setPasswordCheck] = useState('');
   const [conditions, setConditions] = useState(false);
   const [personalData, setPersonalData] = useState(false);
-  const db = usePouch();
+
+  const { registrationState, setRegistrationState } =
+    useContext(RegistrationContext);
 
   const handleSubmit = (e) => {
     console.log('funguju');
     e.preventDefault();
-
-    const registration = {
-      // type: 'todo',
-      // text: input,
-      // done: false,
-    };
-
-    db.post(registration);
+    setRegistrationState({
+      name: name,
+      surname: surname,
+      email: email,
+      phone: phone,
+      password: password,
+      passwordCheck: passwordCheck,
+      conditions: conditions,
+      personalData: personalData,
+      role: role,
+    });
   };
 
   return (
@@ -120,15 +124,18 @@ export const Registration = ({ type, text }) => {
               classes={{ root: 'text-field' }}
             />
           </FormGroup>
-
-          <div type="submit" className="btn primary">
-            <Button text="Registrovat se" formType="submit" />
-          </div>
+          <Button
+            text="Registrovat se"
+            formType="submit"
+            to={role === 'wheelchair' ? '/pozadavek' : '/hledani'}
+          />
+          <div>Už máte účet?</div>
+          <Button
+            text="Přihlásit se"
+            type="secondary"
+            to="/prihlaseni"
+          />
         </form>
-        <div className="registration__account-created">
-          Už máte účet?
-          <Link to="/prihlaseni">Přihlásit se</Link>
-        </div>
       </div>
     </>
   );

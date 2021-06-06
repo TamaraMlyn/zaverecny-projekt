@@ -9,7 +9,7 @@ export const RegistrationWheelchair = () => {
 
   return (
     <Registration
-      type="wheelchair"
+      role="wheelchair"
       text=" Od asistence Vás už dělí jenom pár kroků!"
     />
   );

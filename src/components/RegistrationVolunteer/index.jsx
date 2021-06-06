@@ -9,7 +9,7 @@ export const RegistrationVolunteer = () => {
   
   return (
     <Registration
-      type="volunteer"
+      role="volunteer"
       text=" Od dobrovolnictví Vás už dělí jenom pár kroků!"
     />
   );

@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Button } from '../Button';
 import { TextField, FormGroup } from '@material-ui/core';
+import { RegistrationContext } from './../../lib/RegistrationContext';
+
 import './style.css';
 
 export const SignUp = () => {
@@ -10,6 +13,22 @@ export const SignUp = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const { registrationState, setRegistrationState } =
+    useContext(RegistrationContext);
+
+  const history = useHistory();
+
+  const handleOnClick = (e) => {
+    if (email.includes('seznam')) {
+      console.log('funguju');
+      history.push('/pozadavek');
+    } else {
+      history.push('/hledani');
+    }
+
+    setRegistrationState({ email: email });
+  };
 
   return (
     <>
@@ -37,12 +56,16 @@ export const SignUp = () => {
             />
           </FormGroup>
 
-          <Button text="Přihlásit se" />
           <Button
-            to="/registrace/dobrovolnik"
-            type="secondary"
-            text="Registrovat se"
+            onClick={handleOnClick}
+            text="Přihlásit se"
+            // to={
+            //   registrationState.role === 'wheelchair'
+            //     ? '/pozadavek'
+            //     : '/hledani'
+            // }
           />
+          <Button to="/" type="secondary" text="Registrovat se" />
         </form>
       </div>
     </>

@@ -8,6 +8,7 @@ export const Button = ({
   text,
   description,
   to,
+  onClick,
 }) => {
   const history = useHistory();
 
@@ -20,6 +21,9 @@ export const Button = ({
     }
     if (to) {
       history.push(to);
+    }
+    if (onClick) {
+      onClick(e);
     }
   };
 
