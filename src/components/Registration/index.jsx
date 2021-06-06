@@ -124,19 +124,18 @@ export const Registration = ({ role, text }) => {
               classes={{ root: 'text-field' }}
             />
           </FormGroup>
-
-          <div type="submit" className="btn primary">
-            <Button
-              text="Registrovat se"
-              formType="submit"
-              to={role === 'wheelchair' ? '/pozadavek' : '/hledani'}
-            />
-          </div>
+          <Button
+            text="Registrovat se"
+            formType="submit"
+            to={role === 'wheelchair' ? '/pozadavek' : '/hledani'}
+          />
+          <div>Už máte účet?</div>
+          <Button
+            text="Přihlásit se"
+            type="secondary"
+            to="/prihlaseni"
+          />
         </form>
-        <div className="registration__account-created">
-          Už máte účet?
-          <Link to="/prihlaseni">Přihlásit se</Link>
-        </div>
       </div>
     </>
   );
