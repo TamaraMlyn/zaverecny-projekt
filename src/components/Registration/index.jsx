@@ -68,8 +68,20 @@ export const Registration = ({ type, text }) => {
               type="tel"
               variant="outlined"
             />
-            <TextField label="Heslo" type="password" variant="outlined" />
-            <TextField label="Heslo znovu" type="password" variant="outlined" />
+            <TextField
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              label="Heslo"
+              type="password"
+              variant="outlined"
+            />
+            <TextField
+              onChange={(e) => setPasswordCheck(e.target.value)}
+              value={passwordCheck}
+              label="Heslo znovu"
+              type="password"
+              variant="outlined"
+            />
 
             <FormControlLabel
               control={
