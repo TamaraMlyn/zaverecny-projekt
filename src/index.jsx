@@ -13,10 +13,15 @@ import './style.css';
 import { Wheelchair } from './components/Wheelchair';
 import PouchDB from 'pouchdb-browser';
 import { Provider } from 'use-pouchdb';
+import 'dayjs';
+import DayJsUtils from '@date-io/dayjs';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+
 
 const db = new PouchDB('local')
 
 const App = () => (
+  <MuiPickersUtilsProvider utils={DayJsUtils}>
   <Provider pouchdb={db}>
   <Router>
     <Header />
@@ -48,6 +53,7 @@ const App = () => (
     </Switch>
   </Router>
   </Provider>
+  </MuiPickersUtilsProvider>
 );
 
 render(<App />, document.querySelector('#app'));
