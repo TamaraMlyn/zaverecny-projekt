@@ -4,7 +4,12 @@ import { Button } from '../Button';
 import './style.css';
 import { useCallback } from 'react';
 import { usePouch } from 'use-pouchdb';
-
+import {
+  TextField,
+  Checkbox,
+  FormControlLabel,
+  FormGroup,
+} from '@material-ui/core';
 
 export const Registration = ({ type, text }) => {
   const [name, setName] = useState('');
@@ -15,8 +20,7 @@ export const Registration = ({ type, text }) => {
   const [passwordCheck, setPasswordCheck] = useState('');
   const [conditions, setConditions] = useState(false);
   const [personalData, setPersonalData] = useState(false);
-  const db = usePouch()
-
+  const db = usePouch();
 
   const handleSubmit = (e) => {
     console.log('funguju');
@@ -26,14 +30,10 @@ export const Registration = ({ type, text }) => {
       // type: 'todo',
       // text: input,
       // done: false,
-    }
+    };
 
-    db.post(registration) 
-
-  
-  }
-
-  
+    db.post(registration);
+  };
 
   return (
     <>
@@ -41,83 +41,61 @@ export const Registration = ({ type, text }) => {
         <h1 className="h1log">Zaregistrujte se</h1>
         <div className="registration__intro">{text}</div>
         <form onSubmit={handleSubmit}>
-          <label className="label">
-            Jméno:
-            <input
+          <FormGroup>
+            <TextField
               onChange={(e) => setName(e.target.value)}
               value={name}
-              type="text"
-              placeholder="Julie"
+              label="Jméno"
+              variant="outlined"
             />
-          </label>
-          <label className="label">
-            Příjmení:
-            <input
+            <TextField
               onChange={(e) => setSurname(e.target.value)}
               value={surname}
-              type="text"
-              placeholder="Malá"
+              label="Příjmení"
+              variant="outlined"
             />
-          </label>
-          <label className="label">
-            Email:
-            <input
+            <TextField
               onChange={(e) => setEmail(e.target.value)}
               value={email}
+              label="E-mail"
               type="email"
-              placeholder="julie.mala@gmail.com"
+              variant="outlined"
             />
-          </label>
-          <label className="label">
-            Telefonní číslo:
-            <input
+            <TextField
               onChange={(e) => setPhone(e.target.value)}
               value={phone}
-              type="number"
-              placeholder="+420*********"
+              label="Telefonní číslo"
+              type="tel"
+              variant="outlined"
             />
-          </label>
-          <label className="label">
-            Heslo:
-            <input
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-              type="password"
-              placeholder="Minimálně 8 znaků"
+            <TextField label="Heslo" type="password" variant="outlined" />
+            <TextField label="Heslo znovu" type="password" variant="outlined" />
+
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={() => setConditions((oldValue) => !oldValue)}
+                  checked={conditions}
+                  color="primary"
+                />
+              }
+              label="Souhlasím s podmínkami"
             />
-          </label>
-          <label className="label">
-            Heslo znovu:
-            <input
-              onChange={(e) => setPasswordCheck(e.target.value)}
-              value={passwordCheck}
-              type="password"
-              placeholder="Minimálně 8 znaků"
+
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={() => setPersonalData((oldValue) => !oldValue)}
+                  checked={personalData}
+                  color="primary"
+                />
+              }
+              label="Souhlasím se zpracováním údajů"
             />
-          </label>
-          <label className="label label__checkbox">
-            <input
-              onChange={() => setConditions((oldValue) => !oldValue)}
-              checked={conditions}
-              className="checkbox"
-              type="checkbox"
-              name="podmínky"
-            />
-            Souhlasím s obchodními podmínkami
-          </label>
-          <label className="label label__checkbox">
-            <input
-              onChange={() => setPersonalData((oldValue) => !oldValue)}
-              checked={personalData}
-              className="checkbox"
-              type="checkbox"
-              name="podmínky"
-            />
-            Souhlasím se zpracováním údajů
-          </label>
+          </FormGroup>
+
           <div type="submit" className="btn primary">
-            <Button text="Registrovat se" 
-            formType="submit"/>
+            <Button text="Registrovat se" formType="submit" />
           </div>
         </form>
         <div className="registration__account-created">
