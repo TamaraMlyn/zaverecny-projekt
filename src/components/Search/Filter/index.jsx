@@ -79,6 +79,7 @@ export const Filter = ({ onChange }) => {
               label="Čas od:"
               format="HH:mm"
               ampm={false}
+              minutesStep={5}
               value={timeFrom}
               onChange={(time) => {
                 setTimeFrom(time);
@@ -94,6 +95,7 @@ export const Filter = ({ onChange }) => {
               label="Čas do:"
               format="HH:mm"
               ampm={false}
+              minutesStep={5}
               value={timeTo}
               onChange={(time) => {
                 setTimeTo(time);
