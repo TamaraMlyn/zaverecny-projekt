@@ -49,14 +49,14 @@ export const Request = () => {
       name: registrationState.name,
       surname: registrationState.surname.slice(0, 1) + '.',
       cityFrom: 'Praha',
-      streetFrom: from.name,
+      streetFrom: from,
       cityTo: 'Praha',
-      streetTo: to.name,
+      streetTo: to,
       dateTimeFrom: createDateTime(date, timeFrom).toISOString(),
       dateTimeTo: createDateTime(date, timeTo).toISOString(),
       purpose: purpose,
-      experience: false,
-      strength: false,
+      experience: experience,
+      strength: strength,
       notes: notes,
     };
 

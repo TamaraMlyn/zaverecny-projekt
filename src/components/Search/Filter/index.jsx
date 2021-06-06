@@ -130,7 +130,7 @@ export const Filter = ({ onChange }) => {
                 checkedIcon={<i className="icons las la-hands-helping"></i>}
               />
             }
-            label="Dobrovolník musí mít zkušenosti s asistencí"
+            label="Mám zkušenosti s asistencí"
             classes={{ root: "text-field" }}
           />
 
@@ -144,7 +144,7 @@ export const Filter = ({ onChange }) => {
                 checkedIcon={<i className="icons dumbell las la-dumbbell"></i>}
               />
             }
-            label="Dobrovolník musí být fyzicky zdatný"
+            label="Jsem fyzicky zdatný"
             classes={{ root: "text-field" }}
           />
         </FormGroup>
