@@ -12,7 +12,7 @@ import { Header } from './components/Header';
 import './style.css';
 import { Wheelchair } from './components/Wheelchair';
 import PouchDB from 'pouchdb-browser';
-import Find from 'pouchdb-find'
+import Find from 'pouchdb-find';
 import { Provider } from 'use-pouchdb';
 import 'dayjs';
 import DayJsUtils from '@date-io/dayjs';
@@ -20,8 +20,22 @@ import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { RegistrationContext } from './lib/RegistrationContext';
 import { Confirmation } from './components/Confirmation';
 
-PouchDB.plugin(Find)
-const db = new PouchDB('local')
+PouchDB.plugin(Find);
+const db = new PouchDB('local');
+
+db.createIndex({
+  index: {
+    fields: [
+      'cityFrom',
+      'cityTo',
+      'streetFrom',
+      'dateTimeFrom',
+      'dateTimeTo',
+      'experience',
+      'strength',
+    ],
+  },
+});
 
 const App = () => {
   const [registrationState, setRegistrationState] = useState(null);
