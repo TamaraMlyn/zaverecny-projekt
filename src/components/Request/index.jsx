@@ -42,7 +42,7 @@ export const Request = () => {
     useContext(RegistrationContext);
 
   const handleSubmit = (e) => {
-    console.log('funguju');
+    console.log(registrationState);
     e.preventDefault();
 
     const request = {
@@ -66,24 +66,24 @@ export const Request = () => {
   };
 
   const districts = [
-    { name: 'Praha 1' },
-    { name: 'Praha 2' },
-    { name: 'Praha 3' },
-    { name: 'Praha 4' },
-    { name: 'Praha 5' },
-    { name: 'Praha 6' },
-    { name: 'Praha 7' },
-    { name: 'Praha 8' },
-    { name: 'Praha 9' },
-    { name: 'Praha 10' },
+     'Praha 1' ,
+     'Praha 2' ,
+     'Praha 3' ,
+     'Praha 4' ,
+     'Praha 5' ,
+     'Praha 6' ,
+     'Praha 7' ,
+     'Praha 8' ,
+     'Praha 9' ,
+     'Praha 10',
   ];
 
   const purposes = [
-    { name: 'k lékaři' },
-    { name: 'na nákup' },
-    { name: 'na úřad' },
-    { name: 'na společenskou událost' },
-    { name: 'procházka' },
+     'k lékaři' ,
+     'na nákup' ,
+     'na úřad' ,
+     'na společenskou událost' ,
+     'procházka' ,
   ];
 
   return (
@@ -98,9 +98,7 @@ export const Request = () => {
         <form onSubmit={handleSubmit}>
           <FormGroup>
             <Autocomplete
-              id="combo-box-demo"
               options={districts}
-              getOptionLabel={(option) => option.name}
               style={{ width: 300 }}
               value={from}
               onChange={(event, value, reason) => {
@@ -116,9 +114,7 @@ export const Request = () => {
             />
 
             <Autocomplete
-              id="combo-box-demo"
               options={districts}
-              getOptionLabel={(option) => option.name}
               style={{ width: 300 }}
               value={to}
               onChange={(event, value, reason) => {
@@ -183,7 +179,6 @@ export const Request = () => {
 
             <Autocomplete
               options={purposes}
-              getOptionLabel={(option) => option.name}
               style={{ width: 300 }}
               value={purpose}
               onChange={(event, value, reason) => {
