@@ -22,7 +22,7 @@ export const Button = ({
     if (to) {
       history.push(to);
     }
-    if (onClick !== null) {
+    if (onClick) {
       onClick(e);
     }
   };

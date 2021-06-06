@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Button } from '../Button';
 import dayjs from '../../lib/dayjs';
-
-import {
-  KeyboardTimePicker,
-  KeyboardDatePicker,
-} from '@material-ui/pickers';
-
+import { KeyboardTimePicker, KeyboardDatePicker } from '@material-ui/pickers';
 import {
   TextField,
   Checkbox,
@@ -14,10 +9,9 @@ import {
   FormGroup,
 } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
-
-import './style.css';
+import { RegistrationContext } from '../../lib/RegistrationContext';
 import { usePouch } from 'use-pouchdb';
-
+import './style.css';
 
 export const Request = () => {
   const [from, setFrom] = useState(null);
@@ -30,43 +24,43 @@ export const Request = () => {
   const [strength, setStrength] = useState(false);
   const [notes, setNotes] = useState('');
 
-  const db = usePouch()
+  const db = usePouch();
 
   useEffect(() => {
     document.title = 'Potřebuji asistenci';
   }, []);
 
   const createDateTime = (date, time) => {
-  const timeData = dayjs(time)
-  return dayjs(date).hour(timeData.hour()).minute(timeData.minute())
-  }
+    const timeData = dayjs(time);
+    return dayjs(date).hour(timeData.hour()).minute(timeData.minute());
+  };
+
+  const { registrationState, setRegistrationState } =
+    useContext(RegistrationContext);
 
   const handleSubmit = (e) => {
     console.log('funguju');
     e.preventDefault();
 
     const request = {
-    name: 'Anna',
-    surname: 'S.',
-    cityFrom: 'Praha',
-    streetFrom: from.name,
-    cityTo: 'Praha',
-    streetFrom: to.name,
-    dateTimeFrom: createDateTime(date, timeFrom).toISOString(),
-    dateTimeTill: createDateTime(date, timeTo).toISOString(),
-    purpose: purpose.name,
-    experience: false,
-    strength: false,
-    notes: notes,
-    }
+      name: registrationState.name,
+      surname: registrationState.surname.slice(0, 1) + '.',
+      cityFrom: 'Praha',
+      streetFrom: from.name,
+      cityTo: 'Praha',
+      streetFrom: to.name,
+      dateTimeFrom: createDateTime(date, timeFrom).toISOString(),
+      dateTimeTill: createDateTime(date, timeTo).toISOString(),
+      purpose: purpose.name,
+      experience: false,
+      strength: false,
+      notes: notes,
+    };
 
     db.post(request)
-    .then((response)=> console.log(response))
-    .catch((err)=> console.error(err))
-
-  
-  }
-
+      .then((response) => console.log(response))
+      .catch((err) => console.error(err));
+  };
 
   const districts = [
     { name: 'Praha 1' },
@@ -79,6 +73,14 @@ export const Request = () => {
     { name: 'Praha 8' },
     { name: 'Praha 9' },
     { name: 'Praha 10' },
+  ];
+
+  const purposes = [
+    { name: 'k lékaři' },
+    { name: 'na nákup' },
+    { name: 'na úřad' },
+    { name: 'na společenskou událost' },
+    { name: 'procházka' },
   ];
 
   return (
@@ -98,7 +100,7 @@ export const Request = () => {
               getOptionLabel={(option) => option.name}
               style={{ width: 300 }}
               value={from}
-              onChange={(event, value, reason ) => {
+              onChange={(event, value, reason) => {
                 setFrom(value);
               }}
               renderInput={(params) => (
@@ -116,11 +118,10 @@ export const Request = () => {
               getOptionLabel={(option) => option.name}
               style={{ width: 300 }}
               value={to}
-              onChange={(event, value, reason ) => {
+              onChange={(event, value, reason) => {
                 setTo(value);
               }}
               renderInput={(params) => (
-
                 <TextField
                   {...params}
                   label="Místo, kam potřebujete:"
@@ -178,15 +179,14 @@ export const Request = () => {
             </FormGroup>
 
             <Autocomplete
-              options={districts}
+              options={purposes}
               getOptionLabel={(option) => option.name}
               style={{ width: 300 }}
               value={purpose}
-              onChange={(event, value, reason ) => {
+              onChange={(event, value, reason) => {
                 setPurpose(value);
               }}
               renderInput={(params) => (
-
                 <TextField
                   {...params}
                   label="Účel asistence:"
@@ -194,17 +194,6 @@ export const Request = () => {
                 />
               )}
             />
-
-          
-
-            {/* <input list="choices" id="purpose" type="text" />
-          <datalist id="choices">
-            <option value="k lékaři" />
-            <option value="na nákup" />
-            <option value="na úřad" />
-            <option value="na společenskou událost" />
-            <option value="procházka" />
-          </datalist> */}
 
             <div className="request__details">
               <h2 className="container__header">Požadavky na asistenta</h2>
@@ -237,8 +226,10 @@ export const Request = () => {
               />
             </div>
 
-            <Button text="Zadat požadavek" 
-            formType="submit"
+            <Button
+              text="Zadat požadavek"
+              formType="submit"
+              to="/pozadavek/potvrzeni"
             />
           </FormGroup>
         </form>

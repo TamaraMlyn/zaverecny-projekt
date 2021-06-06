@@ -17,6 +17,7 @@ import 'dayjs';
 import DayJsUtils from '@date-io/dayjs';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { RegistrationContext } from './lib/RegistrationContext';
+import { Confirmation } from './components/Confirmation';
 
 const db = new PouchDB('local');
 
@@ -34,6 +35,9 @@ const App = () => {
             <Switch>
               <Route path="/potrebuji-asistenci">
                 <Wheelchair />
+              </Route>
+              <Route path="/pozadavek/potvrzeni">
+                <Confirmation />
               </Route>
               <Route path="/pozadavek">
                 <Request />
