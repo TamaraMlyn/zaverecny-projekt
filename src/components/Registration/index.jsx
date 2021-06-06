@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Button } from '../Button';
 import {
   TextField,
@@ -20,12 +20,14 @@ export const Registration = ({ role, text }) => {
   const [conditions, setConditions] = useState(false);
   const [personalData, setPersonalData] = useState(false);
 
+  const history = useHistory();
+
   const { registrationState, setRegistrationState } =
     useContext(RegistrationContext);
 
   const handleSubmit = (e) => {
-    console.log('funguju');
     e.preventDefault();
+
     setRegistrationState({
       name: name,
       surname: surname,
@@ -37,6 +39,8 @@ export const Registration = ({ role, text }) => {
       personalData: personalData,
       role: role,
     });
+
+    history.push(role === 'wheelchair' ? '/pozadavek' : '/hledani');
   };
 
   return (
@@ -47,6 +51,7 @@ export const Registration = ({ role, text }) => {
         <form onSubmit={handleSubmit}>
           <FormGroup>
             <TextField
+              required
               onChange={(e) => setName(e.target.value)}
               value={name}
               label="Jméno"
@@ -55,6 +60,7 @@ export const Registration = ({ role, text }) => {
               classes={{ root: 'text-field' }}
             />
             <TextField
+              required
               onChange={(e) => setSurname(e.target.value)}
               value={surname}
               label="Příjmení"
@@ -63,6 +69,7 @@ export const Registration = ({ role, text }) => {
               classes={{ root: 'text-field' }}
             />
             <TextField
+              required
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               label="E-mail"
@@ -72,6 +79,7 @@ export const Registration = ({ role, text }) => {
               classes={{ root: 'text-field' }}
             />
             <TextField
+              required
               onChange={(e) => setPhone(e.target.value)}
               value={phone}
               label="Telefonní číslo"
@@ -81,6 +89,7 @@ export const Registration = ({ role, text }) => {
               classes={{ root: 'text-field' }}
             />
             <TextField
+              required
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               label="Heslo"
@@ -91,6 +100,7 @@ export const Registration = ({ role, text }) => {
               classes={{ root: 'text-field' }}
             />
             <TextField
+              required
               onChange={(e) => setPasswordCheck(e.target.value)}
               value={passwordCheck}
               label="Heslo znovu"
@@ -103,6 +113,7 @@ export const Registration = ({ role, text }) => {
             <FormControlLabel
               control={
                 <Checkbox
+                  required={true}
                   onChange={() => setConditions((oldValue) => !oldValue)}
                   checked={conditions}
                   color="primary"
@@ -115,6 +126,7 @@ export const Registration = ({ role, text }) => {
             <FormControlLabel
               control={
                 <Checkbox
+                  required={true}
                   onChange={() => setPersonalData((oldValue) => !oldValue)}
                   checked={personalData}
                   color="primary"
@@ -124,17 +136,9 @@ export const Registration = ({ role, text }) => {
               classes={{ root: 'text-field' }}
             />
           </FormGroup>
-          <Button
-            text="Registrovat se"
-            formType="submit"
-            to={role === 'wheelchair' ? '/pozadavek' : '/hledani'}
-          />
+          <Button text="Registrovat se" formType="submit" />
           <div>Už máte účet?</div>
-          <Button
-            text="Přihlásit se"
-            type="secondary"
-            to="/prihlaseni"
-          />
+          <Button text="Přihlásit se" type="secondary" to="/prihlaseni" />
         </form>
       </div>
     </>

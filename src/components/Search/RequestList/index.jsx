@@ -44,6 +44,15 @@ export const RequestList = ({ search }) => {
       selector: selector,
       // sort: ['dateTimeFrom'],
     });
+
+    requests.docs.sort((first, second) => {
+      if (first.dateTimeFrom > second.dateTimeFrom) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+
     //    setRequests(db)
   }
   //}, [search]);
