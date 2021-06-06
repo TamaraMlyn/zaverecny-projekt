@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '../Button';
+import dayjs from '../../lib/dayjs';
 
 import {
-  MuiPickersUtilsProvider,
   KeyboardTimePicker,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
@@ -20,20 +20,26 @@ import { usePouch } from 'use-pouchdb';
 
 
 export const Request = () => {
-  const [from, setFrom] = useState('');
-  const [to, setTo] = useState('');
+  const [from, setFrom] = useState(null);
+  const [to, setTo] = useState(null);
   const [date, setDate] = useState(null);
   const [timeFrom, setTimeFrom] = useState(null);
   const [timeTo, setTimeTo] = useState(null);
-  const [purpose, setPurpose] = useState('');
+  const [purpose, setPurpose] = useState(null);
   const [experience, setExperience] = useState(false);
   const [strength, setStrength] = useState(false);
+  const [notes, setNotes] = useState('');
 
   const db = usePouch()
 
   useEffect(() => {
     document.title = 'Potřebuji asistenci';
   }, []);
+
+  const createDateTime = (date, time) => {
+  const timeData = dayjs(time)
+  return dayjs(date).hour(timeData.hour()).minute(timeData.minute())
+  }
 
   const handleSubmit = (e) => {
     console.log('funguju');
@@ -43,15 +49,15 @@ export const Request = () => {
     name: 'Anna',
     surname: 'S.',
     cityFrom: 'Praha',
-    streetFrom: from,
+    streetFrom: from.name,
     cityTo: 'Praha',
-    streetFrom: to,
-    dateTimeFrom: `${date}T${timeFrom}:00`,
-    dateTimeTill: `${date}T${timeTo}:00`,
-    purpose: purpose,
+    streetFrom: to.name,
+    dateTimeFrom: createDateTime(date, timeFrom).toISOString(),
+    dateTimeTill: createDateTime(date, timeTo).toISOString(),
+    purpose: purpose.name,
     experience: false,
     strength: false,
-    notes: '',
+    notes: notes,
     }
 
     db.post(request)
@@ -91,6 +97,10 @@ export const Request = () => {
               options={districts}
               getOptionLabel={(option) => option.name}
               style={{ width: 300 }}
+              value={from}
+              onChange={(event, value, reason ) => {
+                setFrom(value);
+              }}
               renderInput={(params) => (
                 <TextField
                   {...params}
@@ -105,7 +115,12 @@ export const Request = () => {
               options={districts}
               getOptionLabel={(option) => option.name}
               style={{ width: 300 }}
+              value={to}
+              onChange={(event, value, reason ) => {
+                setTo(value);
+              }}
               renderInput={(params) => (
+
                 <TextField
                   {...params}
                   label="Místo, kam potřebujete:"
@@ -135,9 +150,10 @@ export const Request = () => {
                 label="Čas od:"
                 format="HH:mm"
                 ampm={false}
+                minutesStep={5}
                 value={timeFrom}
-                onChange={(time) => {
-                  setTimeFrom(time);
+                onChange={(date) => {
+                  setTimeFrom(date);
                 }}
                 KeyboardButtonProps={{
                   'aria-label': 'výběr času - začátek',
@@ -150,9 +166,10 @@ export const Request = () => {
                 label="Čas od:"
                 format="HH:mm"
                 ampm={false}
+                minutesStep={5}
                 value={timeTo}
-                onChange={(time) => {
-                  setTimeTo(time);
+                onChange={(date) => {
+                  setTimeTo(date);
                 }}
                 KeyboardButtonProps={{
                   'aria-label': 'výběr času - konec',
@@ -160,7 +177,25 @@ export const Request = () => {
               />
             </FormGroup>
 
-            <TextField label="Účel asistence:" variant="outlined" />
+            <Autocomplete
+              options={districts}
+              getOptionLabel={(option) => option.name}
+              style={{ width: 300 }}
+              value={purpose}
+              onChange={(event, value, reason ) => {
+                setPurpose(value);
+              }}
+              renderInput={(params) => (
+
+                <TextField
+                  {...params}
+                  label="Účel asistence:"
+                  variant="outlined"
+                />
+              )}
+            />
+
+          
 
             {/* <input list="choices" id="purpose" type="text" />
           <datalist id="choices">
@@ -202,7 +237,9 @@ export const Request = () => {
               />
             </div>
 
-            <Button text="Zadat požadavek" />
+            <Button text="Zadat požadavek" 
+            formType="submit"
+            />
           </FormGroup>
         </form>
       </div>

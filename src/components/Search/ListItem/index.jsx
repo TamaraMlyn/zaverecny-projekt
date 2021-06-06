@@ -9,7 +9,7 @@ export const ListItem = ({ item }) => {
       <div className="filter__row">
         <i className="user__icon las la-user-circle"></i>
         <div className="filter__name">
-          {item.name} {item.surname}{' '}
+          {item.name} {item.surname}
         </div>
       </div>
       <div className="filter__row">
