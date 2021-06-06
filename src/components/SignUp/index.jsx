@@ -22,7 +22,9 @@ export const SignUp = () => {
               value={email}
               label="E-mail"
               type="email"
+              placeholder="julie.mala@gmail.com"
               variant="outlined"
+              classes={{ root: 'text-field' }}
             />
 
             <TextField
@@ -31,6 +33,7 @@ export const SignUp = () => {
               label="Heslo"
               type="password"
               variant="outlined"
+              classes={{ root: 'text-field' }}
             />
           </FormGroup>
 

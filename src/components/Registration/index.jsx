@@ -46,41 +46,54 @@ export const Registration = ({ type, text }) => {
               onChange={(e) => setName(e.target.value)}
               value={name}
               label="Jméno"
+              placeholder="Julie"
               variant="outlined"
+              classes={{ root: 'text-field' }}
             />
             <TextField
               onChange={(e) => setSurname(e.target.value)}
               value={surname}
               label="Příjmení"
+              placeholder="Malá"
               variant="outlined"
+              classes={{ root: 'text-field' }}
             />
             <TextField
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               label="E-mail"
+              placeholder="julie.mala@gmail.com"
               type="email"
               variant="outlined"
+              classes={{ root: 'text-field' }}
             />
             <TextField
               onChange={(e) => setPhone(e.target.value)}
               value={phone}
               label="Telefonní číslo"
+              placeholder="+420*********"
               type="tel"
               variant="outlined"
+              classes={{ root: 'text-field' }}
             />
             <TextField
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               label="Heslo"
+              placeholder="Minimálně 8 znaků"
               type="password"
               variant="outlined"
+              margin="normal"
+              classes={{ root: 'text-field' }}
             />
             <TextField
               onChange={(e) => setPasswordCheck(e.target.value)}
               value={passwordCheck}
               label="Heslo znovu"
+              placeholder="Minimálně 8 znaků"
               type="password"
               variant="outlined"
+              classes={{ root: 'text-field' }}
             />
 
             <FormControlLabel
@@ -92,6 +105,7 @@ export const Registration = ({ type, text }) => {
                 />
               }
               label="Souhlasím s podmínkami"
+              classes={{ root: 'text-field' }}
             />
 
             <FormControlLabel
@@ -103,6 +117,7 @@ export const Registration = ({ type, text }) => {
                 />
               }
               label="Souhlasím se zpracováním údajů"
+              classes={{ root: 'text-field' }}
             />
           </FormGroup>
 

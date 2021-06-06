@@ -56,7 +56,6 @@ export const Filter = () => {
         <FormGroup>
           <KeyboardDatePicker
             id="date"
-            margin="normal"
             id="date-picker-dialog"
             label="Datum"
             format="D.M.YYYY"
@@ -67,11 +66,11 @@ export const Filter = () => {
             KeyboardButtonProps={{
               'aria-label': 'změňte datum',
             }}
+            classes={{ root: 'text-field' }}
           />
 
           <FormGroup row={true}>
             <KeyboardTimePicker
-              margin="normal"
               id="time-picker"
               label="Čas od:"
               format="HH:mm"
@@ -83,10 +82,10 @@ export const Filter = () => {
               KeyboardButtonProps={{
                 'aria-label': 'výběr času - začátek',
               }}
+              classes={{ root: 'text-field' }}
             />
 
             <KeyboardTimePicker
-              margin="normal"
               id="time-picker"
               label="Čas od:"
               format="HH:mm"
@@ -98,6 +97,7 @@ export const Filter = () => {
               KeyboardButtonProps={{
                 'aria-label': 'výběr času - konec',
               }}
+              classes={{ root: 'text-field' }}
             />
           </FormGroup>
 
@@ -109,6 +109,7 @@ export const Filter = () => {
             renderInput={(params) => (
               <TextField {...params} label="Lokalita:" variant="outlined" />
             )}
+            classes={{ root: 'text-field' }}
           />
 
           <FormControlLabel
@@ -122,6 +123,7 @@ export const Filter = () => {
               />
             }
             label="Dobrovolník musí mít zkušenosti s asistencí"
+            classes={{ root: 'text-field' }}
           />
 
           <FormControlLabel
@@ -135,6 +137,7 @@ export const Filter = () => {
               />
             }
             label="Dobrovolník musí být fyzicky zdatný"
+            classes={{ root: 'text-field' }}
           />
         </FormGroup>
 

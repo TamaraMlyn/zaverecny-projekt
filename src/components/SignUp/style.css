@@ -34,10 +34,19 @@ input {
   font-size: 16px;
 }
 
-
 @media (min-width: 768px) {
   input {
     margin-top: 12px;
     margin-bottom: 20px;
   }
+}
+
+/* nove styly pro komponenty z knihovny */
+
+.MuiFormControl-root.text-field {
+  margin: 16px 0;
+}
+
+.MuiFormControlLabel-root.text-field {
+  margin: 8px 0;
 }

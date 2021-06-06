@@ -1,0 +1,11 @@
+.MuiFormControl-root.text-field {
+  margin: 16px 0;
+}
+
+.MuiAutocomplete-root.text-field {
+  margin: 16px 0;
+}
+
+.MuiFormControlLabel-root.text-field {
+  margin: 8px 0;
+}
