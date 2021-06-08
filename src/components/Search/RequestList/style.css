@@ -1,0 +1,30 @@
+.nolist__requests {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nolist__requests {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 60px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header--search {
+    color: var(--dark-blue);
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .img--search {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.btn.btn--primary.btn--resize {
+width: 300px;
+}
+
