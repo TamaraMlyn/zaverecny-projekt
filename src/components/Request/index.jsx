@@ -15,9 +15,11 @@ import { usePouch } from 'use-pouchdb';
 import './style.css';
 
 export const Request = () => {
+  const actualDate = dayjs();
+
   const [from, setFrom] = useState(null);
   const [to, setTo] = useState(null);
-  const [date, setDate] = useState(null);
+  const [date, setDate] = useState(actualDate.toDate());
   const [timeFrom, setTimeFrom] = useState(null);
   const [timeTo, setTimeTo] = useState(null);
   const [purpose, setPurpose] = useState(null);
@@ -40,6 +42,12 @@ export const Request = () => {
     useContext(RegistrationContext);
 
   const history = useHistory();
+
+  const minDate = () => {
+    if (timeTo < timeFrom) {
+      return 'špatně!!';
+    }
+  };
 
   const handleSubmit = (e) => {
     console.log(registrationState);
@@ -69,24 +77,24 @@ export const Request = () => {
   };
 
   const districts = [
-     'Praha 1' ,
-     'Praha 2' ,
-     'Praha 3' ,
-     'Praha 4' ,
-     'Praha 5' ,
-     'Praha 6' ,
-     'Praha 7' ,
-     'Praha 8' ,
-     'Praha 9' ,
-     'Praha 10',
+    'Praha 1',
+    'Praha 2',
+    'Praha 3',
+    'Praha 4',
+    'Praha 5',
+    'Praha 6',
+    'Praha 7',
+    'Praha 8',
+    'Praha 9',
+    'Praha 10',
   ];
 
   const purposes = [
-     'k lékaři' ,
-     'na nákup' ,
-     'na úřad' ,
-     'na společenskou událost' ,
-     'procházka' ,
+    'k lékaři',
+    'na nákup',
+    'na úřad',
+    'na společenskou událost',
+    'procházka',
   ];
 
   return (
@@ -145,6 +153,10 @@ export const Request = () => {
               KeyboardButtonProps={{
                 'aria-label': 'změňte datum',
               }}
+              cancelLabel="Zrušit"
+              okLabel="Vybrat"
+              invalidDateMessage="Špatný formát"
+              minDate={actualDate.toDate()}
             />
             <FormGroup row={true}>
               <KeyboardTimePicker
@@ -161,6 +173,8 @@ export const Request = () => {
                 KeyboardButtonProps={{
                   'aria-label': 'výběr času - začátek',
                 }}
+                cancelLabel="Zrušit"
+                okLabel="Vybrat"
               />
 
               <KeyboardTimePicker
@@ -177,6 +191,9 @@ export const Request = () => {
                 KeyboardButtonProps={{
                   'aria-label': 'výběr času - konec',
                 }}
+                cancelLabel="Zrušit"
+                okLabel="Vybrat"
+                minDateMessage={minDate()}
               />
             </FormGroup>
 
@@ -222,8 +239,11 @@ export const Request = () => {
               />
 
               <TextField
-                label="Vaše poznámky (dopište, co je ještě pro Vás důležité):"
+                label="Poznámky"
+                placeholder="Vaše poznámky (dopište, co je ještě pro Vás důležité):"
                 variant="outlined"
+                multiline
+                rows={5}
               />
             </div>
 

@@ -1,14 +1,15 @@
-import React, { useState } from "react";
-import { Button } from "../../Button";
-import { KeyboardTimePicker, KeyboardDatePicker } from "@material-ui/pickers";
+import React, { useState } from 'react';
+import { Button } from '../../Button';
+import { KeyboardTimePicker, KeyboardDatePicker } from '@material-ui/pickers';
 import {
   TextField,
   Checkbox,
   FormControlLabel,
   FormGroup,
-} from "@material-ui/core";
-import { Autocomplete } from "@material-ui/lab";
-import "./style.css";
+  Tooltip,
+} from '@material-ui/core';
+import { Autocomplete } from '@material-ui/lab';
+import './style.css';
 import dayjs from '../../../lib/dayjs';
 
 export const Filter = ({ onChange }) => {
@@ -33,24 +34,24 @@ export const Filter = ({ onChange }) => {
       streetFrom: place,
       experience: experience,
       strength: strength,
-      cityFrom: "Praha",
-      cityTo: "Praha",
+      cityFrom: 'Praha',
+      cityTo: 'Praha',
     };
 
     onChange(search);
   };
 
   const districts = [
-    { name: "Praha 1" },
-    { name: "Praha 2" },
-    { name: "Praha 3" },
-    { name: "Praha 4" },
-    { name: "Praha 5" },
-    { name: "Praha 6" },
-    { name: "Praha 7" },
-    { name: "Praha 8" },
-    { name: "Praha 9" },
-    { name: "Praha 10" },
+    { name: 'Praha 1' },
+    { name: 'Praha 2' },
+    { name: 'Praha 3' },
+    { name: 'Praha 4' },
+    { name: 'Praha 5' },
+    { name: 'Praha 6' },
+    { name: 'Praha 7' },
+    { name: 'Praha 8' },
+    { name: 'Praha 9' },
+    { name: 'Praha 10' },
   ];
 
   return (
@@ -68,9 +69,9 @@ export const Filter = ({ onChange }) => {
               setDate(date);
             }}
             KeyboardButtonProps={{
-              "aria-label": "změňte datum",
+              'aria-label': 'změňte datum',
             }}
-            classes={{ root: "text-field" }}
+            classes={{ root: 'text-field' }}
           />
 
           <FormGroup row={true}>
@@ -85,9 +86,9 @@ export const Filter = ({ onChange }) => {
                 setTimeFrom(time);
               }}
               KeyboardButtonProps={{
-                "aria-label": "výběr času - začátek",
+                'aria-label': 'výběr času - začátek',
               }}
-              classes={{ root: "text-field" }}
+              classes={{ root: 'text-field' }}
             />
 
             <KeyboardTimePicker
@@ -101,54 +102,60 @@ export const Filter = ({ onChange }) => {
                 setTimeTo(time);
               }}
               KeyboardButtonProps={{
-                "aria-label": "výběr času - konec",
+                'aria-label': 'výběr času - konec',
               }}
-              classes={{ root: "text-field" }}
+              classes={{ root: 'text-field' }}
             />
           </FormGroup>
 
           <Autocomplete
             id="combo-box-demo"
-            options={districts.map(option => option.name)}
-            getOptionLabel={(option) => districts.find(item => item.name === option).name}
+            options={districts.map((option) => option.name)}
+            getOptionLabel={(option) =>
+              districts.find((item) => item.name === option).name
+            }
             style={{ width: 300 }}
             value={place}
-            onChange={(event, value, reason ) => {
+            onChange={(event, value, reason) => {
               setPlace(value);
             }}
             renderInput={(params) => (
               <TextField {...params} label="Lokalita:" variant="outlined" />
             )}
-            classes={{ root: "text-field" }}
+            classes={{ root: 'text-field' }}
           />
 
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={experience}
-                onChange={(e) => setExperience((oldValue) => !oldValue)}
-                color="primary"
-                icon={<i className="icons las la-hands-helping"></i>}
-                checkedIcon={<i className="icons las la-hands-helping"></i>}
-              />
-            }
-            label="Mám zkušenosti s asistencí"
-            classes={{ root: "text-field" }}
-          />
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={experience}
+                  onChange={(e) => setExperience((oldValue) => !oldValue)}
+                  color="primary"
+                />
+              }
+              label="Mám zkušenosti s asistencí"
+              classes={{ root: 'text-field' }}
+            />
+          </div>
 
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={strength}
-                onChange={(e) => setStrength((oldValue) => !oldValue)}
-                color="primary"
-                icon={<i className="icons dumbell las la-dumbbell"></i>}
-                checkedIcon={<i className="icons dumbell las la-dumbbell"></i>}
-              />
-            }
-            label="Jsem fyzicky zdatný"
-            classes={{ root: "text-field" }}
-          />
+          <div className="checkbox-container">
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={strength}
+                  onChange={(e) => setStrength((oldValue) => !oldValue)}
+                  color="primary"
+                />
+              }
+              label="Jsem fyzicky zdatný"
+              classes={{ root: 'text-field' }}
+            />
+
+            <Tooltip title="Zvládnu manipulaci s těžším vozíkem.">
+              {<i className="icons las la-info"></i>}
+            </Tooltip>
+          </div>
         </FormGroup>
 
         <Button text="Hledat" type="secondary" formType="submit" />

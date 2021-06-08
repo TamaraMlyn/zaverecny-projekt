@@ -45,7 +45,7 @@ export const Header = () => {
               </li>
 
               <li className="menu-item sign-up">
-                <Link to="/registrace">Registrace</Link>
+                <Link to="/registrace/dobrovolnik">Registrace</Link>
               </li>
             </>
           ) : registrationState.role === 'wheelchair' ? (
