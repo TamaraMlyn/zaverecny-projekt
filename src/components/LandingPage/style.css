@@ -1,14 +1,14 @@
 .container {
   width: 100%;
   /* font-family: 'Lora', serif; */
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   padding: 0 25px;
   margin-bottom: 50px;
 }
 
 .container__header,
 .person__header {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--dark-blue);
 }
 
@@ -31,17 +31,13 @@ img {
   padding-bottom: 15px;
 }
 
-.rules__person {
-  transition: transform 0.2s;
-}
-
-.rules__person:hover {
-  transform: scale(1.3);
-}
-
 .person__header {
   color: var(--contrast-color);
   font-size: 1.7rem;
+}
+
+.person__icon {
+  display: none;
 }
 
 h1 {
@@ -90,6 +86,7 @@ h1 {
   }
 
   .person__icon {
+    display: block;
     max-width: 15%;
   }
 
@@ -100,5 +97,14 @@ h1 {
 
   .about__text {
     line-height: 1.5rem;
+  }
+
+  /* animation */
+  .rules__person {
+    transition: transform 0.2s;
+  }
+
+  .rules__person:hover {
+    transform: scale(1.3);
   }
 }

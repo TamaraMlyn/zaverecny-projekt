@@ -2,6 +2,7 @@
   font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .topbar {
@@ -30,6 +31,7 @@
 .navigation--opened {
   display: flex;
   width: 100%;
+  justify-content: flex-end;
 }
 
 .topbar--opened {
@@ -46,12 +48,14 @@
 .menu-item {
   list-style-type: none;
   padding: 1.5rem;
-  color: var(--dark-blue);
   cursor: pointer;
+  text-align: end;
 }
 
 .menu-item a {
   text-decoration: none;
+  color: var(--dark-blue);
+  position: relative;
 }
 
 .sign-up a {
