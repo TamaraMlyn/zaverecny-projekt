@@ -17,29 +17,29 @@ export const Volunteer = () => {
         <div className="volunteer__expect">Co Vás čeká?</div>
         <div className="volunteer__process">
           <div className="volunteer__step">
-            <div>1.</div>
-            <div>
+            <div><i className="icons lab la-wpforms"></i></div>
+            <div className="volunteer__step--text">
               Zaregistrujte se v pár jednoduchých krocích a vyplňte si svůj
               profil, který Vás bude dál reprezentovat.
             </div>
           </div>
           <div className="volunteer__step">
-            <div>2.</div>
-            <div>
+            <div><i className="icons las la-envelope-open-text"></i></div>
+            <div className="volunteer__step--text">
               Na základě vaší registrace Vás obratem budeme kontaktovat a
               doladíme spolu další nutné kroky.
             </div>
           </div>
           <div className="volunteer__step">
-            <div>3.</div>
-            <div>
+            <div><i className="icons las la-smile-beam"></i></div>
+            <div className="volunteer__step--text">
               Teď už můžete na základě vašich časových možností reagovat na
               konkrétní požadavky.
             </div>
           </div>
         </div>
 
-        <Button to="/registrace/dobrovolnik" text="Chci se registrovat" />
+        <Button className="btn--resize" to="/registrace/dobrovolnik" text="Chci se registrovat" />
       </div>
     </>
   );
