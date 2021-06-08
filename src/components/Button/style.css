@@ -27,6 +27,10 @@
   margin-top: 10px;
 }
 
+.btn.btn--primary:hover {
+ color: var(--contrast-color);
+}
+
 .btn--hidden {
   display: none;
 }
