@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ListItem } from '../ListItem';
 import './style.css';
+import magnifier from './img/magnifier.svg';
 import { usePouch } from 'use-pouchdb';
+import {Button} from '../../Button/index';
 
 export const RequestList = ({ search }) => {
   const db = usePouch();
@@ -47,22 +49,24 @@ export const RequestList = ({ search }) => {
   return (
     <>
       {search === null || requests === null ? (
-        <div className="filter__requests">
-          <h1 className="header ">
-            Vyhledejte osobu, které můžete pomoct dle vašich možností
+        <div className="nolist__requests">
+          <h1 className="header--search">
+            Vyhledávej přesně podle svých možností
           </h1>
-        </div>
+          <img className="img--search" src={magnifier} alt="hledani"/>
+          </div>
       ) : requests.docs.length === 0 ? (
-        <div className="filter__requests">
-          <h1 className="header ">
+        <div className="nolist__requests">
+          <h1 className="header--search">
             Evidentně neexistuje momentálně nikdo, kdo by vaší pomoc na základě
             vašich možností potřeboval. Nemůžete v jiný čas, nebo na jiném
             místě?
           </h1>
+          <Button className="btn--resize" to="/hledani" text="Hledat znovu"/>
         </div>
       ) : (
         <div className="filter__requests">
-          <h1 className="header ">Momentálně pomoc hledají tyto osoby: </h1>
+          <h1 className="header">Momentálně pomoc hledají tyto osoby: </h1>
           <div className="filter__intro">
             Můžete vybírat z už existujících požadavků od těch, které jsou
             seřazeny dle největší urgence
