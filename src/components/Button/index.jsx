@@ -9,6 +9,7 @@ export const Button = ({
   description,
   to,
   onClick,
+  className,
 }) => {
   const history = useHistory();
 
@@ -29,7 +30,7 @@ export const Button = ({
 
   return (
     <>
-      <div className={`btn btn--${type}`} onClick={handleClick}>
+      <div className={`btn btn--${type} ${className}`} onClick={handleClick}>
         <div className="btn__text" href="">
           {text}
         </div>
