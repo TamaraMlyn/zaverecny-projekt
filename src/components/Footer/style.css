@@ -1,11 +1,9 @@
 .container-footer {
-  display: none;
-}
-
-.container-footer {
+  font-family: 'Raleway', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 36px;
 }
 
 footer {

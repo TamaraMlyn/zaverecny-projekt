@@ -34,7 +34,7 @@ export const SignUp = () => {
     <>
       <div className="sign-in container">
         <h1 className="h1log">Přihlášení</h1>
-        <form>
+        <form className="sign-in__form">
           <FormGroup>
             <TextField
               onChange={(e) => setEmail(e.target.value)}
@@ -65,7 +65,11 @@ export const SignUp = () => {
             //     : '/hledani'
             // }
           />
-          <Button to="/" type="secondary" text="Registrovat se" />
+          <Button
+            to="/registrace/dobrovolnik"
+            type="secondary"
+            text="Registrovat se"
+          />
         </form>
       </div>
     </>

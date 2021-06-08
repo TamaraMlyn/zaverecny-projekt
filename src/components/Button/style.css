@@ -38,10 +38,6 @@
 }
 
 @media (min-width: 768px) {
-  .btn {
-    margin-top: 40px;
-  }
-
   .btn__description {
     margin-top: 20px;
   }

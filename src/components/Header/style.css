@@ -15,6 +15,7 @@
   width: 40px;
   height: 40px;
   padding: 0;
+  margin: 10px;
 
   background-image: url('./img/menu-icon.svg');
   background-size: contain;
@@ -39,6 +40,7 @@
 }
 
 .menu-items {
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -78,5 +80,13 @@
 
   .menu-items {
     flex-direction: row;
+  }
+
+  .menu-item:hover {
+    border-bottom: 2px solid var(--dark-blue);
+  }
+
+  .sign-up:hover {
+    border-bottom: 2px solid var(--contrast-color);
   }
 }

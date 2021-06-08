@@ -47,8 +47,8 @@ export const Registration = ({ role, text }) => {
     <>
       <div className="registration__container">
         <h1 className="h1log">Zaregistrujte se</h1>
-        <div className="registration__intro">{text}</div>
-        <form onSubmit={handleSubmit}>
+        <div className="registration__text">{text}</div>
+        <form className="registration__form" onSubmit={handleSubmit}>
           <FormGroup>
             <TextField
               required
@@ -136,9 +136,10 @@ export const Registration = ({ role, text }) => {
               classes={{ root: 'text-field' }}
             />
           </FormGroup>
-          <Button text="Registrovat se" formType="submit" />
-          <div>Už máte účet?</div>
-          <Button text="Přihlásit se" type="secondary" to="/prihlaseni" />
+          <div className="btn--registration">
+            <Button text="Registrovat se" formType="submit" />
+            <Button text="Přihlásit se" type="secondary" to="/prihlaseni" />
+          </div>
         </form>
       </div>
     </>
