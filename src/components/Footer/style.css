@@ -1,0 +1,20 @@
+.container-footer {
+  display: none;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 10px;
+}
+
+svg {
+  width: 60px;
+  margin-left: 10px;
+}

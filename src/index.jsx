@@ -9,7 +9,7 @@ import { Request } from './components/Request';
 import { Volunteer } from './components/Volunteer';
 import { Search } from './components/Search';
 import { Header } from './components/Header';
-import './style.css';
+import { Footer } from './components/Footer';
 import { Wheelchair } from './components/Wheelchair';
 import PouchDB from 'pouchdb-browser';
 import Find from 'pouchdb-find';
@@ -19,6 +19,7 @@ import DayJsUtils from '@date-io/dayjs';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { RegistrationContext } from './lib/RegistrationContext';
 import { Confirmation } from './components/Confirmation';
+import './style.css';
 
 PouchDB.plugin(Find);
 const db = new PouchDB('local');
@@ -81,6 +82,7 @@ const App = () => {
                 <LandingPage />
               </Route>
             </Switch>
+            <Footer />
           </Router>
         </Provider>
       </RegistrationContext.Provider>
