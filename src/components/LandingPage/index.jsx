@@ -30,12 +30,14 @@ export const LandingPage = () => {
           </div>
           <div className="intro__buttons">
             <Button
+              className="main--page"
               to="/potrebuji-asistenci"
               text="Potřebuji asistenci"
               description="Jsem na vozíku a hledám pomoc"
             />
 
             <Button
+              className="main--page"
               to="/dobrovolnik"
               text="Chci být dobrovolník"
               description="Chci věnovat svůj čas a pomoc"

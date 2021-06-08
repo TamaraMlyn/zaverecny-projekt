@@ -45,6 +45,12 @@ h1 {
   font-weight: 800;
 }
 
+.btn.btn--primary.main--page:hover {
+  color: var(--dark-blue);
+  background-color: white;
+  border: solid 2px var(--dark-blue);
+ }
+
 @media (min-width: 768px) {
   .intro {
     display: flex;
