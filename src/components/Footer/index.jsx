@@ -3,11 +3,15 @@ import './style.css';
 
 export const Footer = () => {
   return (
-    <footer>
-      <div className="container-footer">
-        <p className="footer__content">
-          Vytvořeno v rámci Digitální akademie Web od
-        </p>
+    <footer className="container--footer">
+      <div className="copyright">
+        <i className="las la-copyright copyright-icon"></i>
+        <a href="https://tamaramlyn.github.io/o-projektu/">
+          Soňa Ouzká & Tamara Mlýnková, 2021
+        </a>
+      </div>
+      <div className="czechitas">
+        <p>Vytvořeno v rámci Digitální akademie Web od</p>
         <a href="https://www.czechitas.cz/cs/co-delame/digitalni-akademie">
           <svg viewBox="0 0 196.109 58.678">
             <path
@@ -120,6 +124,9 @@ export const Footer = () => {
             ></path>
           </svg>
         </a>
+      </div>
+      <div>
+        <a href="https://www.freepik.com/vectorjuice">Icons by vector juice</a>
       </div>
     </footer>
   );

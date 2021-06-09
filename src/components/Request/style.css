@@ -21,19 +21,6 @@ form {
   font-size: 20px;
 }
 
-input {
-  width: 100%;
-  display: inline-block;
-  height: 56px;
-  margin-top: 8px;
-  margin-bottom: 16px;
-  padding: 0 8px;
-  border: none;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-  border-radius: 5px;
-  font-size: 16px;
-}
-
 .request__details {
   margin-top: 50px;
 }
@@ -53,11 +40,4 @@ input {
 
 .btn--form {
   border-radius: 5px;
-}
-
-@media (min-width: 768px) {
-  input {
-    margin-top: 12px;
-    margin-bottom: 20px;
-  }
 }

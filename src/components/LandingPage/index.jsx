@@ -8,44 +8,48 @@ import './style.css';
 
 export const LandingPage = () => {
   return (
-    <>
-      <div className="background-image"></div>
+    <div className="landing-page">
+      <div className="LP--first-part">
+        <div className="intro container">
+          <img
+            className="intro__image"
+            src={wheelchair}
+            alt="Člověk na vozíku s asistentem"
+          />
 
-      <div className="intro container">
-        <img
-          className="intro__image"
-          src={wheelchair}
-          alt="Člověk na vozíku s asistentem"
-        />
+          <div className="intro__content">
+            <div className="intro__info">
+              <h1 className="container__header header--main">
+                Asistence pro lidi na vozíčku
+              </h1>
+              <p className="intro__text">
+                Propojujeme vozíčkáře s dobrovolníky, aby byl pohyb po městě
+                jednodušší.
+              </p>
+            </div>
+            <div className="intro__buttons">
+              <Button
+                className="main--page"
+                to="/potrebuji-asistenci"
+                text="Potřebuji asistenci"
+                description="Jsem na vozíku a hledám pomoc"
+              />
 
-        <div className="intro__content">
-          <div className="intro__info">
-            <h1 className="container__header header--main">
-              Asistence pro lidi na vozíčku
-            </h1>
-            <p className="intro__text">
-              Propojujeme vozíčkáře s dobrovolníky, aby byl pohyb po městě
-              jednodušší.
-            </p>
-          </div>
-          <div className="intro__buttons">
-            <Button
-              className="main--page"
-              to="/potrebuji-asistenci"
-              text="Potřebuji asistenci"
-              description="Jsem na vozíku a hledám pomoc"
-            />
-
-            <Button
-              className="main--page"
-              to="/dobrovolnik"
-              text="Chci být dobrovolník"
-              description="Chci věnovat svůj čas a pomoc"
-            />
+              <Button
+                className="main--page"
+                to="/dobrovolnik"
+                text="Chci být dobrovolník"
+                description="Chci věnovat svůj čas a pomoc"
+              />
+            </div>
           </div>
         </div>
+        <div className="icon--next-section">
+          <svg viewBox="0 0 32 32">
+            <path d="M7, 8 l9, 9 l9,-9 l4,4 l-13,13 l-13,-13 z" />
+          </svg>
+        </div>
       </div>
-      <i className="icon--next-section las la-chevron-down"></i>
 
       <div className="second-section" id="o-projektu">
         <div className="rules container">
@@ -102,6 +106,6 @@ export const LandingPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

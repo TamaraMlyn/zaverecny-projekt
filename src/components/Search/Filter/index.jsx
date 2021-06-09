@@ -89,6 +89,7 @@ export const Filter = ({ onChange }) => {
                 'aria-label': 'výběr času - začátek',
               }}
               classes={{ root: 'text-field' }}
+              keyboardIcon={<i class="las la-clock"></i>}
             />
 
             <KeyboardTimePicker
@@ -105,6 +106,7 @@ export const Filter = ({ onChange }) => {
                 'aria-label': 'výběr času - konec',
               }}
               classes={{ root: 'text-field' }}
+              keyboardIcon={<i class="las la-clock"></i>}
             />
           </FormGroup>
 
@@ -140,20 +142,18 @@ export const Filter = ({ onChange }) => {
           </div>
 
           <div className="checkbox-container">
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={strength}
-                  onChange={(e) => setStrength((oldValue) => !oldValue)}
-                  color="primary"
-                />
-              }
-              label="Jsem fyzicky zdatný"
-              classes={{ root: 'text-field' }}
-            />
-
             <Tooltip title="Zvládnu manipulaci s těžším vozíkem.">
-              {<i className="icons las la-info"></i>}
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={strength}
+                    onChange={(e) => setStrength((oldValue) => !oldValue)}
+                    color="primary"
+                  />
+                }
+                label="Jsem fyzicky zdatný"
+                classes={{ root: 'text-field' }}
+              />
             </Tooltip>
           </div>
         </FormGroup>

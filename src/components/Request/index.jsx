@@ -53,6 +53,11 @@ export const Request = () => {
     console.log(registrationState);
     e.preventDefault();
 
+    if (timeFrom > timeTo) {
+      alert('Ko');
+      return;
+    }
+
     const request = {
       name: registrationState.name,
       surname: registrationState.surname.slice(0, 1) + '.',
@@ -175,6 +180,7 @@ export const Request = () => {
                 }}
                 cancelLabel="Zrušit"
                 okLabel="Vybrat"
+                keyboardIcon={<i class="las la-clock"></i>}
               />
 
               <KeyboardTimePicker
@@ -194,6 +200,7 @@ export const Request = () => {
                 cancelLabel="Zrušit"
                 okLabel="Vybrat"
                 minDateMessage={minDate()}
+                keyboardIcon={<i class="las la-clock"></i>}
               />
             </FormGroup>
 

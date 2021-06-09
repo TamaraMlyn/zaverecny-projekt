@@ -1,159 +1,137 @@
-  h1 {
-    color: var(--dark-blue);
-  }
-  
-  .filter__containter {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .filter__requests {
-    width: 100%;
-    margin: 0 60px;
-  }
-
-  .filter__window {
-    width: 100%;
-    max-width: 400px;
-    padding: 24px 0;
-    background-color: var(--light-blue);
-    margin-top: 20px;
-    margin: 0 auto;
-  }
-
-  .filter__request {
-    display: flex;
-    flex-direction: column;
-    border: solid var(--dark-blue);
-    width: 100%;
-    padding: 10px 10px;
-    margin: 14px 0;
-    justify-content: space-between;
-    font-size: 18px;
-
-  }
-
-
-  .filter__row {
-      display: flex;
-      flex-direction: row;
-      padding: 0 30px;
-  }
-
-  .filter__row--second {
-      font-weight: 800;
-  }
-  
-
-  .filter__search {
-    font-family: 'Roboto', sans-serif;
-    padding-left: 20px;
-    font-size: 25px;
-    color: var(--contrast-color);
-    font-weight: 800;
-  }
-
-  .user__icon {
-    font-size: 60px;
-  }
-
-  .filter__name {
-    padding: 10px 10px;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--contrast-color);
-  }
-
-  .filter__row--first,
-  .filter__row--second {
-      padding: 10px;
-      min-width: 80px;  
-  }
-
-  
-  .h1log {
-    font-family: 'Roboto', sans-serif;
-    color: var(--dark-blue);
-    text-align: center;
-  }
-  
-  form {
-    width: 90%;
-    margin: 40px auto;
-  }
-  
-  .label {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-  }
-
-  .specific.label {
-      display: flex;
-      flex-direction: row;
-      padding:25px 0;
-      justify-content:space-between;
-      align-items: center;
-  }
-
- 
-  .label__checkbox {
-    font-size: 15px;
-  }
-
-  .checkbox {
-    width: 20px;
-    height: 20px;
-    margin: 10px 6px;
-  }
-
-  .requirements {
-    display: flex;
-    align-items: center;
-  }
-  
-  input {
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    height: 56px;
-    margin-top: 8px;
-    margin-bottom: 16px;
-    padding: 0 8px;
-    border: none;
-    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .icons {
-      font-size: 32px;
-  }
-  
-  @media (min-width: 768px) {
-    input {
-      margin-top: 12px;
-      margin-bottom: 20px;
-    }
-
+h1 {
+  color: var(--dark-blue);
+}
 
 .filter__containter {
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+.filter__requests {
+  width: 100%;
+  margin: 0 60px;
 }
 
 .filter__window {
-    width: 600px;
+  width: 100%;
+  max-width: 400px;
+  padding: 24px 0;
+  background-color: var(--light-blue);
+  margin-top: 20px;
+  margin: 0 auto;
 }
 
 .filter__request {
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid var(--dark-blue);
+  width: 100%;
+  padding: 10px 10px;
+  margin: 14px 0;
+  justify-content: space-between;
+  font-size: 18px;
 }
 
 .filter__row {
-    flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  padding: 0 30px;
 }
 
-/* .filter__row--first,
+.filter__row--second {
+  font-weight: 800;
+}
+
+.filter__search {
+  font-family: 'Roboto', sans-serif;
+  padding-left: 20px;
+  font-size: 25px;
+  color: var(--contrast-color);
+  font-weight: 800;
+}
+
+.user__icon {
+  font-size: 60px;
+}
+
+.filter__name {
+  padding: 10px 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--contrast-color);
+}
+
+.filter__row--first,
+.filter__row--second {
+  padding: 10px;
+  min-width: 80px;
+}
+
+.h1log {
+  font-family: 'Roboto', sans-serif;
+  color: var(--dark-blue);
+  text-align: center;
+}
+
+form {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+.specific.label {
+  display: flex;
+  flex-direction: row;
+  padding: 25px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label__checkbox {
+  font-size: 15px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin: 10px 6px;
+}
+
+.requirements {
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  font-size: 32px;
+}
+
+@media (min-width: 768px) {
+
+
+  .filter__containter {
+    flex-direction: row;
+  }
+
+  .filter__window {
+    width: 600px;
+  }
+
+  .filter__request {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .filter__row {
+    flex-direction: column;
+  }
+
+  /* .filter__row--first,
   .filter__row--second {
       min-width: 120px;  
 } */
