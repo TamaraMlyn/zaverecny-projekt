@@ -24,24 +24,8 @@
   margin: 20px auto;
 }
 
-/* .label {
-  font-size: 20px;
-  display: block;
-}
 
-input {
-  width: 100%;
-  height: 56px;
-  margin-top: 8px;
-  margin-bottom: 16px;
-  padding: 0 8px;
-  border: none;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-  border-radius: 5px;
-  font-size: 16px;
-} */
-
-.label__checkbox {
+/* .label__checkbox {
   font-size: 15px;
 }
 
@@ -54,7 +38,7 @@ input {
 .registration__account-created {
   font-size: 20px;
   text-align: center;
-}
+} */
 
 .MuiFormControl-root.text-field {
   margin: 16px 0;

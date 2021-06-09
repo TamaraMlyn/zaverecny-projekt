@@ -12,32 +12,26 @@
   margin: 32px 0;
 }
 
-form {
+.request__form {
   width: 90%;
   margin: 40px auto;
 }
 
-.label {
-  font-size: 20px;
+.MuiFormControl-root.text-field {
+  margin: 16px 0;
 }
 
-.request__details {
-  margin-top: 50px;
+.MuiFormControl-root.text-field.notes {
+  width: 100%;
 }
 
-.label--checkbox {
+.MuiFormGroup-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
 }
 
-.input--checkbox {
-  flex-grow: 0;
-  width: 30px;
-  margin: 0;
-}
-
-.btn--form {
-  border-radius: 5px;
+@media (min-width: 768px) {
+  .request__form {
+    width: 80%;
+  }
 }

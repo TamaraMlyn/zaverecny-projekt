@@ -54,7 +54,7 @@ export const Request = () => {
     e.preventDefault();
 
     if (timeFrom > timeTo) {
-      alert('Ko');
+      alert('Čas ukončení musí být později než čas začátku');
       return;
     }
 
@@ -111,7 +111,7 @@ export const Request = () => {
             Najděte si vhodného asistenta na základě svých přesných požadavků.
           </p>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form className="request__form" onSubmit={handleSubmit}>
           <FormGroup>
             <Autocomplete
               options={districts}
@@ -127,6 +127,7 @@ export const Request = () => {
                   variant="outlined"
                 />
               )}
+              classes={{ root: 'text-field' }}
             />
 
             <Autocomplete
@@ -143,6 +144,7 @@ export const Request = () => {
                   variant="outlined"
                 />
               )}
+              classes={{ root: 'text-field' }}
             />
 
             <KeyboardDatePicker
@@ -162,6 +164,7 @@ export const Request = () => {
               okLabel="Vybrat"
               invalidDateMessage="Špatný formát"
               minDate={actualDate.toDate()}
+              classes={{ root: 'text-field' }}
             />
             <FormGroup row={true}>
               <KeyboardTimePicker
@@ -180,7 +183,8 @@ export const Request = () => {
                 }}
                 cancelLabel="Zrušit"
                 okLabel="Vybrat"
-                keyboardIcon={<i class="las la-clock"></i>}
+                keyboardIcon={<i className="las la-clock"></i>}
+                classes={{ root: 'clock-field' }}
               />
 
               <KeyboardTimePicker
@@ -200,7 +204,7 @@ export const Request = () => {
                 cancelLabel="Zrušit"
                 okLabel="Vybrat"
                 minDateMessage={minDate()}
-                keyboardIcon={<i class="las la-clock"></i>}
+                keyboardIcon={<i className="las la-clock"></i>}
               />
             </FormGroup>
 
@@ -218,6 +222,7 @@ export const Request = () => {
                   variant="outlined"
                 />
               )}
+              classes={{ root: 'text-field' }}
             />
 
             <div className="request__details">
@@ -232,6 +237,7 @@ export const Request = () => {
                   />
                 }
                 label="Dobrovolník musí mít zkušenosti s asistencí"
+                classes={{ root: 'text-field' }}
               />
 
               <FormControlLabel
@@ -243,6 +249,7 @@ export const Request = () => {
                   />
                 }
                 label="Dobrovolník musí být fyzicky zdatný"
+                classes={{ root: 'text-field' }}
               />
 
               <TextField
@@ -251,6 +258,7 @@ export const Request = () => {
                 variant="outlined"
                 multiline
                 rows={5}
+                classes={{ root: 'text-field notes' }}
               />
             </div>
 

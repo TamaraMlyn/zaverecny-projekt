@@ -20,6 +20,8 @@ export const Filter = ({ onChange }) => {
   const [experience, setExperience] = useState(false);
   const [strength, setStrength] = useState(false);
 
+  const actualDate = dayjs();
+
   const createDateTime = (date, time) => {
     const timeData = dayjs(time);
     return dayjs(date).hour(timeData.hour()).minute(timeData.minute());
@@ -27,6 +29,11 @@ export const Filter = ({ onChange }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (timeFrom > timeTo) {
+      alert('Čas ukončení musí být později než čas začátku');
+      return;
+    }
 
     const search = {
       dateTimeFrom: createDateTime(date, timeFrom).toISOString(),
@@ -71,6 +78,7 @@ export const Filter = ({ onChange }) => {
             KeyboardButtonProps={{
               'aria-label': 'změňte datum',
             }}
+            minDate={actualDate.toDate()}
             classes={{ root: 'text-field' }}
           />
 
@@ -89,7 +97,7 @@ export const Filter = ({ onChange }) => {
                 'aria-label': 'výběr času - začátek',
               }}
               classes={{ root: 'text-field' }}
-              keyboardIcon={<i class="las la-clock"></i>}
+              keyboardIcon={<i className="las la-clock"></i>}
             />
 
             <KeyboardTimePicker
@@ -106,7 +114,7 @@ export const Filter = ({ onChange }) => {
                 'aria-label': 'výběr času - konec',
               }}
               classes={{ root: 'text-field' }}
-              keyboardIcon={<i class="las la-clock"></i>}
+              keyboardIcon={<i className="las la-clock"></i>}
             />
           </FormGroup>
 
