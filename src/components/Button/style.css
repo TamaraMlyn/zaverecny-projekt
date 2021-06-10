@@ -27,11 +27,17 @@
   margin-top: 10px;
 }
 
-/* .btn.btn--primary:hover {
- color: var(--dark-blue);
- background-color: white;
- border: solid 2px var(--dark-blue);
-} */
+.btn.btn--primary:hover {
+  color: var(--dark-blue);
+  background-color: transparent;
+  border: solid 2px var(--dark-blue);
+}
+
+.btn.btn--secondary:hover {
+  color: var(--dark-blue);
+  background-color: transparent;
+  border: solid 2px var(--dark-blue);
+}
 
 .btn--hidden {
   display: none;

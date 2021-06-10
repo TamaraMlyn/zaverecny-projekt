@@ -1,7 +1,6 @@
 .sign-in {
   max-width: 576px;
-  margin: 0 auto;
-  margin-top: 30px;
+  margin: 20px auto;
   padding: 24px 0;
   background-color: var(--light-blue);
   box-shadow: 0 0 15px 5px rgba(21, 29, 117, 0.05);

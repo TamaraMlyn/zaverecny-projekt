@@ -1,21 +1,19 @@
 import React from 'react';
 import { Button } from '../Button';
-
-import wheelchair from './img/wheelchair.jpeg';
+import wheelchair from './img/wheelchair.png';
 import magnifier from './img/magnifier.svg';
 import clock from './img/clock.svg';
+import { HashLink } from 'react-router-hash-link';
 import './style.css';
 
 export const LandingPage = () => {
   return (
     <div className="landing-page">
-      <div className="LP--first-part">
+      <div className="first-section">
         <div className="intro container">
-          <img
-            className="intro__image"
-            src={wheelchair}
-            alt="Člověk na vozíku s asistentem"
-          />
+          <div className="intro__image">
+            <img src={wheelchair} alt="Člověk na vozíku s asistentem" />
+          </div>
 
           <div className="intro__content">
             <div className="intro__info">
@@ -45,9 +43,12 @@ export const LandingPage = () => {
           </div>
         </div>
         <div className="icon--next-section">
-          <svg viewBox="0 0 32 32">
-            <path d="M7, 8 l9, 9 l9,-9 l4,4 l-13,13 l-13,-13 z" />
-          </svg>
+          <HashLink to="/#o-projektu">
+            {' '}
+            <svg viewBox="0 0 32 32">
+              <path d="M7, 8 l9, 9 l9,-9 l4,4 l-13,13 l-13,-13 z" />
+            </svg>
+          </HashLink>
         </div>
       </div>
 

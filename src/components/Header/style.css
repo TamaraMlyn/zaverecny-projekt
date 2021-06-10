@@ -20,6 +20,7 @@
   background-image: url('./img/menu-icon.svg');
   background-size: contain;
   background-color: transparent;
+  fill: blue;
 
   cursor: pointer;
 }
