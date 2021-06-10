@@ -52,11 +52,4 @@
   .volunteer__process {
     flex-direction: row;
   }
-
-  .btn.btn--primary.btn--resize.main--page:hover {
-    color: var(--dark-blue);
-    background-color: white;
-    border: solid 2px var(--dark-blue);
-    font-weight: bold;
-  }
 }
