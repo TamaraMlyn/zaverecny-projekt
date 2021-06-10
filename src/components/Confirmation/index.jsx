@@ -45,11 +45,11 @@ export const Confirmation = () => {
         </div>
         <div className="confirmation__buttons">
         <Button 
-        className="main--page"
+        className="btn--resize"
         text="Moje požadavky" 
         formType="submit"/>
         <Button
-          className="main--page"
+          className="btn--resize"
           text="Vytvořit další požadavek"
           formType="submit"
           to="/pozadavek"

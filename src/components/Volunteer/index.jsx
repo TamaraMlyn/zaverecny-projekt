@@ -39,7 +39,7 @@ export const Volunteer = () => {
           </div>
         </div>
 
-        <Button className="btn--resize main--page" to="/registrace/dobrovolnik" text="Chci se registrovat" />
+        <Button className="btn--resize" to="/registrace/dobrovolnik" text="Chci se registrovat" />
       </div>
     </>
   );

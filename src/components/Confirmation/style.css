@@ -9,7 +9,7 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 20px 20px;
+  padding: 40px;
   background-color: var(--light-blue);
   font-size: 1.2rem;
   line-height: 1.8rem;
@@ -40,8 +40,8 @@
 .confirmation__next--question {
   font-family: "Raleway", sans-serif;
   color: var(--contrast-color);
-  font-weight: 900px;
-  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
 }
 
 .confirmation__next--text {
@@ -56,22 +56,9 @@
 }
 
 @media (min-width: 768px) {
-  .btn.btn--primary.main--page:hover {
-    color: var(--dark-blue);
-    background-color: white;
-    border: solid 2px var(--dark-blue);
-    font-weight: bold;
-  }
-
-  .btn.main--page {
-    flex-basis: 45%;
-    margin: 0;
-  }
-
   .confirmation__buttons {
     display: flex;
     flex-direction: row;
-    max-width: 700px;
     text-align: center;
     justify-content: space-between;
     align-items: center;

@@ -13,6 +13,7 @@
 .btn.btn--primary {
   background-color: var(--dark-blue);
   color: var(--light-blue);
+  border: solid 2px var(--dark-blue);
 }
 
 .btn.btn--secondary {
@@ -30,7 +31,6 @@
 .btn.btn--primary:hover {
   color: var(--dark-blue);
   background-color: transparent;
-  border: solid 2px var(--dark-blue);
 }
 
 .btn.btn--secondary:hover {
