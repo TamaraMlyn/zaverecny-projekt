@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { Button } from "../Button";
 import "./style.css";
-import form from "./img/form.png";
-import thick from "./img/thick.png";
-import timeplace from "./img/timeplace.png";
+import form from "./img/form.svg";
+import thick from "./img/thick.svg";
+import timeplace from "./img/timeplace.svg";
 
 export const Wheelchair = () => {
   useEffect(() => {

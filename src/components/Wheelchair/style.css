@@ -6,7 +6,7 @@
   font-family: "Raleway", sans-serif;
   padding: 30px;
   color: var(--dark-blue);
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .volunteer__intro {
@@ -18,7 +18,7 @@
   font-family: Roboto, sans-serif;
   font-size: 1.9rem;
   font-weight: 800;
-  margin: 50px 0;
+  margin-top: 50px;
   color: var(--contrast-color);
 }
 
@@ -30,7 +30,8 @@
 }
 
 .volunteer__step {
-  width: 220px;
+  width: 230px;
+  height: 270px;
   margin: 10px 30px;
   padding: 10px;
   text-align: center;
@@ -44,24 +45,20 @@
   background-color: var(--light-blue);
 }
 
-.volunteer__step--text {
-  margin-top: 20px;
-}
-
-.volunteer__step--form {
-  width: 60px;
-  height: 100px;
-}
+/* .volunteer__step--form {
+  width: 120px;
+  height: 150px;
+} 
 
 .volunteer__step--timeplace {
-  width: 135px;
-  height: 100px;
-}
+  width: 195px;
+  height: 150px;
+}  
 
 .volunteer__step--thick {
-  width: 100px;
-  height: 100px;
-}
+  width: 150px;
+  height: 150px;
+}   */
 
 /* .icons--flow {
   font-size: 55px;
