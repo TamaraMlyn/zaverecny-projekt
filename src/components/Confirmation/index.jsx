@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useDoc } from "use-pouchdb";
 import { Button } from "../Button";
+import checked from './img/checked.png';
 import dayjs from "dayjs";
 import "dayjs/locale/cs";
 import "./style.css";
@@ -16,11 +17,12 @@ export const Confirmation = () => {
 
   return (
     <div className="confirmation__container">
+      <img className="checked--picture" src={checked} alt="checked"/>
       <h1 className="header header--main">
-        Děkujeme, Váš požadavek jsme obdrželi.
+        Děkujeme, tvůj požadavek jsme obdrželi.
       </h1>
       <div className="confirmation__text">
-        Ještě předtím, než začněte pomáhat, zaregistujte se!
+        Pro jistotu to ještě shrneme:
         <div className="confirmation__block">
           <div className="confirmation__date">
             Datum: {dayjs(doc.dateTimeFrom).format("D.M.")}
@@ -35,18 +37,24 @@ export const Confirmation = () => {
         </div>
       </div>
       <div className="confirmation__next">
-        Co se bude dít dál?
-        <div>
-          V případě, že se najde dobrovolník, který bude splňovat vaše
-          požadavky, dáme Vám vědet prostřednictvím emailu nebo smsky dle vašich
+        <div className="confirmation__next--question">Co se bude dít dál?</div>
+        <div  className="confirmation__next--text">
+          V případě, že se najde dobrovolník, který bude splňovat tvoje
+          požadavky, dáme ti vědet prostřednictvím emailu nebo smsky dle tvých 
           preferencí.
         </div>
-        <Button text="Zpátky domů" formType="submit" to="/" />
+        <div className="confirmation__buttons">
+        <Button 
+        className="main--page"
+        text="Moje požadavky" 
+        formType="submit"/>
         <Button
+          className="main--page"
           text="Vytvořit další požadavek"
           formType="submit"
           to="/pozadavek"
         />
+        </div>
       </div>
     </div>
   );

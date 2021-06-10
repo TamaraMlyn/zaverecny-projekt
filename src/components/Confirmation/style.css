@@ -1,11 +1,15 @@
 .confirmation__container {
+  width: 100%;
+  max-width: 900px;
+  max-height: 100vh;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 80px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: space-between;
-  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  padding: 20px 20px;
   background-color: var(--light-blue);
   font-size: 1.2rem;
   line-height: 1.8rem;
@@ -14,12 +18,68 @@
 
 .header.header--main {
   line-height: 2.4rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .confirmation__text {
   margin: 20px;
+  font-family: "Raleway", sans-serif;
 }
 
 .confirmation__block {
   margin: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+.confirmation__next {
+  font-family: "Raleway", sans-serif;
+  color: var(--constrast-color);
+  font-size: 1.2rem;
+}
+
+.confirmation__next--question {
+  font-family: "Raleway", sans-serif;
+  color: var(--contrast-color);
+  font-weight: 900px;
+  font-size: 1.4rem;
+}
+
+.confirmation__next--text {
+  font-family: "Raleway", sans-serif;
+  margin: 20px 0;
+}
+
+.checked--picture {
+  width: 80px;
+  height: 80px;
+  size:100%;
+}
+
+@media (min-width: 768px) {
+  .btn.btn--primary.main--page:hover {
+    color: var(--dark-blue);
+    background-color: white;
+    border: solid 2px var(--dark-blue);
+    font-weight: bold;
+  }
+
+  .btn.main--page {
+    flex-basis: 45%;
+    margin: 0;
+  }
+
+  .confirmation__buttons {
+    display: flex;
+    flex-direction: row;
+    max-width: 700px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .checked--picture {
+    width: 100px;
+    height: 100px;
+    size:100%;
+  }
 }
