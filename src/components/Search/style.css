@@ -20,6 +20,7 @@ h1 {
   background-color: var(--light-blue);
   margin-top: 20px;
   margin: 0 auto;
+  color: var(--dark-blue);
 }
 
 .filter__request {
@@ -46,9 +47,10 @@ h1 {
 .filter__search {
   font-family: 'Roboto', sans-serif;
   padding-left: 20px;
-  font-size: 25px;
+  font-size: 20px;
   color: var(--contrast-color);
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 .user__icon {
@@ -120,6 +122,7 @@ form {
 
   .filter__window {
     width: 600px;
+    margin-left: 30px;
   }
 
   .filter__request {

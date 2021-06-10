@@ -32,12 +32,12 @@
 .volunteer__process {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .volunteer__step {
   width: 220px;
-  margin: 20px 50px;
+  margin: 10px 30px;
   padding: 10px;
   text-align: center;
   border-radius: 5px;
@@ -78,7 +78,7 @@
     width: 500px;
     height: 500px;
     size: 100%;
-    margin-left:30px;
+    margin-left:40px;
 }
 .picture--side {
     display: block;
