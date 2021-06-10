@@ -5,7 +5,6 @@
   background-color: var(--light-blue);
   padding: 24px 0;
   color: var(--dark-blue);
-  font-family: "Roboto", sans-serif;
 }
 
 .request__description {
