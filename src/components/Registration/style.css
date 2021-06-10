@@ -5,6 +5,8 @@
   padding: 24px 0;
   background-color: var(--light-blue);
   color: var(--dark-blue);
+  min-height: 100%;
+  position: relative;
 }
 
 .h1log {
@@ -24,7 +26,6 @@
   width: 90%;
   margin: 20px auto;
 }
-
 
 /* .label__checkbox {
   font-size: 15px;

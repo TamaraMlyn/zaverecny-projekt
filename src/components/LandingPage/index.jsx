@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../Button';
-import wheelchair from './img/wheelchair.png';
+import wheelchair from './img/wheelchair.svg';
 import magnifier from './img/magnifier.svg';
 import clock from './img/clock.svg';
 import { HashLink } from 'react-router-hash-link';
@@ -23,6 +23,8 @@ export const LandingPage = () => {
               <p className="intro__text">
                 Propojujeme vozíčkáře s dobrovolníky, aby byl pohyb po městě
                 jednodušší.
+                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
             <div className="intro__buttons">

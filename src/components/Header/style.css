@@ -20,7 +20,6 @@
   background-image: url('./img/menu-icon.svg');
   background-size: contain;
   background-color: transparent;
-  fill: blue;
 
   cursor: pointer;
 }
@@ -67,6 +66,10 @@
 }
 
 @media (min-width: 768px) {
+  .header {
+    height: 4rem;
+  }
+  
   .hamburger {
     display: none;
   }
