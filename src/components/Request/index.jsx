@@ -95,11 +95,12 @@ export const Request = () => {
   ];
 
   const purposes = [
-    'k lékaři',
-    'na nákup',
-    'na úřad',
-    'na společenskou událost',
-    'procházka',
+    'Návštěva lékaře',
+    'Nákup',
+    'Cesta na úřad',
+    'Cesta na společenskou událost',
+    'Procházka',
+    'Jiné',
   ];
 
   return (
@@ -107,9 +108,9 @@ export const Request = () => {
       <div className="request">
         <div className="request__description">
           <h1 className="container__header">Potřebuji asistenci</h1>
-          <p>
-            Najděte si vhodného asistenta na základě svých přesných požadavků.
-          </p>
+          <div className="request__intro" >
+            Najdi si vhodného asistenta na základě přesných požadavků!
+          </div>
         </div>
         <form className="request__form" onSubmit={handleSubmit}>
           <FormGroup>
@@ -123,7 +124,7 @@ export const Request = () => {
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  label="Místo, odkud potřebujete:"
+                  label="Místo, odkud potřebuješ:"
                   variant="outlined"
                 />
               )}
@@ -140,7 +141,7 @@ export const Request = () => {
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  label="Místo, kam potřebujete:"
+                  label="Místo, kam potřebuješ:"
                   variant="outlined"
                 />
               )}
@@ -158,7 +159,7 @@ export const Request = () => {
                 setDate(date);
               }}
               KeyboardButtonProps={{
-                'aria-label': 'změňte datum',
+                'aria-label': 'změň datum',
               }}
               cancelLabel="Zrušit"
               okLabel="Vybrat"
@@ -254,7 +255,7 @@ export const Request = () => {
 
               <TextField
                 label="Poznámky"
-                placeholder="Vaše poznámky (dopište, co je ještě pro Vás důležité):"
+                placeholder="Tvoje poznámky (dopiš, co je ještě pro tebe důležité):"
                 variant="outlined"
                 multiline
                 rows={5}

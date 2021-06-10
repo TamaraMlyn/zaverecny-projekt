@@ -9,6 +9,7 @@
   background-color: var(--light-blue);
   font-size: 1.2rem;
   line-height: 1.8rem;
+  color: var(--dark-blue);
 }
 
 .header.header--main {
