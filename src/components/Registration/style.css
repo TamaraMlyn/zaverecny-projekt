@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 24px 0;
   background-color: var(--light-blue);
+  color: var(--dark-blue);
 }
 
 .h1log {

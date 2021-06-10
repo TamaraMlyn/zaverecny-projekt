@@ -46,7 +46,7 @@ export const Registration = ({ role, text }) => {
   return (
     <>
       <div className="registration__container">
-        <h1 className="h1log">Zaregistrujte se</h1>
+        <h1 className="h1log">Zaregistruj se</h1>
         <div className="registration__text">{text}</div>
         <form className="registration__form" onSubmit={handleSubmit}>
           <FormGroup>
