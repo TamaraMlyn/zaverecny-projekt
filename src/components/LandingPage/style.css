@@ -172,11 +172,10 @@
   }
 
   svg.animate-volunteer .volunteer {
-    animation: 1s infinite alternate scale;
+    animation: 2s ease-out infinite alternate scale;
   }
-
   svg.animate-wheelchair .wheelchair {
-    animation: 1s infinite alternate scale;
+    animation: 2s ease-out infinite alternate scale;
   }
 }
 
