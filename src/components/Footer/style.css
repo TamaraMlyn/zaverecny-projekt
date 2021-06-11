@@ -34,10 +34,18 @@ a {
   vertical-align: middle;
 }
 
+.icons-resource {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .container--footer {
     flex-direction: row;
     justify-content: space-around;
     height: 3rem;
+  }
+
+  .icons-resource {
+    text-align: left;
   }
 }

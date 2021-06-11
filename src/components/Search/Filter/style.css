@@ -19,6 +19,10 @@
   margin-left: 10px;
 }
 
+.MuiFormControl-root.MuiTextField-root.MuiFormControl-fullWidth {
+  width: 100%;
+}
+
 .MuiFormGroup-row {
   display: flex;
   justify-content: space-between;

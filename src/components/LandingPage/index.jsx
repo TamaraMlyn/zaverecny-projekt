@@ -59,7 +59,7 @@ export const LandingPage = () => {
           <h2 className="container__header">Jak propojování funguje?</h2>
           <div className="rules__content">
             <div className="rules__person">
-              <img className="person__icon" src={magnifier} alt="" />
+              <img className="person__icon" src={magnifier} alt="ikona lupy" />
               <div className="person__description">
                 <h3 className="person__header">Člověk na vozíku</h3>
                 <p>
@@ -72,7 +72,7 @@ export const LandingPage = () => {
             </div>
 
             <div className="rules__person">
-              <img className="person__icon" src={clock} alt="" />
+              <img className="person__icon" src={clock} alt="ikona hodin" />
               <div className="person__description">
                 <h3 className="person__header">Dobrovolník</h3>
                 <p>

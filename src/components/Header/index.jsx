@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { RegistrationContext } from './../../lib/RegistrationContext';
+import dobrovozik from './img/dobrovozik.svg';
 import './style.css';
 
 export const Header = () => {
@@ -26,7 +27,9 @@ export const Header = () => {
   return (
     <header className="header">
       <div className={menuOpen ? 'topbar topbar--opened' : 'topbar'}>
-        <Link to="/">Dobrovozík</Link>
+        <Link to="/">
+          <img className="logo-icon" src={dobrovozik} alt="logo dobrovozik" />
+        </Link>
         <span className="hamburger" onClick={handleOnClick}></span>
       </div>
 

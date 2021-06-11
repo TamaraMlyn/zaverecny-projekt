@@ -275,7 +275,7 @@ export const Request = () => {
               />
 
               <TextField
-                label="Poznámky"
+                label="Poznámka"
                 placeholder="Tvoje poznámky (dopiš, co je ještě pro tebe důležité):"
                 variant="outlined"
                 multiline

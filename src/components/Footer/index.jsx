@@ -126,8 +126,12 @@ export const Footer = () => {
           </svg>
         </a>
       </p>
-      <div>
+      <div className="icons-resource">
         <a href="https://www.freepik.com/vectorjuice">Icons by vectorjuice</a>
+        <br />
+        <a href="https://www.linkedin.com/in/nikola-posp%C3%AD%C5%A1ilov%C3%A1-0b91751a3/">
+          Logo by Nikola Pospíšilová
+        </a>
       </div>
     </footer>
   );

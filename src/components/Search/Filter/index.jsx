@@ -86,6 +86,8 @@ export const Filter = ({ onChange }) => {
             id="date"
             id="date-picker-dialog"
             label="Datum"
+            cancelLabel="Zrušit"
+            okLabel="Vybrat"
             format="D.M.YYYY"
             value={date}
             onChange={(date) => {
@@ -103,6 +105,8 @@ export const Filter = ({ onChange }) => {
             <KeyboardTimePicker
               id="time-picker"
               label="Čas od:"
+              cancelLabel="Zrušit"
+              okLabel="Vybrat"
               format="HH:mm"
               ampm={false}
               minutesStep={5}
