@@ -1,5 +1,6 @@
 .MuiFormControl-root.text-field {
   margin: 16px 0;
+  flex-grow: 0;
 }
 
 .MuiAutocomplete-root.text-field {
@@ -8,6 +9,19 @@
 
 .MuiFormControlLabel-root.text-field {
   margin: 8px 0;
+}
+
+.MuiFormControl-root.MuiTextField-root.clock-field-left {
+  margin-right: 10px;
+}
+
+.MuiFormControl-root.MuiTextField-root.clock-field-right {
+  margin-left: 10px;
+}
+
+.MuiFormGroup-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .checkbox-container {

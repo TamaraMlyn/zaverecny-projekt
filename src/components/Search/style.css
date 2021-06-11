@@ -6,7 +6,6 @@ h1 {
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  
 }
 
 .filter__requests {
@@ -19,7 +18,6 @@ h1 {
   max-width: 400px;
   padding: 24px 0;
   background-color: var(--light-blue);
-  margin-top: 20px;
   margin: 0 auto;
   color: var(--dark-blue);
 }
@@ -76,9 +74,10 @@ h1 {
   text-align: center;
 }
 
-form {
+.filter__window form {
   width: 90%;
-  margin: 40px auto;
+  margin: 20px auto;
+  margin-bottom: 0;
 }
 
 .label {

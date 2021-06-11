@@ -51,39 +51,43 @@ const App = () => {
         value={{ registrationState, setRegistrationState }}
       >
         <Provider pouchdb={db}>
-          <Router>
-            <Header />
-            <Switch>
-              <Route path="/potrebuji-asistenci">
-                <Wheelchair />
-              </Route>
-              <Route path="/pozadavek/potvrzeni/:id">
-                <Confirmation />
-              </Route>
-              <Route path="/pozadavek">
-                <Request />
-              </Route>
-              <Route path="/dobrovolnik">
-                <Volunteer />
-              </Route>
-              <Route path="/registrace/dobrovolnik">
-                <RegistrationVolunteer />
-              </Route>
-              <Route path="/registrace/vozickar">
-                <RegistrationWheelchair />
-              </Route>
-              <Route path="/prihlaseni">
-                <SignUp />
-              </Route>
-              <Route path="/hledani">
-                <Search />
-              </Route>
-              <Route path="/">
-                <LandingPage />
-              </Route>
-            </Switch>
+          <div className="page">
+            <div className="content">
+              <Router>
+                <Header />
+                <Switch>
+                  <Route path="/potrebuji-asistenci">
+                    <Wheelchair />
+                  </Route>
+                  <Route path="/pozadavek/potvrzeni/:id">
+                    <Confirmation />
+                  </Route>
+                  <Route path="/pozadavek">
+                    <Request />
+                  </Route>
+                  <Route path="/dobrovolnik">
+                    <Volunteer />
+                  </Route>
+                  <Route path="/registrace/dobrovolnik">
+                    <RegistrationVolunteer />
+                  </Route>
+                  <Route path="/registrace/vozickar">
+                    <RegistrationWheelchair />
+                  </Route>
+                  <Route path="/prihlaseni">
+                    <SignUp />
+                  </Route>
+                  <Route path="/hledani">
+                    <Search />
+                  </Route>
+                  <Route path="/">
+                    <LandingPage />
+                  </Route>
+                </Switch>
+              </Router>
+            </div>
             <Footer />
-          </Router>
+          </div>
         </Provider>
       </RegistrationContext.Provider>
     </MuiPickersUtilsProvider>

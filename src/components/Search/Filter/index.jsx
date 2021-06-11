@@ -96,7 +96,7 @@ export const Filter = ({ onChange }) => {
               KeyboardButtonProps={{
                 'aria-label': 'výběr času - začátek',
               }}
-              classes={{ root: 'text-field' }}
+              classes={{ root: 'text-field clock-field-left' }}
               keyboardIcon={<i className="las la-clock"></i>}
             />
 
@@ -113,7 +113,7 @@ export const Filter = ({ onChange }) => {
               KeyboardButtonProps={{
                 'aria-label': 'výběr času - konec',
               }}
-              classes={{ root: 'text-field' }}
+              classes={{ root: 'text-field clock-field-right' }}
               keyboardIcon={<i className="las la-clock"></i>}
             />
           </FormGroup>

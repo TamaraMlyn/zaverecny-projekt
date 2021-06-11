@@ -15,6 +15,7 @@
 
 .request__intro {
   font-size: 20px;
+  padding: 0 15px;
 }
 
 .request__form {
@@ -26,12 +27,17 @@
   margin: 16px 0;
 }
 
+.MuiFormControl-marginNormal.clock-field {
+  margin-bottom: 16px;
+}
+
 .MuiFormControl-root.text-field.notes {
   width: 100%;
 }
 
-.MuiFormGroup-row {
+.MuiFormGroup-row.MuiFormGroup-root {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 
