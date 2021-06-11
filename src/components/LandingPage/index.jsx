@@ -64,7 +64,7 @@ export const LandingPage = () => {
                 <h3 className="person__header">Člověk na vozíku</h3>
                 <p>
                   Člověk na vozíku zadá svůj konkrétní požadavek s upřesněním
-                  datumu, lokality, v jakém časovém intervalu a pro jaké účely
+                  datumu, lokality, v jakém časovém intervalu a gpro jaké účely
                   potrebuje pomoc s doprovodem. Na základě požadavku ho pak
                   kontaktuje dobrovolník, který je schopen mu vyhovět.
                 </p>

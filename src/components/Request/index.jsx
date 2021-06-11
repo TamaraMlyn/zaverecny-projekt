@@ -108,13 +108,14 @@ export const Request = () => {
       <div className="request">
         <div className="request__description">
           <h1 className="container__header">Potřebuji asistenci</h1>
-          <div className="request__intro" >
+          <div className="request__intro">
             Najdi si vhodného asistenta na základě přesných požadavků!
           </div>
         </div>
         <form className="request__form" onSubmit={handleSubmit}>
           <FormGroup>
             <Autocomplete
+              required
               options={districts}
               style={{ width: 300 }}
               value={from}
@@ -166,6 +167,7 @@ export const Request = () => {
               invalidDateMessage="Špatný formát"
               minDate={actualDate.toDate()}
               classes={{ root: 'text-field' }}
+              autoOk={true}
             />
             <FormGroup row={true}>
               <KeyboardTimePicker
@@ -186,6 +188,7 @@ export const Request = () => {
                 okLabel="Vybrat"
                 keyboardIcon={<i className="las la-clock"></i>}
                 classes={{ root: 'clock-field' }}
+                autoOk={true}
               />
 
               <KeyboardTimePicker
@@ -206,6 +209,7 @@ export const Request = () => {
                 okLabel="Vybrat"
                 minDateMessage={minDate()}
                 keyboardIcon={<i className="las la-clock"></i>}
+                autoOk={true}
               />
             </FormGroup>
 

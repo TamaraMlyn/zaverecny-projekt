@@ -9,6 +9,8 @@ import {
   Tooltip,
 } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
+import InputAdornment from '@material-ui/core/InputAdornment';
+
 import './style.css';
 import dayjs from '../../../lib/dayjs';
 
@@ -80,6 +82,7 @@ export const Filter = ({ onChange }) => {
             }}
             minDate={actualDate.toDate()}
             classes={{ root: 'text-field' }}
+            autoOk={true}
           />
 
           <FormGroup row={true}>
@@ -98,6 +101,7 @@ export const Filter = ({ onChange }) => {
               }}
               classes={{ root: 'text-field clock-field-left' }}
               keyboardIcon={<i className="las la-clock"></i>}
+              autoOk={true}
             />
 
             <KeyboardTimePicker
@@ -115,6 +119,7 @@ export const Filter = ({ onChange }) => {
               }}
               classes={{ root: 'text-field clock-field-right' }}
               keyboardIcon={<i className="las la-clock"></i>}
+              autoOk={true}
             />
           </FormGroup>
 
@@ -135,7 +140,7 @@ export const Filter = ({ onChange }) => {
             classes={{ root: 'text-field' }}
           />
 
-          <div>
+          <div className="checkbox-container">
             <FormControlLabel
               control={
                 <Checkbox
@@ -147,10 +152,14 @@ export const Filter = ({ onChange }) => {
               label="Mám zkušenosti s asistencí"
               classes={{ root: 'text-field' }}
             />
+            <i className="icons las la-graduation-cap"></i>
           </div>
 
           <div className="checkbox-container">
-            <Tooltip title="Zvládnu manipulaci s těžším vozíkem.">
+            <Tooltip
+              title="Zvládnu manipulaci s těžším vozíkem."
+              placement="right"
+            >
               <FormControlLabel
                 control={
                   <Checkbox
@@ -163,6 +172,7 @@ export const Filter = ({ onChange }) => {
                 classes={{ root: 'text-field' }}
               />
             </Tooltip>
+            <i className="icons las la-dumbbell"></i>
           </div>
         </FormGroup>
 
