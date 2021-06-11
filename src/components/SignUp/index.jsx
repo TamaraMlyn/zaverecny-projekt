@@ -20,6 +20,17 @@ export const SignUp = () => {
   const history = useHistory();
 
   const handleOnClick = (e) => {
+    if (email === '') {
+      alert('Zadejte svůj email');
+      return;
+    } else if (!email.includes('@') || !email.includes('.cz')) {
+      alert('Špatný formát emailu');
+      return;
+    } else if (password === '') {
+      alert('Zadejte svoje heslo');
+      return;
+    }
+
     if (email.includes('seznam')) {
       console.log('funguju');
       history.push('/pozadavek');

@@ -28,6 +28,14 @@ export const Registration = ({ role, text }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (password.length < 8) {
+      alert("Heslo musí obsahovat minimálně 8 znaků")
+      return
+    } else if (passwordCheck !== password ) {
+      alert("Hesla se neshodují")
+      return
+    }
+
     setRegistrationState({
       name: name,
       surname: surname,
@@ -132,7 +140,7 @@ export const Registration = ({ role, text }) => {
                   color="primary"
                 />
               }
-              label="Souhlasím se zpracováním údajů"
+              label="Souhlasím se zpracováním osobních údajů"
               classes={{ root: 'text-field' }}
             />
           </FormGroup>

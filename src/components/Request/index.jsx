@@ -58,6 +58,23 @@ export const Request = () => {
       return;
     }
 
+    if (from === null) {
+      alert('Musíte vyplnit všechny položky kromě požadavků a poznámek');
+      return;
+    } else if (to === null) {
+      alert('Musíte vyplnit všechny položky kromě požadavků a poznámek');
+      return;
+    } else if (timeFrom === null) {
+      alert('Musíte vyplnit všechny položky kromě požadavků a poznámek');
+      return;
+    } else if (timeTo === null) {
+      alert('Musíte vyplnit všechny položky kromě požadavků a poznámek');
+      return;
+    } else if (purpose === null) {
+      alert('Musíte vyplnit všechny položky kromě požadavků a poznámek');
+      return;
+    }
+
     const request = {
       name: registrationState.name,
       surname: registrationState.surname.slice(0, 1) + '.',

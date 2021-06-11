@@ -37,6 +37,20 @@ export const Filter = ({ onChange }) => {
       return;
     }
 
+    if (date === null) {
+      alert('Vyplňte prosím položky filtru');
+      return;
+    } else if (timeFrom === null) {
+      alert('Vyplňte prosím položky filtru');
+      return;
+    } else if (timeTo === null) {
+      alert('Vyplňte prosím položky filtru');
+      return;
+    } else if (place === null) {
+      alert('Vyplňte prosím položky filtru');
+      return;
+    }
+
     const search = {
       dateTimeFrom: createDateTime(date, timeFrom).toISOString(),
       dateTimeTo: createDateTime(date, timeTo).toISOString(),
