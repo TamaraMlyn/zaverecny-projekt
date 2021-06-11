@@ -98,7 +98,7 @@ export const Request = () => {
     'Návštěva lékaře',
     'Nákup',
     'Cesta na úřad',
-    'Cesta na společenskou událost',
+    'Cesta za kulturou',
     'Procházka',
     'Jiné',
   ];

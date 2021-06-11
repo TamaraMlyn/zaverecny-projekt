@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ListItem } from '../ListItem';
 import './style.css';
 import magnifier from './img/magnifier.svg';
+import cross from './img/cross.svg';
 import { usePouch } from 'use-pouchdb';
 import {Button} from '../../Button/index';
 
@@ -56,19 +57,20 @@ export const RequestList = ({ search }) => {
           <img className="img--search" src={magnifier} alt="hledani"/>
           </div>
       ) : requests.docs.length === 0 ? (
-        <div className="nolist__requests">
+        <div className="noone__requests">
           <h1 className="header--search">
-            Evidentně neexistuje momentálně nikdo, kdo by vaší pomoc na základě
-            vašich možností potřeboval. Nemůžete v jiný čas, nebo na jiném
-            místě?
+            Škoda! Asi teď neexistuje nikdo, kdo by tvou pomoc v rámci
+            tvých časových možností potřeboval. Nezkusíš ještě zadat jiný čas, nebo jiné
+            místo?
           </h1>
-          <Button className="btn--resize" to="/hledani" text="Hledat znovu"/>
+          <img className="img--search" src={cross} alt="cross"/>
+
         </div>
       ) : (
         <div className="filter__requests">
           <h1 className="header">Momentálně pomoc hledají tyto osoby: </h1>
           <div className="filter__intro">
-            Můžete vybírat z už existujících požadavků od těch, které jsou
+            Můžeš vybírat z už existujících požadavků od těch, které jsou
             seřazeny dle největší urgence
           </div>
 
