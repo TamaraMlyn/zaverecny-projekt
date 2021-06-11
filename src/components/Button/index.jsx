@@ -10,6 +10,8 @@ export const Button = ({
   to,
   onClick,
   className,
+  onMouseEnter,
+  onMouseLeave,
 }) => {
   const history = useHistory();
 
@@ -30,7 +32,20 @@ export const Button = ({
 
   return (
     <>
-      <div className={`btn btn--${type} ${className}`} onClick={handleClick}>
+      <div
+        className={`btn btn--${type} ${className}`}
+        onClick={handleClick}
+        onMouseEnter={() => {
+          if (onMouseEnter) {
+            onMouseEnter();
+          }
+        }}
+        onMouseLeave={() => {
+          if (onMouseLeave) {
+            onMouseLeave();
+          }
+        }}
+      >
         <div className="btn__text" href="">
           {text}
         </div>

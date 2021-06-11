@@ -19,18 +19,7 @@ export const SignUp = () => {
 
   const history = useHistory();
 
-  const handleOnClick = (e) => {
-    if (email === '') {
-      alert('Zadejte svůj email');
-      return;
-    } else if (!email.includes('@') || !email.includes('.cz')) {
-      alert('Špatný formát emailu');
-      return;
-    } else if (password === '') {
-      alert('Zadejte svoje heslo');
-      return;
-    }
-
+  const handleOnSubmit = (e) => {
     if (email.includes('seznam')) {
       console.log('funguju');
       history.push('/pozadavek');
@@ -45,7 +34,7 @@ export const SignUp = () => {
     <>
       <div className="sign-in container">
         <h1 className="h1log">Přihlášení</h1>
-        <form className="sign-in__form">
+        <form className="sign-in__form" onSubmit={handleOnSubmit}>
           <FormGroup>
             <TextField
               required
@@ -69,7 +58,7 @@ export const SignUp = () => {
             />
           </FormGroup>
 
-          <Button onClick={handleOnClick} text="Přihlásit se" />
+          <Button text="Přihlásit se" formType="submit" />
           <Button
             to="/registrace/dobrovolnik"
             type="secondary"

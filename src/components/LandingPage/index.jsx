@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '../Button';
 import wheelchair from './img/wheelchair.svg';
 import magnifier from './img/magnifier.svg';
@@ -7,12 +7,23 @@ import { HashLink } from 'react-router-hash-link';
 import './style.css';
 
 export const LandingPage = () => {
+  const [animationWheelchair, setAnimationWheelchair] = useState(false);
+  const [animationVolunteer, setAnimationVolunteer] = useState(false);
+
   return (
     <div className="landing-page">
       <div className="first-section">
         <div className="intro container">
           <div className="intro__image">
-            <img src={wheelchair} alt="Člověk na vozíku s asistentem" />
+            <svg
+              className={
+                'image--main ' +
+                (animationWheelchair ? 'animate-wheelchair' : '') +
+                (animationVolunteer ? 'animate-volunteer' : '')
+              }
+            >
+              {wheelchair}
+            </svg>
           </div>
 
           <div className="intro__content">
@@ -33,6 +44,8 @@ export const LandingPage = () => {
                 to="/potrebuji-asistenci"
                 text="Potřebuji asistenci"
                 description="Jsem na vozíku a hledám pomoc"
+                onMouseEnter={() => setAnimationWheelchair(true)}
+                onMouseLeave={() => setAnimationWheelchair(false)}
               />
 
               <Button
@@ -40,6 +53,8 @@ export const LandingPage = () => {
                 to="/dobrovolnik"
                 text="Chci být dobrovolník"
                 description="Chci věnovat svůj čas a pomoc"
+                onMouseEnter={() => setAnimationVolunteer(true)}
+                onMouseLeave={() => setAnimationVolunteer(false)}
               />
             </div>
           </div>
