@@ -161,25 +161,153 @@
     line-height: 1.5rem;
   }
 
-  svg .asistent {
+  /* ---------animation--------- */
+
+  svg .volunteer {
     transform-origin: 1200px 1700px;
   }
-  ​ svg .vozickar {
+
+  svg .wheelchair {
     transform-origin: 1900px 2300px;
   }
-  ​ svg.animate-volunteer .volunteer {
-    animation: 2s infinite alternate scale;
-  }
-  ​ svg.animate-wheelchair .wheelchair {
-    animation: 2s infinite alternate scale;
+
+  svg.animate-volunteer .volunteer {
+    animation: 1s infinite alternate scale;
   }
 
-  ​ @keyframes scale {
-    from {
-      transform: scale(1);
-    }
-    ​ to {
-      transform: scale(1.2);
-    }
+  svg.animate-wheelchair .wheelchair {
+    animation: 1s infinite alternate scale;
+  }
+}
+
+svg .cls-1 {
+  fill: #fff;
+}
+svg .cls-2 {
+  fill: #bdd0fb;
+}
+svg .cls-3 {
+  fill: #91b3fa;
+}
+svg .cls-4 {
+  fill: #7d97f4;
+}
+svg .cls-5 {
+  fill: url(#linear-gradient);
+}
+svg .cls-6 {
+  fill: url(#linear-gradient-2);
+}
+svg .cls-7 {
+  fill: url(#linear-gradient-3);
+}
+svg .cls-8 {
+  fill: url(#linear-gradient-4);
+}
+svg .cls-9 {
+  fill: url(#linear-gradient-5);
+}
+svg .cls-10 {
+  fill: url(#linear-gradient-6);
+}
+svg .cls-11 {
+  fill: url(#linear-gradient-7);
+}
+svg .cls-12 {
+  fill: url(#linear-gradient-8);
+}
+svg .cls-13 {
+  fill: url(#linear-gradient-9);
+}
+svg .cls-14 {
+  fill: url(#linear-gradient-10);
+}
+svg .cls-15 {
+  fill: url(#linear-gradient-11);
+}
+svg .cls-16 {
+  fill: url(#linear-gradient-12);
+}
+svg .cls-17 {
+  fill: url(#linear-gradient-13);
+}
+svg .cls-18,
+svg .cls-25 {
+  opacity: 0.56;
+}
+svg .cls-18 {
+  fill: url(#linear-gradient-14);
+}
+svg .cls-19 {
+  fill: url(#linear-gradient-15);
+}
+svg .cls-20 {
+  fill: url(#linear-gradient-16);
+}
+svg .cls-21 {
+  fill: url(#linear-gradient-17);
+}
+svg .cls-22 {
+  fill: url(#linear-gradient-18);
+}
+svg .cls-23 {
+  fill: url(#linear-gradient-19);
+}
+svg .cls-24 {
+  fill: url(#linear-gradient-20);
+}
+svg .cls-25 {
+  fill: url(#linear-gradient-21);
+}
+svg .cls-26 {
+  fill: url(#linear-gradient-22);
+}
+svg .cls-27 {
+  fill: url(#linear-gradient-23);
+}
+svg .cls-28 {
+  fill: url(#linear-gradient-24);
+}
+svg .cls-29 {
+  fill: url(#linear-gradient-25);
+}
+svg .cls-30 {
+  fill: url(#linear-gradient-26);
+}
+svg .cls-31 {
+  fill: url(#linear-gradient-27);
+}
+svg .cls-32 {
+  fill: url(#linear-gradient-28);
+}
+svg .cls-33 {
+  fill: url(#linear-gradient-29);
+}
+svg .cls-34 {
+  fill: url(#linear-gradient-30);
+}
+svg .cls-35 {
+  fill: url(#linear-gradient-31);
+}
+svg .cls-36 {
+  fill: url(#linear-gradient-32);
+}
+svg .cls-37 {
+  fill: url(#linear-gradient-33);
+}
+svg .cls-38 {
+  fill: url(#linear-gradient-34);
+}
+svg .cls-39 {
+  fill: url(#linear-gradient-35);
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
   }
 }
