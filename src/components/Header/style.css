@@ -24,6 +24,7 @@
   cursor: pointer;
 }
 
+
 .navigation {
   display: none;
   background-color: var(--light-blue);
@@ -69,7 +70,7 @@
   .header {
     height: 4rem;
   }
-  
+
   .hamburger {
     display: none;
   }

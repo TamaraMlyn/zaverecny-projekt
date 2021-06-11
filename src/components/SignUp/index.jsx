@@ -37,6 +37,7 @@ export const SignUp = () => {
         <form className="sign-in__form">
           <FormGroup>
             <TextField
+              required
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               label="E-mail"
@@ -47,6 +48,7 @@ export const SignUp = () => {
             />
 
             <TextField
+              required
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               label="Heslo"
@@ -56,15 +58,7 @@ export const SignUp = () => {
             />
           </FormGroup>
 
-          <Button
-            onClick={handleOnClick}
-            text="Přihlásit se"
-            // to={
-            //   registrationState.role === 'wheelchair'
-            //     ? '/pozadavek'
-            //     : '/hledani'
-            // }
-          />
+          <Button onClick={handleOnClick} text="Přihlásit se" />
           <Button
             to="/registrace/dobrovolnik"
             type="secondary"
