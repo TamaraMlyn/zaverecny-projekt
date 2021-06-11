@@ -84,10 +84,6 @@
     flex-basis: 30%;
   }
 
-  .logo-icon {
-    width: 8rem;
-  }
-
   .navigation {
     display: flex;
     background-color: transparent;
