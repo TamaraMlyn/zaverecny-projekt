@@ -59,8 +59,8 @@ export const RequestList = ({ search }) => {
       ) : requests.docs.length === 0 ? (
         <div className="noone__requests">
           <h1 className="header--search">
-            Škoda! Asi teď neexistuje nikdo, kdo by tvou pomoc v rámci
-            tvých časových možností potřeboval. Nezkusíš ještě zadat jiný čas, nebo jiné
+            Škoda! Teď asi neexistuje nikdo, kdo by tvou pomoc v rámci
+            tvých časových možností potřeboval. Nezkusíš ještě zadat jiný čas nebo jiné
             místo?
           </h1>
           <img className="img--search" src={cross} alt="cross"/>
@@ -70,8 +70,7 @@ export const RequestList = ({ search }) => {
         <div className="filter__requests">
           <h1 className="header">Momentálně pomoc hledají tyto osoby: </h1>
           <div className="filter__intro">
-            Můžeš vybírat z už existujících požadavků od těch, které jsou
-            seřazeny dle největší urgence
+            Můžeš vybírat z už existujících požadavků. Jsou seřazeny dle největší urgence:
           </div>
 
           {requests &&

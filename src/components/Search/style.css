@@ -124,7 +124,7 @@ h1 {
 
   .filter__window {
     width: 600px;
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
   .filter__request {
@@ -134,7 +134,7 @@ h1 {
   .filter__requests {
   margin: 0 60px;
   }
-  
+
   .filter__row {
     flex-direction: column;
     justify-content: center;

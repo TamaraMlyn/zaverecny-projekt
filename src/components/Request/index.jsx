@@ -126,7 +126,7 @@ export const Request = () => {
         <div className="request__description">
           <h1 className="container__header">Potřebuji asistenci</h1>
           <div className="request__intro">
-            Najdi si vhodného asistenta na základě přesných požadavků!
+            Najdi si vhodného asistenta na základě tvých přesných požadavků!
           </div>
         </div>
         <form className="request__form" onSubmit={handleSubmit}>
@@ -142,7 +142,7 @@ export const Request = () => {
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  label="Místo, odkud potřebuješ:"
+                  label="Odkud:"
                   variant="outlined"
                 />
               )}
@@ -159,7 +159,7 @@ export const Request = () => {
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  label="Místo, kam potřebuješ:"
+                  label="Kam:"
                   variant="outlined"
                 />
               )}
@@ -211,7 +211,7 @@ export const Request = () => {
               <KeyboardTimePicker
                 margin="normal"
                 id="time-picker"
-                label="Čas od:"
+                label="Čas do:"
                 format="HH:mm"
                 ampm={false}
                 minutesStep={5}
@@ -276,7 +276,7 @@ export const Request = () => {
 
               <TextField
                 label="Poznámka"
-                placeholder="Tvoje poznámky (dopiš, co je ještě pro tebe důležité):"
+                placeholder="Tvoje poznámky (dopiš, co je pro tebe ještě důležité):"
                 variant="outlined"
                 multiline
                 rows={5}

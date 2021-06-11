@@ -13,9 +13,9 @@ export const Volunteer = () => {
   return (
     <>
       <div className="volunteer__container">
-        <h1 className="header header--main">Chcete se stát dobrovolníkem?</h1>
+        <h1 className="container__header header--main">Chceš se stát dobrovolníkem?</h1>
         <div className="volunteer__intro">
-          Ještě předtím, než začneš pomáhat, zaregistuj se!
+          Ještě předtím, než začneš pomáhat, zaregistruj se!
         </div>
         <div className="volunteer__expect">Co tě čeká?</div>
         <div className="volunteer__process">
@@ -28,7 +28,7 @@ export const Volunteer = () => {
             {/* <div><i className="icons--flow lab la-wpforms"></i></div> */}
             <div className="volunteer__step--text">
               Zaregistruj se v pár jednoduchých krocích a vyplň si svůj
-              profil, který tě bude dál reprezentovat.
+              profil, který tě bude dále reprezentovat.
             </div>
           </div>
           <div className="volunteer__step">

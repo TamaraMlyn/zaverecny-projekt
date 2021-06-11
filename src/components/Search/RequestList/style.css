@@ -24,6 +24,7 @@
     color: var(--dark-blue);
     font-size: 25px;
     text-align: center;
+    margin: 0 100px;
   }
 
   .img--search {

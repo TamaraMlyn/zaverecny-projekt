@@ -10,7 +10,7 @@ export const RegistrationWheelchair = () => {
   return (
     <Registration
       role="wheelchair"
-      text="Od zadání svého prvního požadavku tě dělí už jenom registrace!"
+      text="Od zadání tvého prvního požadavku tě dělí už jen registrace!"
     />
   );
 };

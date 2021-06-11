@@ -14,11 +14,11 @@ export const Wheelchair = () => {
     <>
       <div className="wheelchair__main--container">
         <div className="wheelchair__container">
-          <h1 className="header header--main">
+          <h1 className="container__header header--main">
             Hledáš dobrovolníka jako doprovod?
           </h1>
           <div className="wheelchair__intro">
-            S Dobrovozíkem je to strašně jednoduché!
+            S Dobrovozíkem je to tak jednoduché!
           </div>
           <div className="wheelchair__expect">Jak na to?</div>
           <div className="wheelchair__process">
@@ -29,8 +29,8 @@ export const Wheelchair = () => {
               </div>
               {/* <div><i className="icons--flow lab la-wpforms"></i></div> */}
               <div className="wheelchair__step--text">
-                Nejdřív se na stránce zaregistruj, můžeš si pak vytvořit svůj
-                medajlónek s informacemi o sobě, o svých zájmech.
+                Nejdřív se zde zaregistruj, potom si můžeš vytvořit svůj
+                medailonek s informacemi o sobě a o svých zájmech.
               </div>
             </div>
             <div className="wheelchair__step">
@@ -43,7 +43,7 @@ export const Wheelchair = () => {
               </div>
               {/* <div><i className="icons--flow las la-praying-hands"></i></div> */}
               <div className="wheelchair__step--text">
-                Hned po registraci se ti naskytne možnost zadat první požadavek
+                Ihned po registraci se ti naskytne možnost zadat první požadavek
                 dle toho, kdy a kde asistenci potřebuješ.
               </div>
             </div>
@@ -57,8 +57,8 @@ export const Wheelchair = () => {
               </div>
               {/* <div><i className="icons--flow las la-smile-beam"></i></div> */}
               <div className="wheelchair__step--text">
-                Požadavek se hned začne zobrazovat dobrovolníkům a akonáhle se
-                nájde někdo, v koho možnostech bude ti pomoct, bude tě
+                Požadavek se ihned začne zobrazovat dobrovolníkům. Jakmile se
+                najde někdo, v jehož možnostech je ti pomoct, bude tě dobrovolník
                 kontaktovat.
               </div>
             </div>
