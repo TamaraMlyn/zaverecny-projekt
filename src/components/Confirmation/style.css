@@ -3,7 +3,7 @@
   max-width: 900px;
   max-height: 100vh;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -12,12 +12,12 @@
   padding: 40px;
   background-color: var(--light-blue);
   font-size: 1.2rem;
-  line-height: 1.8rem;
+  line-height: 1.7rem;
   color: var(--dark-blue);
 }
 
 .header.header--main {
-  line-height: 2.4rem;
+  line-height: 2rem;
   font-family: "Roboto", sans-serif;
 }
 
@@ -27,7 +27,8 @@
 }
 
 .confirmation__block {
-  margin: 20px;
+  margin: 10px;
+  font-weight: 800;
   font-family: "Raleway", sans-serif;
 }
 
@@ -38,10 +39,11 @@
 }
 
 .confirmation__next--question {
-  font-family: "Raleway", sans-serif;
   color: var(--contrast-color);
   font-family: "Roboto", sans-serif;
   font-size: 30px;
+  font-weight: 800;
+  margin-top:10px;
 }
 
 .confirmation__next--text {
@@ -49,10 +51,9 @@
   margin: 20px 0;
 }
 
-.checked--picture {
-  width: 80px;
-  height: 80px;
-  size:100%;
+.thick--picture {
+  width: 100px;
+  height: 100px;
 }
 
 @media (min-width: 768px) {

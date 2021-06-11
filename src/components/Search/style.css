@@ -6,12 +6,15 @@ h1 {
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  
+}
+
+.filter__intro {
+  color: var(--dark-blue);
+  margin-bottom:10px;
 }
 
 .filter__requests {
   width: 100%;
-  margin: 0 60px;
 }
 
 .filter__window {
@@ -38,7 +41,8 @@ h1 {
 .filter__row {
   display: flex;
   flex-direction: row;
-  padding: 0 30px;
+  padding: 0 15px;
+  color:var(--dark-blue);
 }
 
 .filter__row--second {
@@ -127,9 +131,23 @@ form {
     flex-direction: row;
     align-items: center;
   }
-
+  .filter__requests {
+  margin: 0 60px;
+  }
+  
   .filter__row {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn.btn--primary.btn__item {
+    max-width: 250px;
+  }
+
+  .filter__row.purpose {
+    /* flex-grow: 1; */
+    min-width:250px;
   }
 
   /* .filter__row--first,

@@ -12,7 +12,7 @@ export const ListItem = ({ item }) => {
           {item.name} {item.surname}
         </div>
       </div>
-      <div className="filter__row">
+      <div className="filter__row purpose">
         <div className="filter__row--first">Účel:</div>
         <div className="filter__row--second">{item.purpose}</div>
       </div>
@@ -34,6 +34,7 @@ export const ListItem = ({ item }) => {
         </div>
       </div>
       <Button
+        className="btn__item"
         text="Kontaktovat"
       />
     </div>
