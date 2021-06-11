@@ -12,50 +12,51 @@ export const Wheelchair = () => {
 
   return (
     <>
-      <div className="volunteer__main--container">
-        <div className="volunteer__container">
+      <div className="wheelchair__main--container">
+        <div className="wheelchair__container">
           <h1 className="header header--main">
             Hledáš dobrovolníka jako doprovod?
           </h1>
-          <div className="volunteer__intro">
+          <div className="wheelchair__intro">
             S Dobrovozíkem je to strašně jednoduché!
           </div>
-          <div className="volunteer__expect">Jak na to?</div>
-          <div className="volunteer__process">
-            <div className="volunteer__step">
+          <div className="wheelchair__expect">Jak na to?</div>
+          <div className="wheelchair__process">
+            <div className="wheelchair__step">
               <div>
-                <img className="volunteer__step--form" src={form} alt="form" />
+                <img className="wheelchair__step--image" 
+                src={form} alt="form" />
               </div>
               {/* <div><i className="icons--flow lab la-wpforms"></i></div> */}
-              <div className="volunteer__step--text">
+              <div className="wheelchair__step--text">
                 Nejdřív se na stránce zaregistruj, můžeš si pak vytvořit svůj
                 medajlónek s informacemi o sobě, o svých zájmech.
               </div>
             </div>
-            <div className="volunteer__step">
+            <div className="wheelchair__step">
               <div>
                 <img
-                  className="volunteer__step--timeplace"
+                  className="wheelchair__step--image"
                   src={timeplace}
                   alt="timeplace"
                 />
               </div>
               {/* <div><i className="icons--flow las la-praying-hands"></i></div> */}
-              <div className="volunteer__step--text">
+              <div className="wheelchair__step--text">
                 Hned po registraci se ti naskytne možnost zadat první požadavek
                 dle toho, kdy a kde asistenci potřebuješ.
               </div>
             </div>
-            <div className="volunteer__step">
+            <div className="wheelchair__step">
               <div>
                 <img
-                  className="volunteer__step--thick"
+                  className="wheelchair__step--image"
                   src={thick}
                   alt="thick"
                 />
               </div>
               {/* <div><i className="icons--flow las la-smile-beam"></i></div> */}
-              <div className="volunteer__step--text">
+              <div className="wheelchair__step--text">
                 Požadavek se hned začne zobrazovat dobrovolníkům a akonáhle se
                 nájde někdo, v koho možnostech bude ti pomoct, bude tě
                 kontaktovat.
