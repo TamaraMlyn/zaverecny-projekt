@@ -13,8 +13,9 @@
 }
 
 .logo-icon {
-  width: 6rem;
-  margin: 15px;
+  height: 4rem;
+  padding: 10px;
+  padding-left: 15px;
 }
 
 .hamburger {
