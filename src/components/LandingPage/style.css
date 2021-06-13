@@ -21,6 +21,7 @@
 .intro__image {
   display: flex;
   justify-content: center;
+  flex-grow: 1;
 }
 
 .image--main {
