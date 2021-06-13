@@ -18,7 +18,7 @@ export const Confirmation = () => {
   return (
     <div className="confirmation__container">
       <img className="thick--picture" src={thick} alt="thick"/>
-      <h1 className="header header--main">
+      <h1 className="container__header header--main">
         Děkujeme, tvůj požadavek jsme obdrželi.
       </h1>
       <div className="confirmation__text">

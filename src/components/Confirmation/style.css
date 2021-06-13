@@ -16,7 +16,7 @@
   color: var(--dark-blue);
 }
 
-.header.header--main {
+.container__header.header--main {
   line-height: 2rem;
   font-family: "Roboto", sans-serif;
 }
