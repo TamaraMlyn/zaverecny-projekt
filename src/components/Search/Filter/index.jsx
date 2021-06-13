@@ -125,6 +125,8 @@ export const Filter = ({ onChange }) => {
             <KeyboardTimePicker
               id="time-picker"
               label="Čas do:"
+              cancelLabel="Zrušit"
+              okLabel="Vybrat"
               format="HH:mm"
               ampm={false}
               minutesStep={5}

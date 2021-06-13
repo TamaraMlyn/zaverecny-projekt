@@ -18,10 +18,12 @@
   line-height: 1.8rem;
 }
 
-.intro__image {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
+.intro__text--slogan {
+  font-weight: 800;
+}
+
+.intro__image svg {
+  width: 100%;
 }
 
 .image--main {
@@ -87,11 +89,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0 30px;
-    padding-top: 20px;
-  }
-
-  .intro__text {
-    padding: 15px 0;
   }
 
   .intro__buttons {
