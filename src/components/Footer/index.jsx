@@ -127,10 +127,10 @@ export const Footer = () => {
         </a>
       </p>
       <div className="icons-resource">
-        <a href="https://www.freepik.com/vectorjuice">Icons by vectorjuice</a>
+        <a href="https://www.freepik.com/vectorjuice">Ikony od vectorjuice</a>
         <br />
         <a href="https://www.linkedin.com/in/nikola-posp%C3%AD%C5%A1ilov%C3%A1-0b91751a3/">
-          Logo by Nikola Pospíšilová
+          Logo od Nikola Pospíšilová
         </a>
       </div>
     </footer>

@@ -18,21 +18,17 @@
   line-height: 1.8rem;
 }
 
-.intro__text--slogan {
-  font-weight: 800;
-}
-
-.intro__image svg {
-  width: 100%;
-}
-
 .image--main {
-  width: 50%;
+  display: none;
+  /* width: 50%; */
 }
 
 .container__header {
   color: var(--dark-blue);
-  font-weight: 800;
+}
+
+.intro__info .container__header.header--main {
+  font-size: 28px;
 }
 
 .icon--next-section {
@@ -62,6 +58,7 @@
 
   .first-section {
     height: calc(100vh - 4rem);
+    min-height: 450px;
     display: flex;
     flex-direction: column;
   }
@@ -76,19 +73,25 @@
   }
 
   .intro__image {
-    flex-basis: 40%;
+    flex-basis: 30%;
   }
 
   .image--main {
+    display: block;
     width: 100%;
   }
 
   .intro__content {
     height: 100%;
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0 30px;
+  }
+
+  .intro__info .container__header.header--main {
+    line-height: 2.8rem;
   }
 
   .intro__buttons {
@@ -114,7 +117,7 @@
     fill: transparent;
     stroke: var(--contrast-color);
     align-self: center;
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
   }
 
   .icon--next-section:hover path {

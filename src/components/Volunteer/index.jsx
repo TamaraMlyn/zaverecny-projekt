@@ -54,7 +54,7 @@ export const Volunteer = () => {
             {/* <div><i className="icons--flow las la-smile-beam"></i></div> */}
             <div className="volunteer__step--text">
               Teď už můžeš na základě svých časových možností reagovat na
-              konkrétní požadavky. Začínáš dobrovolničit!:)
+              konkrétní požadavky. Začínáš dobrovolničit! :-)
             </div>
           </div>
         </div>

@@ -15,9 +15,7 @@ export const LandingPage = () => {
         <div className="intro container">
           <div className="intro__image">
             <svg
-              width="500"
-              height="500"
-              viewBox="0 0 3710 3710"
+              viewBox="350 350 3000 3000"
               version="1.1"
               className={
                 'image--main ' +
@@ -376,14 +374,14 @@ export const LandingPage = () => {
                   y2="2880.1"
                 />
               </defs>
-              <rect
+              {/* <rect
                 style={{ fill: '#ffffff' }}
                 y="0"
                 x="0"
                 height="3710"
                 width="3710"
                 className="cls-1"
-              />
+              /> */}
               <path
                 style={{ fill: '#bdd0fb' }}
                 d="m 2705.73,1400.66 c -18.35,-53.91 -29.46,-109.36 -26.58,-168 7.26,-147.62 108.51,-272.22 186.14,-390.77 71.34,-109 134.73,-276.44 -61,-284.31 -155.92,-6.28 -356,125.89 -395.91,283.91 -47.28,187 16.49,437.67 -113.84,597.09 -182.33,223 -286.34,154.44 -335.17,561.81 -20.86,174.07 64,281.64 168.15,347.77 A 465.48,465.48 0 0 0 2658.71,2326 c 136.92,-104 230.33,-266 226.2,-440.31 -4.18,-176.07 -124.2,-323.6 -179.18,-485.03 z"
@@ -855,17 +853,15 @@ export const LandingPage = () => {
           <div className="intro__content">
             <div className="intro__info">
               <h1 className="container__header header--main">
-                Asistence pro lidi na vozíčku
+                Propojujeme lidi na vozíku s dobrovolníky, aby byl pohyb po
+                městě jednodušší.
               </h1>
-              <div className="intro__text">
-                <p className="intro__text--slogan">Propojujeme lidi na vozíku s dobrovolníky, aby byl pohyb po městě jednodušší.</p>
-                <p>Pomoz těm, kteří to ocení - na místě a v okamžiku, kdy pomoc potřebují.</p>
-          
-                  
-                
-               
-        
-              </div>
+              <p className="intro__text">
+                Dostaň se tam, kam potřebuješ, s člověkem, který chce pomáhat.
+                <br />
+                Pomoz těm, kteří to ocení – na místě a v okamžiku, kdy pomoc
+                potřebují.
+              </p>
             </div>
             <div className="intro__buttons">
               <Button
