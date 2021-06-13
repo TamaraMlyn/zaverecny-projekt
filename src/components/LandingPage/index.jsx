@@ -857,7 +857,7 @@ export const LandingPage = () => {
                 městě jednodušší.
               </h1>
               <p className="intro__text">
-                Dostaň se tam, kam potřebuješ, s člověkem, který chce pomáhat.
+                Dostaň se tam, kam potřebuješ – s člověkem, který chce pomáhat.
                 <br />
                 Pomoz těm, kteří to ocení – na místě a v okamžiku, kdy pomoc
                 potřebují.
