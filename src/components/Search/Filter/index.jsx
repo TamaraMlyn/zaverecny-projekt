@@ -15,10 +15,10 @@ import './style.css';
 import dayjs from '../../../lib/dayjs';
 
 export const Filter = ({ onChange }) => {
-  const [date, setDate] = useState(null);
-  const [timeFrom, setTimeFrom] = useState(null);
+  const [date, setDate] = useState("17.8.2021");
+  const [timeFrom, setTimeFrom] = useState("08:00");
   const [timeTo, setTimeTo] = useState(null);
-  const [place, setPlace] = useState(null);
+  const [place, setPlace] = useState('Praha 1');
   const [experience, setExperience] = useState(false);
   const [strength, setStrength] = useState(false);
 
@@ -88,7 +88,7 @@ export const Filter = ({ onChange }) => {
             label="Datum"
             cancelLabel="Zrušit"
             okLabel="Vybrat"
-            format="D.M.YYYY"
+            format="DD.M.YYYY"
             value={date}
             onChange={(date) => {
               setDate(date);

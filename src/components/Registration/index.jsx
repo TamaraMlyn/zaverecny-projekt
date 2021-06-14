@@ -11,14 +11,14 @@ import { RegistrationContext } from '../../lib/RegistrationContext';
 import './style.css';
 
 export const Registration = ({ role, text }) => {
-  const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [password, setPassword] = useState('');
-  const [passwordCheck, setPasswordCheck] = useState('');
-  const [conditions, setConditions] = useState(false);
-  const [personalData, setPersonalData] = useState(false);
+  const [name, setName] = useState('Tomáš');
+  const [surname, setSurname] = useState('Sedláček');
+  const [email, setEmail] = useState('tomas.sedlacek@seznam.cz');
+  const [phone, setPhone] = useState('+420724800655');
+  const [password, setPassword] = useState('tomassedlacek');
+  const [passwordCheck, setPasswordCheck] = useState('tomassedlacek');
+  const [conditions, setConditions] = useState(true);
+  const [personalData, setPersonalData] = useState(true);
 
   const history = useHistory();
 

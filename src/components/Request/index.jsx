@@ -17,14 +17,14 @@ import './style.css';
 export const Request = () => {
   const actualDate = dayjs();
 
-  const [from, setFrom] = useState(null);
-  const [to, setTo] = useState(null);
+  const [from, setFrom] = useState('Praha 1');
+  const [to, setTo] = useState('Praha 3');
   const [date, setDate] = useState(actualDate.toDate());
   const [timeFrom, setTimeFrom] = useState(null);
   const [timeTo, setTimeTo] = useState(null);
-  const [purpose, setPurpose] = useState(null);
+  const [purpose, setPurpose] = useState('Cesta na úřad');
   const [experience, setExperience] = useState(false);
-  const [strength, setStrength] = useState(false);
+  const [strength, setStrength] = useState(true);
   const [notes, setNotes] = useState('');
 
   const db = usePouch();
