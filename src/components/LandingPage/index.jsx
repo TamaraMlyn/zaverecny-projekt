@@ -15,7 +15,7 @@ export const LandingPage = () => {
         <div className="intro container">
           <div className="intro__image">
             <svg
-              viewBox="350 350 3000 3000"
+              viewBox="200 200 3350 3350"
               version="1.1"
               className={
                 'image--main ' +
