@@ -19,9 +19,9 @@ export const Request = () => {
 
   const [from, setFrom] = useState('Praha 1');
   const [to, setTo] = useState('Praha 3');
-  const [date, setDate] = useState(actualDate.toDate());
-  const [timeFrom, setTimeFrom] = useState(null);
-  const [timeTo, setTimeTo] = useState(null);
+  const [date, setDate] = useState(new Date('2021-06-24T11:25:00+02:00'));
+  const [timeFrom, setTimeFrom] = useState(new Date('2021-06-24T08:30:00+02:00'));
+  const [timeTo, setTimeTo] = useState(new Date('2021-06-24T10:00:00+02:00'));
   const [purpose, setPurpose] = useState('Cesta na úřad');
   const [experience, setExperience] = useState(false);
   const [strength, setStrength] = useState(true);

@@ -15,9 +15,11 @@ import './style.css';
 import dayjs from '../../../lib/dayjs';
 
 export const Filter = ({ onChange }) => {
-  const [date, setDate] = useState("17.8.2021");
-  const [timeFrom, setTimeFrom] = useState("08:00");
-  const [timeTo, setTimeTo] = useState(null);
+  const [date, setDate] = useState(new Date('2021-06-21T13:00:00+02:00'));
+  const [timeFrom, setTimeFrom] = useState(
+    new Date('2021-06-14T13:00:00+02:00'),
+  );
+  const [timeTo, setTimeTo] = useState(new Date('2021-06-21T23:00:00+02:00'));
   const [place, setPlace] = useState('Praha 1');
   const [experience, setExperience] = useState(false);
   const [strength, setStrength] = useState(false);
