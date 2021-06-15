@@ -23,8 +23,8 @@ export const Request = () => {
   const [timeFrom, setTimeFrom] = useState(new Date('2021-06-21T08:30:00+02:00'));
   const [timeTo, setTimeTo] = useState(new Date('2021-06-21T10:00:00+02:00'));
   const [purpose, setPurpose] = useState('Cesta na úřad');
-  const [experience, setExperience] = useState(false);
-  const [strength, setStrength] = useState(true);
+  const [experience, setExperience] = useState(true);
+  const [strength, setStrength] = useState(false);
   const [notes, setNotes] = useState('');
 
   const db = usePouch();
